@@ -29,9 +29,11 @@ const Nav = styled.nav`
 
 const NavBar = () => (
   <Headroom calcHeightOnResize disableInlineStyles>
-    <StyledLink to="/">
+    {/* <StyledLink to="/">
       <img src={logo} alt="Gatsby Logo" />
-    </StyledLink>
+      Will Cap
+    </StyledLink> */}
+    <Link to="/">Will Cap</Link>
     <Nav>
       <Link to="/">Home</Link>
       <Link to="/blog">Blog</Link>

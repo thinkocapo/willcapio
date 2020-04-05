@@ -14,6 +14,10 @@ const About = center => (
         read the guide{' '}
         <a href="https://justinformentin.com/gatsby-v2-guide">here.</a>
       </h3>
+      <p>A paragraph1</p>
+      <p>A paragraph2</p>
+      <p>A paragraph3</p>
+
     </Container>
   </Layout>
 );
