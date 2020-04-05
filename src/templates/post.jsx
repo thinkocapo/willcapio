@@ -30,7 +30,6 @@ const Post = ({ data, pageContext }) => {
       <SEO
         title={title}
         description={description || excerpt || ' '}
-        banner={image}
         pathname={path}
         article
       />
