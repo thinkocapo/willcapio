@@ -39,7 +39,7 @@ const NavBar = () => (
     {/* <StyledLink to="/">
       <img src={logo} alt="Gatsby Logo" />
     </StyledLink> */}
-    <Link to="/">Will Cap</Link>
+    <StyledLink to="/" style={{ 'color': 'white'}}>Will Cap</StyledLink>
     <Nav>
       <Link to="/">Home</Link>
       {/* <Link to="/software"> Software</Link> */}
