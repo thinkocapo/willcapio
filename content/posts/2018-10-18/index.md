@@ -2,7 +2,7 @@
 path: "/post-four"
 cover: "../2018-10-17/finance.jpg"
 date: "2018-10-18"
-title: "Post Number Four"
+title: "Healthcare & Biotech"
 tags: ['gatsby', 'other']
 published: true
 ---

@@ -6,17 +6,27 @@ import { Layout, Container } from 'layouts';
 
 const About = center => (
   <Layout>
-    <Helmet title={'About Page'} />
-    <Header title="About Page">Gatsby Tutorial Starter</Header>
+    <Helmet title={'About'} />
+    <Header title="It's About Time">to meet Will</Header>
     <Container center={center}>
-      <h3>
-        If you would like to build this site completely from scratch, you can
-        read the guide{' '}
-        <a href="https://justinformentin.com/gatsby-v2-guide">here.</a>
-      </h3>
-      <p>A paragraph1</p>
-      <p>A paragraph2</p>
-      <p>A paragraph3</p>
+      <h2><a href="https://github.com/thinkocapo">Github</a></h2>
+      <h2><a href="https://linkedin.com/in/williamcapozzoli">LinkedIn</a></h2>
+      {/* <p>I'm a software engineer. I work in Sales. I have a B.S. in Biology. I speak 5 languages.</p> */}
+
+      <br></br>
+      <br></br>
+
+      <br></br>
+
+      <br></br>
+      <br></br>
+
+      <br></br>
+
+      <br></br>
+
+      <br></br>
+      <br></br>
 
     </Container>
   </Layout>

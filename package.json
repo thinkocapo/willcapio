@@ -1,6 +1,6 @@
 {
   "name": "gatsby-tutorial-starter",
-  "author": "Justin Formentin",
+  "author": "Will Cap",
   "title": "Gatsby V2 Tutorial Starter",
   "description": "My Blog",
   "homepage": "https://gatsby-tutorial-starter.netlify.com",
@@ -66,7 +66,7 @@
     "prettier": "^1.18.2"
   },
   "keywords": [
-    "justin formentin",
+    "will cap",
     "personal blog",
     "tutorial",
     "gatsby",
