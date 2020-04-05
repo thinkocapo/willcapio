@@ -42,7 +42,7 @@ const NavBar = () => (
     <Link to="/">Will Cap</Link>
     <Nav>
       <Link to="/">Home</Link>
-      <Link to="/software"> Software</Link>
+      {/* <Link to="/software"> Software</Link> */}
       {/* <a href="http://localhost:8000/post-5">alskdfj</a> */}
       <Link to="/blog">Blog</Link>
       <Link to="/about">About</Link>
