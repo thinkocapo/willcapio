@@ -3,6 +3,13 @@ import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import Headroom from 'react-headroom';
 import logo from '../../static/logo/header-logo.png';
+// import {
+
+//     useRouteMatch,
+
+//   } from "react-router-dom";
+
+// let match = useRouteMatch();
 
 const StyledLink = styled(Link)`
   display: flex;
@@ -29,13 +36,14 @@ const Nav = styled.nav`
 
 const NavBar = () => (
   <Headroom calcHeightOnResize disableInlineStyles>
-    {/* <StyledLink to="/">
+    <StyledLink to="/">
       <img src={logo} alt="Gatsby Logo" />
       Will Cap
-    </StyledLink> */}
+    </StyledLink>
     <Link to="/">Will Cap</Link>
     <Nav>
       <Link to="/">Home</Link>
+      <Link to="/software"> Software</Link>
       <Link to="/blog">Blog</Link>
       <Link to="/about">About</Link>
     </Nav>

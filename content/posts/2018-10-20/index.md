@@ -1,8 +1,8 @@
 ---
 path: "/post-six"
-cover: "../2018-10-16/speed.jpg"
+cover: "../2018-10-20/medellin-style.png"
 date: "2018-10-20"
-title: "Post Number Six"
+title: "Travel Photos"
 tags: ['gatsby', 'tutorial']
 published: true
 ---
