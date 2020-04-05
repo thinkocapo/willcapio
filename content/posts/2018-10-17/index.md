@@ -2,7 +2,7 @@
 path: "/post-three"
 cover: "./finance.jpg"
 date: "2018-10-17"
-title: "Post Number Three"
+title: "Top Photos"
 tags: ['gatsby', 'news', 'other']
 published: true
 ---
