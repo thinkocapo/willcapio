@@ -3,6 +3,21 @@ import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import { Header } from 'components';
 import { Layout, Container } from 'layouts';
+import ReactMarkdown from 'react-markdown'
+
+const input = `
+#### h4 can't style me?
+redux
+
+\`\`\`
+App extends Class {
+    this.redux = 
+}
+\`\`\`
+
+#### h4
+bash party
+`
 
 const About = center => (
   <Layout>
@@ -16,6 +31,13 @@ const About = center => (
       <br></br>
       <br></br>
 
+      <h2 style={{ 'color': 'blue' }}>Books</h2>
+      <p>Book1</p>
+      <p>Book2</p>
+      <p>Book3</p>
+      <p>Book4</p>
+      <p>or markdown....</p>
+      <ReactMarkdown source={input} />
       <br></br>
 
       <br></br>
@@ -27,6 +49,9 @@ const About = center => (
 
       <br></br>
       <br></br>
+
+      <h2>Music</h2>
+      <p>Content1</p>
 
     </Container>
   </Layout>
