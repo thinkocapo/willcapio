@@ -150,3 +150,7 @@ npm format
 ├── gatsby-config.js # Plugin loading and configuration
 └── gatsby-node.js # Generate posts/tags and modify webpack
 ```
+
+## TODO
+Open/collapse the headings on Software post - can't because markdown
+Open/collapse the headings on About page - can because jsx
