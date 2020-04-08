@@ -7,7 +7,7 @@ import { Layout, Container } from 'layouts';
 const Software = center => (
   <Layout>
     <Helmet title={'Software Page'} />
-    <Header title="Software Page">Gatsby Tutorial Starter</Header>
+    <Header title="Software Page">Software</Header>
     <Container center={center}>
       <h3>
         This is for Software{' '}
