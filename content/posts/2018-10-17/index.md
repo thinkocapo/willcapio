@@ -1,6 +1,6 @@
 ---
-path: "/post-three"
-cover: "./finance.jpg"
+path: "/top-photos"
+cover: "./horse.jpg"
 date: "2018-10-17"
 title: "Top Photos"
 tags: ['gatsby', 'news', 'other']

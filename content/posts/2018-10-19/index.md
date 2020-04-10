@@ -1,13 +1,13 @@
 ---
-path: "/post-five"
-cover: "../2018-10-17/finance.jpg"
+path: "/software-journey"
+cover: "./pinata-rocket-ship.jpg"
 date: "2018-10-19"
-title: "Software"
+title: "Software Journey"
 tags: ['tutorial', 'javascript', 'frontend']
 published: true
 ---
 
-# General Software
+# Software Journey
 **2014** started programming in C++ as a hobby  
 **2015** started programming in javascript full-time by leaving my job and moving to Brazil:
 ![Brazil Office](./brazil-office.jpg)
@@ -22,7 +22,8 @@ He said it tasted GREAT. I'm never afraid to take one for the team:
 **2015** I left Brazil to attend Fullstack Academy (NYC) to go from amateur to professional developer. I learned to make super useful things:
 ![Audio Visualizer](./audio-visualizer.jpg)
 
-**2016** 1st Software Developer job at Biotech Company. I developed web services to support R&D of mRNA therapeutic drugs.
+**2016** 1st Software Developer job at Biotech Company. I developed web services to support R&D of mRNA therapeutic drugs and played music in Cambridge:
+![Allston](./allston.jpg)
 
 **2018** I worked for two web development agencies as a contractor, and did much of this remotely while travelling:
 ![Worked Remote](./worked-remote.jpg)
@@ -33,7 +34,7 @@ And took Slavic breaks:
 
 
 **2019** Sales Engineer at Sentry.io  
-Get exposed to wide variety of applications. GRPC (demos/GRPC) and middleware in Go that i'm trying to make. go repo's.
+![Pinata Rocket](./pinata-rocket-ship.jpg)
 
 # Education:
 2016 - Java for Distributed Systems
