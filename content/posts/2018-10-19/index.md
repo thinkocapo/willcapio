@@ -8,17 +8,34 @@ published: true
 ---
 
 # General Software
-2014 started programming as a hobby  
-2015 start programming full-time by leaving job and moving to Brazil (photo)  
-2015 Attended Fullstack Academy (MongoDB, Express, Angular, Node)  
-learned to make stuff (screenshot Audio Visualizer)  
+**2014** started programming in C++ as a hobby  
+**2015** started programming in javascript full-time by leaving my job and moving to Brazil:
+![Brazil Office](./brazil-office.jpg)
+Got an internship at Educare.com.br with these guys:  
+![Internship Colleauges](./internship-colleagues.jpg)
+And bit by a dog when I was skateboarding in Argentina:
+![Dog Bite](./dog-bite.jpg)
 
-2016 Full-time Developer at Biotech - MTX
-2018 Full-time Developer at Biotech - BMS
-2019 Sales Engineer at Sentry.io  
+He said it tasted GREAT. I'm never afraid to take one for the team:
+![Soccer](./sao-paulo-soccer.jpg)
+
+**2015** I left Brazil to attend Fullstack Academy (NYC) to go from amateur to professional developer. I learned to make super useful things:
+![Audio Visualizer](./audio-visualizer.jpg)
+
+**2016** 1st Software Developer job at Biotech Company. I developed web services to support R&D of mRNA therapeutic drugs.
+
+**2018** I worked for two web development agencies as a contractor, and did much of this remotely while travelling:
+![Worked Remote](./worked-remote.jpg)
+I got along with Colombian dogs:
+![Still Okay With Dogs](./still-okay-with-dogs.jpg)
+And took Slavic breaks:
+![Rooftop Break](./rooftop-break.jpg)
+
+
+**2019** Sales Engineer at Sentry.io  
 Get exposed to wide variety of applications. GRPC (demos/GRPC) and middleware in Go that i'm trying to make. go repo's.
 
-Education:
+# Education:
 2016 - Java for Distributed Systems
 2019 - Big Data - Hadoop, Spark, Flume, Flink, Collection, Storage, Horizontal Scaling, 
 
