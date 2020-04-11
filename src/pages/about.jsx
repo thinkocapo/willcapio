@@ -20,7 +20,7 @@ const input = `
 const About = center => (
   <Layout>
     <Helmet title={'About'} />
-    <Header title="About Time">to meet Will</Header>
+    <Header title="About Time">to say hi</Header>
     <Container left={center}>
       <h2>Github</h2>
       <p><a href="https://github.com/thinkocapo">https://github.com/thinkocapo</a></p>
