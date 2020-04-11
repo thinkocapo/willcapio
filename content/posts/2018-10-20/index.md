@@ -1,5 +1,5 @@
 ---
-path: "/post-six"
+path: "/travel-photo-albums"
 cover: "../2018-10-20/medellin-style.png"
 date: "2018-10-20"
 title: "Travel Photo Albums"
@@ -11,10 +11,10 @@ published: true
 [243 photos](https://goo.gl/photos/SH6FDxbaewsrX3vx9)
 
 **2014**  
-[125 photos](https://plus.google.com/photos/116120141382863914580/albums/6022619270305848897?authkey=CJbGnISqhs6vrQE)
+[119 photos](https://photos.app.goo.gl/HJDf8Ji0PPxmFv7b2)
 
 **2013**  
-[187 photos](https://plus.google.com/photos/116120141382863914580/albums/5938695621774542081?authkey=COXY0Jb0xOLkGQ)
+[186 photos](https://photos.app.goo.gl/3fUKMlJePlqxerMC2)
 
 ## Colombia
 **2018**  
@@ -24,7 +24,7 @@ published: true
 [180 photos](https://goo.gl/photos/Em4Ckax1yrDwhg227)
 
 **2013**  
-[187 photos](https://plus.google.com/photos/116120141382863914580/albums/5847773300854734225?authkey=CKDju63hwbbtkAE)
+[182 photos](https://goo.gl/photos/xERchoThEivWdXwE7)
 
 ## Ukraine  
 **2018**  

@@ -1,6 +1,6 @@
 ---
 path: "/music"
-cover: "./music-piano-sword.jpg"
+cover: "./allston.jpg"
 date: "2018-10-16"
 title: "Music"
 tags: ['tutorial', 'javascript', 'frontend']

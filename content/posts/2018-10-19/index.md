@@ -23,7 +23,7 @@ He said it tasted GREAT. I'm never afraid to take one for the team:
 ![Audio Visualizer](./audio-visualizer.jpg)
 
 **2016** 1st Software Developer job at Biotech Company. I developed web services to support R&D of mRNA therapeutic drugs and played music in Cambridge:
-![Allston](./allston.jpg)
+![Allston](./allston-dual-pianos.jpg)
 
 **2018** I worked for two web development agencies as a contractor, and did much of this remotely while travelling:
 ![Worked Remote](./worked-remote.jpg)
