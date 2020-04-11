@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import { TagsBlock } from 'components';
 import { Container } from 'layouts';
-
+// padding-bottom: 0.5rem;
 const Wrapper = styled.article`
   margin: 0 3rem;
 `;

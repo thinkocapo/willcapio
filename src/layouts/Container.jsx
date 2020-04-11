@@ -1,8 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
-
+// css-t1y4x6-Container--Wrapper e1vfv5zq0
+// padding-bottom: 0.5rem;
+// style={{ 'padding-bottom': '0.5rem'}}
 const Wrapper = styled.section`
+
   text-align: ${props => (props.center ? 'center' : '')};
   margin: auto;
   padding: 3rem 1.5rem;
