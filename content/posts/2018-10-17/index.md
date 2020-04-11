@@ -16,17 +16,17 @@ Mother Cow, Colombia 2017
 ![Cow](./mother-cow.jpg)
 Niteroi, Brazil 2015
 ![Niteroi](./niteroi.jpg)
-Florianopolis, Brazil 2015
-![Florianopolis](./floripa-house-party.jpg)
+Recife, Brazil 2015
+![Brazil Horse](./brazil-horse.jpg)
 
-Beach
-![Beach](./floripa-beach.jpg)
+<!-- Beach
+![Beach](./floripa-beach.jpg) -->
 
-Vidigal 2014
-![Vidigal](./vidigal.jpg)
+<!-- Vidigal 2014
+![Vidigal](./vidigal.jpg) -->
 
-Complexo de Alemao 2014
-![Complexo](./complexo.jpg)
+<!-- Complexo de Alemao 2014
+![Complexo](./complexo.jpg) -->
 
-Favela 2014
-![Favela](./favela.jpg)
+<!-- Favela 2014
+![Favela](./favela.jpg) -->

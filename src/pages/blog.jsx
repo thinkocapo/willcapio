@@ -9,7 +9,7 @@ const Blog = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
-      <Helmet title={'Blog Page'} />
+      <Helmet title={'Will Blog'} />
       <Header title="Blog Page">Gatsby Tutorial Starter</Header>
       {edges.map(({ node }) => (
         <BlogList

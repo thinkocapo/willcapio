@@ -7,6 +7,4 @@ tags: ['tutorial', 'javascript', 'frontend']
 published: true
 ---
 
-# Blockchain
-things....  
-github links...  
+# TODO
