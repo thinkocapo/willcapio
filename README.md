@@ -151,6 +151,50 @@ npm format
 └── gatsby-node.js # Generate posts/tags and modify webpack
 ```
 
+## Notes
+Can't open/collapse the headings on Software post because it's markdown
+
+Can open/collapse the headings on About page - can because jsx
+
 ## TODO
-Open/collapse the headings on Software post - can't because markdown
-Open/collapse the headings on About page - can because jsx
+
+#### Code Examples | Topics/Areas of Learning
+My favorite languages...
+
+Idempotency  
+I liked this concept. Here's from grad school course:  
+(snippet)  
+
+Python decorator I wrote because I didn't want to see all the multi-processing verbage:  
+however not good if sharing, because the behavior is quite hidden/encapsulated  
+
+Protocools, data types, ports, https:  
+Network programming, C/C++ Go, Unix  
+I like knowing there's no interpreter, feels more lightweight.  
+
+Scripting. Shell scripts. Especially with blockchains.  
+(Bash Party screenshot + code snippet)  
+Something I find interesting. Usually a variable has a data type. But in shell script, that's not the case. e.g. gcp whoami  
+use it to your advantage.  
+
+React Redux + Reactive programming:  
+I like the concept of immutability avoiding updates by reference, or passing through lots of child/parent props. It's like a database in the browser.  
+The first thing I did on a Angular7 project for client was implement NgRedux.  
+(snippet)  
+
+Tmux:  
+always say going to. i like how you can send-keys from 1 to another.good for when managing lots of terminals. examples...  
+(screenshot | snippet)  
+
+.zshrc:  
+
+Undertaker:  
+Event Maker - protocools, new classes + data types, dig into internals of SDK and how compresses/encodes  
+I would never do 'int_age' because it's obvious what age is for. However with bytes, rowproxy, buffers, ORM classes (e.g. sqlalchemy's rowProxy), and converting between these, it's crucial for `row_proxy.data` or `dict_body`
+
+Kubernetes:  
+minikube repo
+
+
+gRPC:  
+grpc repo

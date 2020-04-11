@@ -100,7 +100,7 @@ const BlogList = ({ path, cover, title, date, excerpt, tags }) => (
           <Title>{title}</Title>
         </Link>
         <TagsBlock list={tags} />
-        {excerpt}
+        {/* {excerpt} */}
       </Information>
     </Wrapper>
   </Container>

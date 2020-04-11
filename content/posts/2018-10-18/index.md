@@ -7,43 +7,53 @@ tags: ['tutorial', 'javascript', 'frontend']
 published: true
 ---
 
-# Education:
-B.S. Biology 2010
+## Education
+**2010** *Roger Williams University* B.S. Biology
 
-2016 - Java for Distributed Systems
+**2015** *Fullstack Academy* Web Development Immersive
 
-2017 - Ethereum Smart Contract Development at Consensys
+**2016** *Harvard Extension School* Java for Distributed Programming & Hadoop
 
-2019 - Big Data - Hadoop, Spark, Flume, Flink, Collection, Storage, Horizontal Scaling, 
+**2017** *Consensys* Academy Developer Program for Ethereum Programming
 
-Idempotency
-(python decorator I wrote)
+**2019** *Harvard Extension School* Principles of Big Data Processing  
 
-Network programming, Scripting, Familiarity with C/C++/Go, Unix
-(Bash Party screenshot + code snippet)
+## Healthcare & Biotech
+</br>
 
-React Redux + Reactive programming. Immutability. Composability
-(Redux store code snippet)
+#### B.S. Biology
 
-Learned to make/automate more stuff (screenshot tmux)
+My favorite courses were Genetics, Virology, Development Biology and Evolutionary Biology. Physics was cool too.
 
-Event Maker - protocools, new classes + data types, dig into internals of SDK and how compresses/encodes
+#### Healthcare IT
 
-# Healthcare & Biotech
-B.S. Biology 2010
+I worked 4 years at a EMR company so I'm competent with EHR | HIT | FHIR
 
-I am competent with EMR | HIT | FHIR
+#### FHIR 
 
-I worked for 2 Biotech Company building web apps and microservices for supporting R&D.
+I enjoy programming with and the potential for interoperability.
+Here's a slide from a presentation I made on it:
 
-Projects - Working with biopython / sars-cov-2 sequence.
+https://www.hl7.org/fhir/ 
 
-Projects - FHIR 
+![FHIR Interoperability](./fhir-interoperability.jpg)
 
-TODO - Interoperabiliy slide)
+and how to declare some FHIR Resources which you can create on a FHIR server and map to your EMR's.  
+(snippet)  
 
-Claims Management
-TODO - Code Snippet
+
+#### Bioinformatics
+I also worked for 2 Biotech Companies building web apps and microservices for supporting R&D.
+
+Management of mRNA sequence data between web apps and AWS for its nucleic sequence design,
+registration, ordering, reviewal and tracking by admins in its pipeline from discovery to FDA approval
+
+Developed apps for biopharma
+
+re-building Computational Genomics suite of applications and UI/UX
+
+Currently exploring Sars-COV-2 which is the virus that causes Covid19.
+(screenshot|snippet)
 
 ## Blockchains
 <!-- There's a lot of competition out there regarding blockchains. The best way to learn them is to run them and make your own decision. Run a node -->
