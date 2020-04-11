@@ -3,7 +3,7 @@ path: "/books"
 cover: "./books-ukraine.jpg"
 date: "2018-10-15"
 title: "Books"
-tags: ['tutorial', 'javascript', 'frontend']
+tags: ['education']
 published: true
 ---
 
@@ -68,5 +68,5 @@ A picture from the university I attended. I was born in '88
 ![RWU](./rwu.jpg)
 
 #### Favorite Writer
-is a tie between this guy and Christopher Hitchens:
+is a tie between Christopher Hitchens and this guy:
 ![Hemingway](./hemingway-books.jpg)

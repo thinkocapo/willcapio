@@ -36,8 +36,8 @@ const Index = ({ data }) => {
               cover={cover.childImageSharp.fluid}
               path={path}
               title={title}
-              date={date}
-              excerpt={excerpt}
+            
+            //   excerpt={excerpt}
             />
           );
         })}

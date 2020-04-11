@@ -3,7 +3,7 @@ path: "/music"
 cover: "./allston-setup.jpg"
 date: "2018-10-16"
 title: "Music"
-tags: ['tutorial', 'javascript', 'frontend']
+tags: ['music']
 published: true
 ---
 

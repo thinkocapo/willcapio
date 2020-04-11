@@ -3,7 +3,7 @@ path: "/top-photos"
 cover: "./horse.jpg"
 date: "2018-10-17"
 title: "Top Photos"
-tags: ['gatsby', 'news', 'other']
+tags: ['travel', 'photos']
 published: true
 ---
 La Finca, Colombia 2017

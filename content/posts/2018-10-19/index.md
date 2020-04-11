@@ -3,7 +3,7 @@ path: "/software-journey"
 cover: "./pinata-rocket-ship.jpg"
 date: "2018-10-19"
 title: "Software Journey"
-tags: ['tutorial', 'javascript', 'frontend']
+tags: ['software', 'travel']
 published: true
 ---
 

@@ -1,9 +1,9 @@
 ---
 path: "/education-and-healthcare"
-cover: "../2018-10-17/barn.jpg"
+cover: "./ukraine-office.jpg"
 date: "2018-10-18"
 title: "Education and Healthcare"
-tags: ['tutorial', 'javascript', 'frontend']
+tags: ['education', 'software']
 published: true
 ---
 

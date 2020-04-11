@@ -3,7 +3,7 @@ path: "/travel-photo-albums"
 cover: "../2018-10-20/medellin-style.png"
 date: "2018-10-20"
 title: "Travel Photo Albums"
-tags: ['gatsby', 'tutorial']
+tags: ['travel', 'photos']
 published: true
 ---
 ## Brazil
