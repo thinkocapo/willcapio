@@ -22,10 +22,13 @@ const About = center => (
     <Helmet title={'About'} />
     <Header title="About Time">to meet Will</Header>
     <Container left={center}>
-      <h2><a href="https://github.com/thinkocapo">Github</a></h2>
-      <h2><a href="https://linkedin.com/in/williamcapozzoli">LinkedIn</a></h2>
+      <h2>Github</h2>
+      <p><a href="https://github.com/thinkocapo">https://github.com/thinkocapo</a></p>
+      <h2>LinkedIn</h2>
+      <p><a href="https://linkedin.com/in/williamcapozzoli">https://linkedin.com/in/williamcapozzoli</a></p>
       {/* <p>I'm a software engineer. I work in Sales. I have a B.S. in Biology. I speak 5 languages.</p> */}
 
+      <h2>About Me</h2>
       <p>I scooter</p>
       <img src={scooter} alt="Scooter" />
       <p>I skate</p>
