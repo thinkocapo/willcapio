@@ -100,6 +100,7 @@ const BlogList = ({ path, cover, title, date, excerpt, tags }) => (
           <Title>{title}</Title>
         </Link>
         <TagsBlock list={tags} />
+        {/* TODO - try writing excerpt note for each so looks nicer? */}
         {/* {excerpt} */}
       </Information>
     </Wrapper>
