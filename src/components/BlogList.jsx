@@ -101,7 +101,7 @@ const BlogList = ({ path, cover, title, date, excerpt, tags }) => (
         </Link>
         <TagsBlock list={tags} />
         {/* TODO - try writing excerpt note for each so looks nicer? */}
-        {/* {excerpt} */}
+        {excerpt.slice(0,84)}
       </Information>
     </Wrapper>
   </Container>

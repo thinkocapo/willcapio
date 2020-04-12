@@ -6,6 +6,8 @@ title: "Travel Photo Albums"
 tags: ['travel', 'photos']
 published: true
 ---
+International photos from backpacking trips and living stints abroad.               
+
 ## Brazil
 **2015**  
 [243 photos](https://goo.gl/photos/SH6FDxbaewsrX3vx9)

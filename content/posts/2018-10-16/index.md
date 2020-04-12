@@ -7,6 +7,8 @@ tags: ['music']
 published: true
 ---
 
+The ways music intersects and shapes my life.                                       
+
 # Music
 Let's get serious
 ![Piano Sword](./music-piano-sword.jpg)

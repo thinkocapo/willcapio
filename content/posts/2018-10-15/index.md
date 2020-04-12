@@ -6,6 +6,7 @@ title: "Books"
 tags: ['education']
 published: true
 ---
+Books I've read and literary observations.                                                 
 
 #### 2020
 How The West Won: The Neglected Story of The Triumph of Modernity by Rodney Stark

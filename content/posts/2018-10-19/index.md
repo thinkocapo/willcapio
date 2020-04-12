@@ -7,6 +7,8 @@ tags: ['software', 'travel']
 published: true
 ---
 
+The story of why and how I started to code, and the places it's taken me.             
+
 # Software Journey
 **2014** started programming in C++ as a hobby  
 **2015** started programming in javascript full-time by leaving my job and moving to Brazil:

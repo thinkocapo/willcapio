@@ -6,6 +6,8 @@ title: "Top Photos"
 tags: ['travel', 'photos']
 published: true
 ---
+Favorite photos from my adventures.                                                     
+
 La Finca, Colombia 2017
 ![Horse](./horse.jpg)
 Barn, Colombia 2017
