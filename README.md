@@ -151,26 +151,54 @@ npm format
 └── gatsby-node.js # Generate posts/tags and modify webpack
 ```
 
-## Notes
-Can't open/collapse the headings on Software post because it's markdown
-
-Can open/collapse the headings on About page - can because jsx
-
 ## TODO
 
-#### Code Examples | Topics/Areas of Learning
-My favorite languages...
+#### other
+1. check memoir document on GDrive, everything underlined....
 
-Idempotency  
-I liked this concept. Here's from grad school course:  
-(snippet)  
+2. pics from : breckenridge hostel, ukrainian toys in store,  US/MExican border
+
+FOOTBALL + RAVES soccer stadium + tailgate pics,  
+The best tailgates and fireworks I've ever seen.  
+
+ANIMALS san diego zoo, and others. south america.
+
+CARNAVAL  
+
+WRITINGS  
+
+SKATEBOARDERS  
+pics of me, skaters in other countries.  
+
+Got lost on way to beach, Barranquilla photo
+
+TOP PHOTOS - check Florida albums and timeline. Should be some in there.
+
+#### Code Snippets  
+on the education-and-healthcare page  
+
+#### Piano video  
+from wedding. Music blog post.  
+
+#### Code Page | Topics/Areas of Learning
+^ Page w/ collapsable Components/snippets
+
+
+1. My favorite languages...
+
+ 
 
 Python decorator I wrote because I didn't want to see all the multi-processing verbage:  
 however not good if sharing, because the behavior is quite hidden/encapsulated  
 
+?  
 Protocools, data types, ports, https:  
 Network programming, C/C++ Go, Unix  
 I like knowing there's no interpreter, feels more lightweight.  
+
+Idempotency  
+I liked this concept. Here's from grad school course:  
+(snippet) 
 
 Scripting. Shell scripts. Especially with blockchains.  
 (Bash Party screenshot + code snippet)  
@@ -187,14 +215,15 @@ always say going to. i like how you can send-keys from 1 to another.good for whe
 (screenshot | snippet)  
 
 .zshrc:  
+(snippet of some fav commands)  
 
 Undertaker:  
 Event Maker - protocools, new classes + data types, dig into internals of SDK and how compresses/encodes  
 I would never do 'int_age' because it's obvious what age is for. However with bytes, rowproxy, buffers, ORM classes (e.g. sqlalchemy's rowProxy), and converting between these, it's crucial for `row_proxy.data` or `dict_body`
 
 Kubernetes:  
-minikube repo
+minikube repo  
 
 
 gRPC:  
-grpc repo
+grpc repo  
