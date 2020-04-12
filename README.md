@@ -154,16 +154,40 @@ npm format
 ## TODO
 
 #### other
-1. check memoir document on GDrive, everything underlined....
+I. Snippets + Texts 
+SOFTWARE JOURNEY  
+story of why i started programming...?  
 
-2. pics from : breckenridge hostel, ukrainian toys in store,  US/MExican border
+EDUCATION&HEALTHCARE - FHIR and Biopython snippets
+
+II
+MUSIC Post
+piano video from wedding....  
+
+III. 
+
+ABOUT Page
+The dirt toad to mexico. US/MExican border  
+hockey in FLorida, jetski, 
+
+CODE Page
+for navbar...collapsable...code snippets | topics areas of interest/learning
+
 
 FOOTBALL + RAVES soccer stadium + tailgate pics,  
 The best tailgates and fireworks I've ever seen.  
 
-ANIMALS san diego zoo, and others. south america.
+CARNAVAL colombia, this is worthy of its own post.
 
-CARNAVAL  
+
+
+
+IV.  
+TOP PHOTOS - check Florida albums and timeline. Should be some in there.
+
+check memoir document on GDrive, everything underlined....
+
+ANIMALS san diego zoo, and others. south america. birds.
 
 WRITINGS  
 
@@ -172,22 +196,16 @@ pics of me, skaters in other countries.
 
 Got lost on way to beach, Barranquilla photo
 
-TOP PHOTOS - check Florida albums and timeline. Should be some in there.
-
-#### Code Snippets  
-on the education-and-healthcare page  
-
-#### Piano video  
-from wedding. Music blog post.  
-
-#### Code Page | Topics/Areas of Learning
-^ Page w/ collapsable Components/snippets
+pics from : breckenridge hostel, ukrainian toys in store,  
 
 
-1. My favorite languages...
 
- 
+## Code Page
+My favorite languages...  
 
+
+(Collapsable...)
+Examples... 
 Python decorator I wrote because I didn't want to see all the multi-processing verbage:  
 however not good if sharing, because the behavior is quite hidden/encapsulated  
 
