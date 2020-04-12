@@ -155,8 +155,6 @@ npm format
 
 #### other
 I. Snippets + Texts 
-SOFTWARE JOURNEY  
-story of why i started programming...?  
 
 EDUCATION&HEALTHCARE - FHIR and Biopython snippets
 
@@ -198,11 +196,12 @@ Got lost on way to beach, Barranquilla photo
 
 pics from : breckenridge hostel, ukrainian toys in store,  
 
+SOFTWARE JOURNEY  
+story of why i started programming...?  
 
 
-## Code Page
+## Code Page for Part II
 My favorite languages...  
-
 
 (Collapsable...)
 Examples... 
