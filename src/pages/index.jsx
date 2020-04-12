@@ -37,7 +37,7 @@ const Index = ({ data }) => {
               path={path}
               title={title}
             
-            //   excerpt={excerpt}
+              excerpt={excerpt}
             />
           );
         })}

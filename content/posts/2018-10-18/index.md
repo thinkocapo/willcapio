@@ -7,7 +7,7 @@ tags: ['education', 'software']
 published: true
 ---
 
-Places I studied. Courses I took. Areas of health science I've worked in.            
+Institutions I studied. Courses I took. Areas of health science I've worked in.            
 
 ## Education
 **2010** *Roger Williams University* B.S. Biology
