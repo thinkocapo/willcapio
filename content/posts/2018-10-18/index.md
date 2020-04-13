@@ -40,9 +40,35 @@ https://www.hl7.org/fhir/
 
 ![FHIR Interoperability](./fhir-interoperability.jpg)
 
-and how to declare some FHIR Resources which you can create on a FHIR server and map to your EMR's.  
-(snippet)  
+Here's the start of an endpoint I wrote for creating FHIR Resources with HL7 FHIR Java Classes
+```java
+// HAPI FHIR
+import ca.uhn.fhir.rest.client.api.IGenericClient;
+import ca.uhn.fhir.rest.api.MethodOutcome;
+// HL7 FHIR
+import org.hl7.fhir.r4.model.*;
+    
+@PostMapping("/claim")
+TransactionRes createNewClaim(@Valid @RequestBody NewClaimReq  reqBody) {
+    log.info(Thread.currentThread().getStackTrace()[1].toString());
 
+    // REFERENCES of RESOURCES  TO BE CREATED IN HAPI FHIR
+    ReferenceIdsRes refIds = new ReferenceIdsRes();
+
+    try {
+
+        // PATIENT
+        Patient patientInst = new MakePatient(reqBody).fhirItUp();
+        MethodOutcome patientOutcome = fhirClient.create().resource(patientInst).execute();
+        Reference patientReference = new MakeReference(patientOutcome).toReference();
+
+        // EPISODE OF CARE
+        EpisodeOfCare episodeOfCareInst = new MakeEpisodeOfCare(reqBody, patientReference).fhirItUp();
+        MethodOutcome episodeOfCareOutcome = fhirClient.create().resource(episodeOfCareInst).execute();
+        Reference episodeOfCareReference = new MakeReference(episodeOfCareOutcome).toReference();
+        episodeOfCareInst.setId(toStrRef(episodeOfCareOutcome));
+        ...
+```
 
 #### Bioinformatics
 I also worked for 2 Biotech Companies building web apps and microservices for supporting R&D.
@@ -66,7 +92,7 @@ https://medium.com/@thinkocapo/technical-evaluations-of-blockchain-and-how-to-st
 How to Send Ethereum via Command Line
 https://github.com/thinkocapo/hash-tronic
 
-```
+```javascript
 // Make web3 calls to get data for Raw Transaction object tx
 export async function createRawTransaction (web3, ether, recipient) {
     const gasPrice = web3.eth.gasPrice; // gasPrice.toString(10)) "10000000000000"

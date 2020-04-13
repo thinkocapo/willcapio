@@ -173,11 +173,7 @@ hockey in FLorida, jetski,
 CODE Page
 for navbar...collapsable...code snippets | topics areas of interest/learning
 
-
-
 CARNAVAL colombia, this is worthy of its own post.
-
-
 
 
 IV.  
