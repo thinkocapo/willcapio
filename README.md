@@ -158,11 +158,13 @@ I. Snippets + Texts
 
 EDUCATION&HEALTHCARE - FHIR and Biopython snippets
 
-II
+FOOTBALL + RAVES soccer stadium + tailgate pics,  
+The best tailgates and fireworks I've ever seen.  
+
 MUSIC Post
 piano video from wedding....  
 
-III. 
+II. 
 
 ABOUT Page
 The dirt toad to mexico. US/MExican border  
@@ -172,8 +174,6 @@ CODE Page
 for navbar...collapsable...code snippets | topics areas of interest/learning
 
 
-FOOTBALL + RAVES soccer stadium + tailgate pics,  
-The best tailgates and fireworks I've ever seen.  
 
 CARNAVAL colombia, this is worthy of its own post.
 
