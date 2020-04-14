@@ -64,10 +64,8 @@ A Literary Education and Other Essays - Joseph Epstein
 
 Capital in the Twenty-First Century by Thomas Piketty
 
-#### Alma Mater
-A picture from the university I attended. I was born in '88
-![RWU](./rwu.jpg)
-
 #### Favorite Writer
-is a tie between Christopher Hitchens and this guy:
+it's a tie between Christopher Hitchens and this guy:
+
+*"If you tried to do the things you said you'd do when you were drunk, it'd teach you to keep your mouth shut"* E.H.
 ![Hemingway](./hemingway-books.jpg)

@@ -152,26 +152,31 @@ npm format
 ```
 
 ## TODO
-hockey in FLorida, (jetski) 
 
 I. 
-FOOTBALL + RAVES soccer stadium + tailgate pics,  
+FOOTBALL & RAVES | CARNAVAL? | ANIMALS? | SKATEBOARDERS?
+
+FOOTBALL + RAVES
+soccer stadium + tailgate pics,  
 The best tailgates and fireworks I've ever seen.  
 
-ABOUT Page
-The dirt toad to mexico. US/MExican border  
-
-
 CARNAVAL colombia, this is worthy of its own post.
-
 
 II. 
 CODE Page
 for navbar...collapsable...code snippets | topics areas of interest/learning
 
+BLOCKCHAIN
+favorite resources. MasteringBitcoin
+
+ABOUT Page
+"I've driven along the US/Mexican border" to valide the lie
+
+MUSIC
+something on RATM. shirt?
 
 III.  
-TOP PHOTOS - check Florida albums and timeline. Should be some in there.
+TOP PHOTOS - saved a bunch to ~/Pictures folder. post FL/vaca's. but re-check all int'l photo albums. pics from : breckenridge hostel, ukrainian toys in store,  
 
 check memoir document on GDrive, everything underlined....
 
@@ -182,13 +187,10 @@ WRITINGS
 SKATEBOARDERS  
 pics of me, skaters in other countries.  
 
-Got lost on way to beach, Barranquilla photo
-
-pics from : breckenridge hostel, ukrainian toys in store,  
-
 SOFTWARE JOURNEY  
-story of why i started programming...?  
+the story of why i started programming
 
+florida hockey photo. jetski.
 
 ## Code Page for Part II
 My favorite languages...  

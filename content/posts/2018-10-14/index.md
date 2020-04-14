@@ -1,0 +1,26 @@
+---
+path: "/education"
+cover: "./harvard.jpg"
+date: "2018-10-15"
+title: "Education"
+tags: ['education']
+published: true
+---
+<!-- institutions I studied in. courses I took -->
+You can take the kid out of Walpole, but you can't take Walpole out of the kid...                     
+
+
+# Education
+**2010** *Roger Williams University* B.S. Biology
+
+**2015** *Fullstack Academy* Web Development Immersive
+
+**2016** *Harvard Extension School* Java for Distributed Programming & Hadoop
+
+**2017** *Consensys* Academy Developer Program for Ethereum Programming
+
+**2019** *Harvard Extension School* Principles of Big Data Processing  
+
+#### Alma Mater
+A picture from the university I attended. I was born in '88
+![RWU](./rwu.jpg)

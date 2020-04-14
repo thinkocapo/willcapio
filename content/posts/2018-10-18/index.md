@@ -1,24 +1,13 @@
 ---
-path: "/education-and-healthcare"
+path: "/healthcare-and-biotech"
 cover: "./ukraine-office.jpg"
 date: "2018-10-18"
-title: "Education and Healthcare"
-tags: ['education', 'software']
+title: "Healthcare | Biotech"
+tags: ['healthcare', 'software']
 published: true
 ---
 
-Institutions I studied. Courses I took. Areas of health science I've worked in.            
-
-# Education
-**2010** *Roger Williams University* B.S. Biology
-
-**2015** *Fullstack Academy* Web Development Immersive
-
-**2016** *Harvard Extension School* Java for Distributed Programming & Hadoop
-
-**2017** *Consensys* Academy Developer Program for Ethereum Programming
-
-**2019** *Harvard Extension School* Principles of Big Data Processing  
+Areas of health science I've worked in.                             
 
 # Healthcare & Biotech
 </br>
@@ -162,7 +151,7 @@ for s in sequences:
 
 ## Blockchains
 
-Technical Evaluations of Blockchain and How To Start Developing With Them by Will Cap
+Technical Evaluations of Blockchain and How To Start Developing With Them    
 https://medium.com/@thinkocapo/technical-evaluations-of-blockchain-and-how-to-start-developing-with-them-807a6e015824
 
 How to Send Ethereum using Node and Web3.js  
