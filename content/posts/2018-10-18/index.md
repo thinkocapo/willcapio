@@ -9,7 +9,7 @@ published: true
 
 Institutions I studied. Courses I took. Areas of health science I've worked in.            
 
-## Education
+# Education
 **2010** *Roger Williams University* B.S. Biology
 
 **2015** *Fullstack Academy* Web Development Immersive
@@ -20,23 +20,21 @@ Institutions I studied. Courses I took. Areas of health science I've worked in.
 
 **2019** *Harvard Extension School* Principles of Big Data Processing  
 
-## Healthcare & Biotech
+# Healthcare & Biotech
 </br>
 
-#### B.S. Biology
+### B.S. Biology
 
 My favorite courses were Genetics, Virology, Development Biology and Evolutionary Biology. Physics was cool too.
 
-#### Healthcare IT
+### Healthcare IT
 
-I worked 4 years at a EMR company so I'm competent with EHR | HIT | FHIR
+I worked 4 years at a EMR company called eClinicalWorks. I'm great with EHR, HIT and FHIR.
 
-#### FHIR 
+### FHIR 
 
-I enjoy programming with and the potential for interoperability.
+I enjoy [FHIR](https://www.hl7.org/fhir/ ) programming and its potential for interoperability.
 Here's a slide from a presentation I made on it:
-
-https://www.hl7.org/fhir/ 
 
 ![FHIR Interoperability](./fhir-interoperability.jpg)
 
@@ -70,26 +68,104 @@ TransactionRes createNewClaim(@Valid @RequestBody NewClaimReq  reqBody) {
         ...
 ```
 
-#### Biotech / Bioinformatics
-I also worked for 2 Biotech Companies building web apps and microservices for supporting R&D.
+### Biotech / Bioinformatics
+I worked for 2 Biotech Companies building web apps and microservices to support their R&D.
 
 Management of mRNA sequence data between web apps and AWS for its nucleic sequence design,
-registration, ordering, reviewal and tracking by admins in its pipeline from discovery to FDA approval
+registration, ordering, reviewal and tracking by admins in its pipeline from discovery to FDA approval. Re-building Computational Genomics suite of applications and UI/UX.
 
-Developed apps for biopharma
+I'm exploring Sars-COV-2 which is the virus that causes Covid19 (April, 2020).
 
-re-building Computational Genomics suite of applications and UI/UX
+https://github.com/thinkocapo/bio
+```python
+import sys
+# !{sys.executable} -m pip install biopython
 
-Currently exploring Sars-COV-2 which is the virus that causes Covid19.
-(screenshot|snippet)
+import pandas as pd
+all_data = pd.read_csv('sars-cov-2.csv')
+data = all_data[["Species","Genus","Family","Length","Host","BioSample","Sequence","GeographicLocation","NucleotideStatus","GenBankTitle", "IsolationSource", "Country"]]
+
+# number of sequences (records too)
+print(data["Sequence"].describe())
+
+# number of unique length'd sequences
+print(data["Length"].unique().shape)
+
+def multiple_of_3(coding_dna):
+    return True == (len(coding_dna) % 3 == 0)
+for coding_dna_strand in data["Sequence"]:
+    print(coding_dna_strand.count("N"), multiple_of_3(coding_dna_strand))
+
+# Confirm that Length refers to length of the Sequence
+len(data.iloc[4]['Sequence']) == data.iloc[4]['Length']
+
+##### PICK 1 SEQUENCE #####
+# sars-cov-19 sample sequence
+sample_seq = data.iloc[4]['Sequence']
+
+print(len(sample_seq))
+
+# check there are no missing nucleotides
+sample_seq.count("N")
+
+############ BIOPYTHON #############
+from Bio.Seq import Seq
+from Bio.Alphabet import IUPAC
+seq = Seq(sample_seq, IUPAC.unambiguous_dna)
+seq
+
+# seq is the coding strand
+coding_dna = seq
+
+# Reverse Complement (template strand)
+template_dna = coding_dna.reverse_complement()
+len(template_dna) == len(coding_dna)
+
+# Transcribe
+messenger_rna = coding_dna.transcribe()
+messenger_rna
+
+# Transcribe Test
+coding_dna_test = messenger_rna.back_transcribe()
+coding_dna_test.transcribe() == messenger_rna
+
+# Transcribe - TRUE 
+# If you do want to do a true biological transcription starting with the template strand, then this becomes a two-step process:
+template_dna.reverse_complement().transcribe()
+
+# CHECK
+template_dna.reverse_complement().transcribe() == coding_dna.transcribe()
+# output of either of these is the mRNA
+
+coding_dna.translate()
+
+# OPEN READING FRAMES, http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc295
+
+table = 11
+min_pro_len = 100
+
+for strand, nuc in [(+1, seq), (-1, seq.reverse_complement())]:
+    for frame in range(3):
+        length = 3 * ((len(seq)-frame) // 3) #Multiple of three
+        for pro in nuc[frame:frame+length].translate(table).split("*"):
+            if len(pro) >= min_pro_len:
+                print("%s...%s - length %i, strand %i, frame %i" \
+                      % (pro[:30], pro[-3:], len(pro), strand, frame))
+
+data.describe()
+sequences = data["Sequence"]
+
+for s in sequences:
+    print(s[:3], (len(s) % 3) == 0, s[-3:])
+
+```
 
 ## Blockchains
-<!-- There's a lot of competition out there regarding blockchains. The best way to learn them is to run them and make your own decision. Run a node -->
 
 Technical Evaluations of Blockchain and How To Start Developing With Them by Will Cap
 https://medium.com/@thinkocapo/technical-evaluations-of-blockchain-and-how-to-start-developing-with-them-807a6e015824
 
-How to Send Ethereum via Command Line
+How to Send Ethereum using Node and Web3.js  
 https://github.com/thinkocapo/hash-tronic
 
 ```javascript
@@ -118,8 +194,8 @@ export async function createRawTransaction (web3, ether, recipient) {
 How to Run a Cardano Node  
 https://github.com/thinkocapo/How-to-run-Cardano-Node
 
-How to Run a Bitcoin Node 
+How to Run a Bitcoin Node  
 https://github.com/thinkocapo/bitcoin-demo
 
-How to Run a EOS Node
+How to Run a EOS Node  
 https://github.com/thinkocapo/eos-instructions

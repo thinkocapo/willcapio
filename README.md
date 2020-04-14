@@ -152,30 +152,25 @@ npm format
 ```
 
 ## TODO
+hockey in FLorida, (jetski) 
 
-#### other
-I. Snippets + Texts 
-
-EDUCATION&HEALTHCARE - Biopython snippet. fix Bioinformatics/Biotech section
-
+I. 
 FOOTBALL + RAVES soccer stadium + tailgate pics,  
 The best tailgates and fireworks I've ever seen.  
 
-Sentry - picture from conference, and/or BASH Party screenshot "more useful things"
-
-II. 
-
 ABOUT Page
 The dirt toad to mexico. US/MExican border  
-hockey in FLorida, jetski, 
 
-CODE Page
-for navbar...collapsable...code snippets | topics areas of interest/learning
 
 CARNAVAL colombia, this is worthy of its own post.
 
 
-IV.  
+II. 
+CODE Page
+for navbar...collapsable...code snippets | topics areas of interest/learning
+
+
+III.  
 TOP PHOTOS - check Florida albums and timeline. Should be some in there.
 
 check memoir document on GDrive, everything underlined....

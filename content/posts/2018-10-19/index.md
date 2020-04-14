@@ -39,7 +39,6 @@ And took Slavic breaks:
 ![Pinata Rocket](./pinata-rocket-ship.jpg)
 
 and wrote this bash script to make ASCII art and play music:
-
 https://github.com/thinkocapo/bash-party-scripting
 ```bash
 ...

@@ -14,7 +14,7 @@ Let's get serious
 ![Piano Sword](./music-piano-sword.jpg)
 Like really serious
 ![Allston Mirrors](./allston-mirrors.jpg)
-I'll throw your band a house party for your band like I did in Cape Cod:
+I'll throw a house party for your band like I did in Cape Cod:
 ![Slumfest](./slumfest-2.jpg)
 Or I'll get people to put money down on a piano at the mall, from gently playing seventh chords on it.
 ![music-money.jpg](./music-money.jpg)
@@ -26,7 +26,7 @@ I play piano at weddings.
 https://www.youtube.com/watch?v=dZC7f8x3M_I
 [![Piano Wedding](./piano-wedding.jpg)](https://www.youtube.com/watch?v=dZC7f8x3M_I)
 
-I sing Kendrick Lamar (Wesley's Theory)
+I sing Kendrick Lamar (Wesley's Theory)  
 https://www.youtube.com/watch?v=2fmnkEQCPhA
 [![Sing Like Kendrick](./sing-like-kendrick.jpg)](https://www.youtube.com/watch?v=2fmnkEQCPhA)
 

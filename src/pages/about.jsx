@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Header } from 'components';
 import { Layout, Container } from 'layouts';
 import ReactMarkdown from 'react-markdown'
+import barranquilla from './road-barranquilla.jpg'
 import scooter from './scooter.jpg'
 import skateboard from './skate-street.jpg'
 import thirtyOne from './thirty-one.jpg'
@@ -37,6 +38,8 @@ const About = center => (
       <img src={thirtyOne} alt="ThirtyOne" />
       <p>Two Truths and One Lie</p>
       <img src={twoTruthsOneLie} alt="TwoTruthsOneLie" />
+      <p>I'll tell you about Barranquilla</p>
+      <img src={barranquilla} alt="barranquilla" />
 
       {/* <h2 style={{ 'color': 'blue' }}>Books</h2> */}
 
