@@ -6,5 +6,7 @@ title: "Football & Tailgates"
 tags: ['travel', 'music']
 published: true
 ---
-    
+
+The best tailgates and fireworks I've ever seen.                                     
+
 TODO photos

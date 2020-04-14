@@ -154,24 +154,25 @@ npm format
 ## TODO
 
 I. 
-FOOTBALL & RAVES | CARNAVAL? | ANIMALS? | SKATEBOARDERS?
 
 FOOTBALL + RAVES
 soccer stadium + tailgate pics,  
 The best tailgates and fireworks I've ever seen.  
-
-CARNAVAL colombia, this is worthy of its own post.
-
-II. 
-CODE Page
-for navbar...collapsable...code snippets | topics areas of interest/learning
 
 BLOCKCHAIN
 favorite resources. MasteringBitcoin  
 better photo, or something $. foreign money? street vendor? banks? military ukr photos? rave. ukr roof. vegas. favela (something 'decentralized')
 
 ABOUT Page
-"I've driven along the US/Mexican border" to valide the lie
+"I've driven along the US/Mexican border" to validatee the lie
+
+II. 
+CARNAVAL? | ANIMALS? | SKATEBOARDERS?
+CARNAVAL colombia, this is worthy of its own post.
+
+CODE Page
+for navbar...collapsable...code snippets | topics areas of interest/learning
+
 
 MUSIC
 something on RATM. shirt?
