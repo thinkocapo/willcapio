@@ -38,3 +38,19 @@ And took Slavic breaks:
 **2019** Sales Engineer at Sentry.io  
 ![Pinata Rocket](./pinata-rocket-ship.jpg)
 
+and wrote this bash script to make ASCII art and play music:
+
+https://github.com/thinkocapo/bash-party-scripting
+```bash
+...
+run() {
+        play_music
+        strobe_light
+}
+run
+```
+
+among other things:  
+https://github.com/thinkocapo/event-maker  
+https://github.com/sentry-demos/kubernetes  
+https://github.com/thinkocapo/golang-grpc  

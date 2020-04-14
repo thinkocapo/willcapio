@@ -156,13 +156,12 @@ npm format
 #### other
 I. Snippets + Texts 
 
-EDUCATION&HEALTHCARE - FHIR and Biopython snippets
+EDUCATION&HEALTHCARE - Biopython snippet. fix Bioinformatics/Biotech section
 
 FOOTBALL + RAVES soccer stadium + tailgate pics,  
 The best tailgates and fireworks I've ever seen.  
 
-MUSIC Post
-piano video from wedding....  
+Sentry - picture from conference, and/or BASH Party screenshot "more useful things"
 
 II. 
 
@@ -181,7 +180,7 @@ TOP PHOTOS - check Florida albums and timeline. Should be some in there.
 
 check memoir document on GDrive, everything underlined....
 
-ANIMALS san diego zoo, and others. south america. birds.
+ANIMALS san diego zoo, and others. south america. birds. "it's all happening At The Zoo" link to simon & garfunkel.
 
 WRITINGS  
 

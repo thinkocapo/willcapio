@@ -70,7 +70,7 @@ TransactionRes createNewClaim(@Valid @RequestBody NewClaimReq  reqBody) {
         ...
 ```
 
-#### Bioinformatics
+#### Biotech / Bioinformatics
 I also worked for 2 Biotech Companies building web apps and microservices for supporting R&D.
 
 Management of mRNA sequence data between web apps and AWS for its nucleic sequence design,
