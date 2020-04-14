@@ -7,7 +7,7 @@ tags: ['music']
 published: true
 ---
 
-The way music intersects and shapes my life.                                       
+The way music intersects and shapes my life. Plus some tunes.                            
 
 # Music
 Let's get serious

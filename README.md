@@ -167,13 +167,17 @@ CODE Page
 for navbar...collapsable...code snippets | topics areas of interest/learning
 
 BLOCKCHAIN
-favorite resources. MasteringBitcoin
+favorite resources. MasteringBitcoin  
+better photo, or something $. foreign money? street vendor? banks? military ukr photos? rave. ukr roof. vegas. favela (something 'decentralized')
 
 ABOUT Page
 "I've driven along the US/Mexican border" to valide the lie
 
 MUSIC
 something on RATM. shirt?
+
+open blog, use header or not?
+
 
 III.  
 TOP PHOTOS - saved a bunch to ~/Pictures folder. post FL/vaca's. but re-check all int'l photo albums. pics from : breckenridge hostel, ukrainian toys in store,  
