@@ -154,24 +154,29 @@ npm format
 ## TODO
 
 I. 
-
-FOOTBALL + RAVES
+FOOTBALL & TAILGATES
 soccer stadium + tailgate pics,  
 The best tailgates and fireworks I've ever seen.  
 
-BLOCKCHAIN
+BLOCKCHAIN -
 favorite resources. MasteringBitcoin  
-better photo, or something $. foreign money? street vendor? banks? military ukr photos? rave. ukr roof. vegas. favela (something 'decentralized')
+update the cover photo with foreign money, street vendor, military photo or favela (commerce or something decentralized)
+Speech by Cardano founder  . quotes.
+subreddits to follow.  
 
-ABOUT Page
+ABOUT - Page
 "I've driven along the US/Mexican border" to validatee the lie
 
 II. 
-CARNAVAL? | ANIMALS? | SKATEBOARDERS?
-CARNAVAL colombia, this is worthy of its own post.
-
-CODE Page
+CODE Page not blog post
 for navbar...collapsable...code snippets | topics areas of interest/learning
+
+III.
+LANGUAGE | SALES | CARNAVAL? | ANIMALS? | SKATEBOARDERS | SPORTS
+
+LANGUAGE - sanskrit. eastern philosophy, words for object orientation. learning techniques for spoken.
+
+CARNAVAL colombia, this is worthy of its own post.
 
 
 MUSIC
@@ -188,9 +193,6 @@ check memoir document on GDrive, everything underlined....
 ANIMALS san diego zoo, and others. south america. birds. "it's all happening At The Zoo" link to simon & garfunkel.
 
 WRITINGS  
-
-SKATEBOARDERS  
-pics of me, skaters in other countries.  
 
 SOFTWARE JOURNEY  
 the story of why i started programming

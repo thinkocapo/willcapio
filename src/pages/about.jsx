@@ -3,17 +3,18 @@ import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import { Header } from 'components';
 import { Layout, Container } from 'layouts';
-import ReactMarkdown from 'react-markdown'
+// import ReactMarkdown from 'react-markdown'
 import barranquilla from './road-barranquilla.jpg'
 import scooter from './scooter.jpg'
 import skateboard from './skate-street.jpg'
 import thirtyOne from './thirty-one.jpg'
 import twoTruthsOneLie from './two-truths-one-lie.jpg'
+import dirtRoadBoarder from './dirt-road-photos.jpg'
 
-const input = `
+// const input = `
 
 
-`
+// `
 
 // TODO - React function so can pass an array of books...
 // OPTIONAL - insert some quotes
@@ -38,8 +39,10 @@ const About = center => (
       <img src={thirtyOne} alt="ThirtyOne" />
       <p>Two Truths and One Lie</p>
       <img src={twoTruthsOneLie} alt="TwoTruthsOneLie" />
-      <p>I'll tell you about Barranquilla</p>
-      <img src={barranquilla} alt="barranquilla" />
+      <p>I drove on a dirt rode along the US/Mexican border. Forgot my bathing suit.</p>
+      <img src={dirtRoadBoarder} alt="DirtRoadBorder" />
+      <p>But I'll tell you a story about Barranquilla</p>
+      <img src={barranquilla} alt="Barranquilla" />
 
       {/* <h2 style={{ 'color': 'blue' }}>Books</h2> */}
 
