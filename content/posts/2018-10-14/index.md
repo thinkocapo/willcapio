@@ -7,7 +7,7 @@ tags: ['education']
 published: true
 ---
 <!-- institutions I studied in. courses I took -->
-You can take the kid out of Walpole, but you can't take Walpole out of the kid...                     
+You can take the kid out of Walpole, but you can't take Walpole out of the kid                     
 
 
 # Education

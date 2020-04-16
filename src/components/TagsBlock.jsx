@@ -29,7 +29,7 @@ const TagsBlock = ({ list }) => (
       list.map(tag => {
         const upperTag = tag.charAt(0).toUpperCase() + tag.slice(1);
         return (
-          <div></div>
+          <div key={tag}></div>
         //   <Link key={tag} to={`/tags/${tag}`}>
         //     <span>{upperTag}</span>
         //   </Link>
