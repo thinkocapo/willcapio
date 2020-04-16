@@ -8,27 +8,36 @@ published: true
 ---
 Favorite photos from my adventures.                                                     
 
-La Finca, Colombia 2017
+La Finca, Interior, Colombia 2017
 ![Horse](./horse.jpg)
-Barn, Colombia 2017
+
 ![Barn](./barn.jpg)
-View of Valley, Colombia 2017
+
 ![Valley](./view-of-valley.jpg)
-Mother Cow, Colombia 2017
+
 ![Cow](./mother-cow.jpg)
+
+Santa Elena, Colombia 2018
+![Santa Elena Cow](./colombia-cow.jpg)
+
 Niteroi, Brazil 2015
 ![Niteroi](./niteroi.jpg)
+
 Recife, Brazil 2015
 ![Brazil Horse](./brazil-horse.jpg)
 
-<!-- Beach
-![Beach](./floripa-beach.jpg) -->
+Del Ruiz, Colombia 2013
+![Del Ruiz Colombia](./truck-del-ruiz.jpg)
 
-<!-- Vidigal 2014
-![Vidigal](./vidigal.jpg) -->
+![Dog Del Ruiz](./dog-del-ruiz.jpg)
 
-<!-- Complexo de Alemao 2014
-![Complexo](./complexo.jpg) -->
+Amazon, Brazil 2013
+![Manaus Amazon](./manaus-boat.JPG)
+
+![Kayak Amazon](./kayak-amazon.jpg)
+
+New Orleans, Louisiana 2011
+![New Orleans Music](./music-new-orleans.jpg)
 
 <!-- Favela 2014
 ![Favela](./favela.jpg) -->
