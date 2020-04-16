@@ -7,7 +7,7 @@ tags: ['healthcare', 'software']
 published: true
 ---
 
-Areas of health science I've worked in.                             
+Areas of health science I've worked in.                                             
 
 # Healthcare & Biotech
 </br>

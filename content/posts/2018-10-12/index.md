@@ -1,6 +1,6 @@
 ---
 path: "/blockchain"
-cover: "./juggle-swords.jpg"
+cover: "./favela.jpg"
 date: "2018-10-12"
 title: "Blockchain"
 tags: ['blockchain', 'software']

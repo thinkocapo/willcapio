@@ -160,12 +160,8 @@ The best tailgates and fireworks I've ever seen.
 
 BLOCKCHAIN -
 favorite resources. MasteringBitcoin  
-update the cover photo with foreign money, street vendor, military photo or favela (commerce or something decentralized)
 Speech by Cardano founder  . quotes.
 subreddits to follow.  
-
-ABOUT - Page
-"I've driven along the US/Mexican border" to validatee the lie
 
 II. 
 CODE Page not blog post

@@ -2,7 +2,7 @@
 path: "/football-and-tailgates"
 cover: "./argentina-futbol.jpg"
 date: "2018-10-13"
-title: "Football & Tailgates"
+title: "Futbol & Tailgates"
 tags: ['travel', 'music']
 published: true
 ---
