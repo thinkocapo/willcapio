@@ -154,26 +154,23 @@ npm format
 ## TODO
 
 I. 
-FOOTBALL & TAILGATES
-soccer stadium + tailgate pics,  
-The best tailgates and fireworks I've ever seen.  
+CODE Page not blog post
+for navbar...collapsable...code snippets | topics areas of interest/learning
 
-BLOCKCHAIN -
+II. 
+BLOCKCHAIN
 favorite resources. MasteringBitcoin  
 Speech by Cardano founder  . quotes.
 subreddits to follow.  
 
-II. 
-CODE Page not blog post
-for navbar...collapsable...code snippets | topics areas of interest/learning
-
 III.
-LANGUAGE | SALES | CARNAVAL? | ANIMALS? | SKATEBOARDERS | SPORTS
+LANGUAGE | SALES | ANIMALS | SPORTS
 
 LANGUAGE - sanskrit. eastern philosophy, words for object orientation. learning techniques for spoken.
 
-CARNAVAL colombia, this is worthy of its own post.
 
+CARNAVAL colombia, this is worthy of its own post.
+SKATEBOARDERS
 
 MUSIC
 something on RATM. shirt?
