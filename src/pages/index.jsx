@@ -20,6 +20,9 @@ const PostWrapper = styled.div`
   }
 `;
 
+// const { cover, path, title, date } = frontmatter; 
+
+
 const Index = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
@@ -29,7 +32,7 @@ const Index = ({ data }) => {
       <PostWrapper>
         {edges.map(({ node }) => {
           const { id, excerpt, frontmatter } = node;
-          const { cover, path, title, date } = frontmatter;
+          const { cover, path, title } = frontmatter; 
           return (
             <PostList
               key={id}

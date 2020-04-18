@@ -154,31 +154,36 @@ npm format
 ## TODO
 
 I. 
-CODE Page not blog post
-for navbar...collapsable...code snippets | topics areas of interest/learning
+CODE Page
+collapsable...code snippets | topics areas of interest/learning
 
 II. 
-BLOCKCHAIN
-favorite resources. MasteringBitcoin  
-Speech by Cardano founder  . quotes.
-subreddits to follow.  
-
-III.
 LANGUAGE | SALES | ANIMALS | SPORTS
 
 LANGUAGE - sanskrit. eastern philosophy, words for object orientation. learning techniques for spoken.
 
 
-CARNAVAL colombia, this is worthy of its own post.
-SKATEBOARDERS
+III.
+monitor MB's used.
+
+BLOCKCHAIN
+favorite resources. MasteringBitcoin  
+Speech by Cardano founder  . quotes.
+subreddits to follow.  
+
+
+CARNAVAL colombia, this is worthy of its own post?
+SKATEBOARDERS & AWESOME SHIT
+guy juggling swords..
+skateboarding SP, argentina (me) and others
 
 MUSIC
 something on RATM. shirt?
 
-open blog, use header or not?
-
 
 III.  
+IMG host research. have to pay somewhere. 
+
 TOP PHOTOS - saved a bunch to ~/Pictures folder. post FL/vaca's. but re-check all int'l photo albums. pics from : breckenridge hostel, ukrainian toys in store,  
 
 check memoir document on GDrive, everything underlined....

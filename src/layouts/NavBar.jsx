@@ -3,13 +3,6 @@ import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import Headroom from 'react-headroom';
 import logo from '../../static/logo/header-logo.png';
-// import {
-
-//     useRouteMatch,
-
-//   } from "react-router-dom";
-
-// let match = useRouteMatch();
 
 const StyledLink = styled(Link)`
   display: flex;
@@ -39,6 +32,8 @@ const NavBar = () => (
     <StyledLink to="/" style={{ 'color': 'white'}}>Will</StyledLink>
     <Nav>
       <Link to="/">Home</Link>
+      <Link to="/code">Code</Link>
+
       {/* <Link to="/software"> Software</Link> */}
       {/* <a href="http://localhost:8000/post-5">alskdfj</a> */}
       <Link to="/blog">Blog</Link>

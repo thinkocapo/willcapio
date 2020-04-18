@@ -126,6 +126,6 @@ PostList.propTypes = {
   cover: PropTypes.object.isRequired,
   path: PropTypes.string.isRequired,
   excerpt: PropTypes.string,
-  date: PropTypes.string.isRequired,
+  date: PropTypes.string, // used to be PropTypes.string.isRequired
   title: PropTypes.string.isRequired,
 };
