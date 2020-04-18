@@ -21,7 +21,7 @@ Books I've read and favorite writers
 | **2018** | |
 | My Beloved World | Sonia Sotomayor |
 | A Time For Truth: Reigniting The Promise of America | Ted Cruz |
-| The Autobiography of Ben Frankling | Ben Frankling |
+| The Autobiography of Ben Franklin | Ben Franklin |
 | The Art of Happiness | Dalai Lama |
 | **2017** | |
 | The McKinsey Way | Ethan Rasiel

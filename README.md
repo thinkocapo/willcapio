@@ -158,6 +158,31 @@ CODE Page
 collapsable...code snippets | topics areas of interest/learning
 "[Intervention] An <img> element was lazyloaded with loading=lazy, but had no dimensions specified. Specifying dimensions improves performance. See https://crbug.com/954323"
 
+https://react-bootstrap.github.io/components/accordion/
+
+or  
+https://github.com/react-component/collapse  
+http://react-component.github.io/collapse/examples/custom-icon.html  
+
+good
+https://www.devzonetech.com/demo/react-collapsible-component/
+
+good
+https://www.npmjs.com/package/react-collapsible
+
+
+
+or  
+https://reactstrap.github.io/components/collapse/
+
+https://reactjsexample.com/tag/accordion/
+
+https://react.semantic-ui.com/modules/accordion/
+
+https://react-bootstrap.github.io/utilities/transitions/
+
+https://reacttraining.com/reach-ui/accordion/
+
 II. 
 LANGUAGE | SALES | ANIMALS | SPORTS
 
