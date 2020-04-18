@@ -11,8 +11,6 @@ published: true
 
 Ask not what Reddit says, but what you can learn by running a bitcoin node            
 
-# Blockchains
-
 Technical Evaluations of Blockchain and How To Start Developing With Them    
 https://medium.com/@thinkocapo/technical-evaluations-of-blockchain-and-how-to-start-developing-with-them-807a6e015824
 

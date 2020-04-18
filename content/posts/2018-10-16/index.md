@@ -9,7 +9,6 @@ published: true
 
 The way music intersects and shapes my life. Plus some tunes.                            
 
-# Music
 Let's get serious
 ![Piano Sword](./music-piano-sword.jpg)
 
@@ -29,7 +28,7 @@ I play piano at weddings
 https://www.youtube.com/watch?v=dZC7f8x3M_I
 [![Piano Wedding](./piano-wedding.jpg)](https://www.youtube.com/watch?v=dZC7f8x3M_I)
 
-I sing Kendrick Lamar  
+I sing Kendrick Lamar (Wesley's Theory)  
 https://www.youtube.com/watch?v=2fmnkEQCPhA
 [![Sing Like Kendrick](./sing-like-kendrick.jpg)](https://www.youtube.com/watch?v=2fmnkEQCPhA)
 

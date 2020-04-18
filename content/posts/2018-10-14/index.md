@@ -9,8 +9,6 @@ published: true
 <!-- institutions I studied in. courses I took -->
 You can take the kid out of Walpole, but you can't take Walpole out of the kid                     
 
-
-# Education
 **2010** *Roger Williams University* B.S. Biology
 
 **2015** *Fullstack Academy* Web Development Immersive

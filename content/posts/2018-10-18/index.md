@@ -15,8 +15,6 @@ function myStuff () {
 }
 
 ``` -->
-# Healthcare & Biotech
-</br>
 
 ### B.S. Biology
 

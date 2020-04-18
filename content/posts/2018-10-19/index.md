@@ -9,7 +9,6 @@ published: true
 
 The story of why and how I started to code, and the places it's taken me.             
 
-# Software Journey
 **2014** started programming in C++ as a hobby  
 **2015** started programming in javascript full-time by leaving my job and moving to Brazil:
 ![Brazil Office](./brazil-office.jpg)
@@ -18,7 +17,7 @@ Got an internship at Educare.com.br with these guys:
 And bit by a dog when I was skateboarding in Argentina:
 ![Dog Bite](./dog-bite.jpg)
 
-He said it tasted GREAT. I'm never afraid to take one for the team:
+I'm never afraid to take one for the team:
 ![Soccer](./sao-paulo-soccer.jpg)
 
 **2015** I left Brazil to attend Fullstack Academy (NYC) to go from amateur to professional developer. I learned to make super useful things:

@@ -183,6 +183,12 @@ https://react-bootstrap.github.io/utilities/transitions/
 
 https://reacttraining.com/reach-ui/accordion/
 
+EDUCATION
+better photo, high-quality. something cambridge or rwu or other
+
+titles...
+either show them at top of markdown page or don't. be consistent.
+
 II. 
 LANGUAGE | SALES | ANIMALS | SPORTS
 
