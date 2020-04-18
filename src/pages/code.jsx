@@ -5,20 +5,13 @@ import { Header } from 'components';
 import { Layout, Container } from 'layouts';
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import style from "react-syntax-highlighter/dist/cjs/styles/prism/prism"; // or prism/xonokai
-
-// 3. react-collapsable-content
-// import {
-//     CollapsibleComponent,
-//     CollapsibleHead,
-//     CollapsibleContent
-// } from "react-collapsible-component";
-// TODO need to override this with 'padding: 0 0px;'
-// ' panel-accordion additionalClassForContent'
-// import reactCollapsibleComponent from '../styles/reactCollapsibleComponent';
-
-// 4. react-collapsable
+import ReactMarkdown from 'react-markdown'
 import Collapsible from 'react-collapsible';
 
+const reactMarkDownInput = `
+#### Project Name
+The **important** details
+`
 const javascriptCode = `
 function myStuff() {
     console.log("do things in here")
@@ -38,6 +31,7 @@ const Code = center => (
         className="wc-collapsible" 
         openedClassName="wc-collapsible"
         transitionTime={transitionTime} tabIndex={0} trigger="+ Python">
+        {/* <ReactMarkdown className="wc-collapsible" source={reactMarkdownInput}/> */}
         <p className="wc-collapsible-p">Description about this python project code...</p>
         <SyntaxHighlighter language={'python'} style={style}>
             {pythonCode}
