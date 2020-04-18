@@ -5,10 +5,27 @@
     color: blue
 } */
 
-.pMarginTop {
+.wc-collapsible-p {
     margin-top: 1.45rem;
+    font-size: 18px;
 }
 
+/* TODO
+- try making the trigger text large like a Header
+*/
+
+.wc-collapsible {
+    /* background-color: lightgrey;
+    border-radius: 5px;
+    border: solid;
+    border-width: 2px; */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.wc-content-inner {
+    background-color: white;
+}
 .redme {
     color: red;
 }

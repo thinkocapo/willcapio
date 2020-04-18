@@ -19,71 +19,42 @@ import style from "react-syntax-highlighter/dist/cjs/styles/prism/prism"; // or 
 // 4. react-collapsable
 import Collapsible from 'react-collapsible';
 
-const code = `
+const javascriptCode = `
 function myStuff() {
-    console.log("do thingsi n here")
+    console.log("do things in here")
 }
 `;
-
-const pMarginTop = { 'marginTop': '1.45rem' }
-
-
+const transitionTime = 600
 const Code = center => (
   <Layout>
     <Helmet title={'Code'} />
     <Header title="Code">examples</Header>
     <Container left={center}>
-      <h2>This page is still under development...</h2>
+      <h2>This page is still under construction</h2>
       <p>For now see my code at <a href="https://github.com/thinkocapo">https://github.com/thinkocapo</a></p>
-  
-      <Collapsible className="redme" tabIndex={0} trigger="+ Python">
-        <p>Description about this python project code</p>
+      <p>Click...</p>
+
+      <Collapsible 
+        className="wc-collapsible" 
+        openedClassName="wc-collapsible"
+        transitionTime={transitionTime} tabIndex={0} trigger="+ Python">
+        <p className="wc-collapsible-p">Description about this python project code...</p>
         <SyntaxHighlighter language={'python'} style={style}>
             {pythonCode}
         </SyntaxHighlighter>
       </Collapsible>
 
-      <Collapsible transitionTime={400} trigger="+ Javascript">
-        <p>Description about this javascript project code</p>
+      <Collapsible 
+        className="wc-collapsible" 
+        openedClassName="wc-collapsible"
+        transitionTime={transitionTime} trigger="+ Javascript">
+        <p className="wc-collapsible-p">Description about this javascript project code...</p>
         <SyntaxHighlighter language={'javascript'} style={style}>
-            {code}
+            {javascriptCode}
         </SyntaxHighlighter>
       </Collapsible>
 
-        {/* 3 */}
-      {/* <CollapsibleComponent>
-        <CollapsibleHead className="additionalClassForHead">
-            + Python with FHIR API
-        </CollapsibleHead>
-        <CollapsibleContent className="wc-collapsible-content">
 
-            <p className="pMarginTop">Description about this python project code</p>
-            <SyntaxHighlighter language={'python'} style={style}>
-                {pythonCode}
-            </SyntaxHighlighter>
-        </CollapsibleContent>
-
-        <CollapsibleHead isExpanded={false}>
-            + Javascript
-        </CollapsibleHead>
-        <CollapsibleContent isExpanded={false}>
-            <p>Description about this javascript project code</p>
-            <SyntaxHighlighter language={'javascript'} style={style}>
-                {code}
-            </SyntaxHighlighter>
-        </CollapsibleContent>
-
-        <CollapsibleHead>+ Bash Shell Script</CollapsibleHead>
-        <CollapsibleContent>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.{" "}
-            </p>
-        </CollapsibleContent>
-      </CollapsibleComponent> */}
 
 
 
