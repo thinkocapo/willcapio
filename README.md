@@ -156,6 +156,7 @@ npm format
 I. 
 CODE Page
 collapsable...code snippets | topics areas of interest/learning
+"[Intervention] An <img> element was lazyloaded with loading=lazy, but had no dimensions specified. Specifying dimensions improves performance. See https://crbug.com/954323"
 
 II. 
 LANGUAGE | SALES | ANIMALS | SPORTS
