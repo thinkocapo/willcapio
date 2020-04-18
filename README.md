@@ -230,46 +230,54 @@ the story of why i started programming
 florida hockey photo. jetski.
 
 ## Code Page for Part II
-My favorite languages...  
 
-(Collapsable...)
-Examples... 
+1.
 Python decorator I wrote because I didn't want to see all the multi-processing verbage:  
 however not good if sharing, because the behavior is quite hidden/encapsulated  
 
-?  
-Protocools, data types, ports, https:  
-Network programming, C/C++ Go, Unix  
-I like knowing there's no interpreter, feels more lightweight.  
+2.
+React Redux + Reactive programming:  
+I like the concept of immutability avoiding updates by reference, or passing through lots of child/parent props. It's like a database in the browser.  
+The first thing I did on a Angular7 project for client was implement NgRedux.  
+(snippet)
 
-Idempotency  
-I liked this concept. Here's from grad school course:  
-(snippet) 
-
+3.
 Scripting. Shell scripts. Especially with blockchains.  
 (Bash Party screenshot + code snippet)  
 Something I find interesting. Usually a variable has a data type. But in shell script, that's not the case. e.g. gcp whoami  
 use it to your advantage.  
 
-React Redux + Reactive programming:  
-I like the concept of immutability avoiding updates by reference, or passing through lots of child/parent props. It's like a database in the browser.  
-The first thing I did on a Angular7 project for client was implement NgRedux.  
-(snippet)  
-
-Tmux:  
-always say going to. i like how you can send-keys from 1 to another.good for when managing lots of terminals. examples...  
-(screenshot | snippet)  
-
-.zshrc:  
-(snippet of some fav commands)  
-
+4.
+YES, divide into many parts
 Undertaker:  
 Event Maker - protocools, new classes + data types, dig into internals of SDK and how compresses/encodes  
 I would never do 'int_age' because it's obvious what age is for. However with bytes, rowproxy, buffers, ORM classes (e.g. sqlalchemy's rowProxy), and converting between these, it's crucial for `row_proxy.data` or `dict_body`
 
+5.
 Kubernetes:  
 minikube repo  
 
+6.
+Java FHIR resources...? or keep in HEALTHCARE card
+6.
+hash-tronic? or keep in BLOCKCHAIN card. or make BLOCKCHAIN card link to here? would have to setup anchor'd routing...
+6.
+could link here TO the HEALCHARE + BLOCKCHAIN cards...
 
-gRPC:  
+?  
+Protocools, data types, ports, https, Network programming, C/C++ Go, Unix  
+I like knowing there's no interpreter, feels more lightweight.  
+?
+Idempotency  
+I liked this concept. Here's from grad school course:  
+(snippet) 
+?
+Tmux:  (get practical example working again)
+always say going to. i like how you can send-keys from 1 to another.good for when managing lots of terminals. examples...  
+(screenshot | snippet)  
+?
+.zshrc:  (good enough?)
+(snippet of some fav commands)  
+?
+gRPC: (doesn't do enough)  
 grpc repo  

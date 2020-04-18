@@ -5,13 +5,14 @@ import { Header } from 'components';
 import { Layout, Container } from 'layouts';
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import style from "react-syntax-highlighter/dist/cjs/styles/prism/prism"; // or prism/xonokai
-import ReactMarkdown from 'react-markdown'
 import Collapsible from 'react-collapsible';
-
-const reactMarkDownInput = `
-#### Project Name
-The **important** details
-`
+// import ReactMarkdown from 'react-markdown'
+// const reactMarkDownInput = `
+// #### Project Name
+// The **important** details
+// `
+// hard to style this when you put it inside of the <Collapsible> component
+// <ReactMarkdown className="wc-collapsible" source={reactMarkdownInput}/>
 const javascriptCode = `
 function myStuff() {
     console.log("do things in here")
@@ -31,8 +32,7 @@ const Code = center => (
         className="wc-collapsible" 
         openedClassName="wc-collapsible"
         transitionTime={transitionTime} tabIndex={0} trigger="+ Python">
-        {/* <ReactMarkdown className="wc-collapsible" source={reactMarkdownInput}/> */}
-        <p className="wc-collapsible-p">Description about this python project code...</p>
+        <p className="wc-collapsible-p">Description about project and problem the code solves...</p>
         <SyntaxHighlighter language={'python'} style={style}>
             {pythonCode}
         </SyntaxHighlighter>
@@ -42,7 +42,7 @@ const Code = center => (
         className="wc-collapsible" 
         openedClassName="wc-collapsible"
         transitionTime={transitionTime} trigger="+ Javascript">
-        <p className="wc-collapsible-p">Description about this javascript project code...</p>
+        <p className="wc-collapsible-p">Description about this project and problem the code solves...</p>
         <SyntaxHighlighter language={'javascript'} style={style}>
             {javascriptCode}
         </SyntaxHighlighter>
