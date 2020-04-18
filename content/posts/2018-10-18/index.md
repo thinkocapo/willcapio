@@ -9,6 +9,12 @@ published: true
 
 Areas of health science I've worked in.                                             
 
+<!-- ```javascript
+function myStuff () {
+    console.log("do thingsi n here")
+}
+
+``` -->
 # Healthcare & Biotech
 </br>
 

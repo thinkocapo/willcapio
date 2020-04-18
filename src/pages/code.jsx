@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import { Header } from 'components';
 import { Layout, Container } from 'layouts';
-import ReactMarkdown from 'react-markdown'
+// import ReactMarkdown from 'react-markdown'
 
 // import barranquilla from './road-barranquilla.jpg'
 
@@ -26,13 +26,31 @@ import ReactMarkdown from 'react-markdown'
 // `
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-// import { coy } from "react-syntax-highlighter/dist/styles/prism";
+// /prism | /xonokai 
+import style from "react-syntax-highlighter/dist/cjs/styles/prism/prism";
+
 
 // const Prism = require('prismjs');
 import Prism from 'prismjs'
 
 // The code snippet you want to highlight, as a string
-const code = `var data = 1;`;
+// python
+// const code = `
+// for strand, nuc in [(+1, seq), (-1, seq.reverse_complement())]:
+//     for frame in range(3):
+//         length = 3 * ((len(seq)-frame) // 3) #Multiple of three
+//         for pro in nuc[frame:frame+length].translate(table).split("*"):
+//             if len(pro) >= min_pro_len:
+//                 print("%s...%s - length %i, strand %i, frame %i" \
+//                       % (pro[:30], pro[-3:], len(pro), strand, frame))
+// `;
+
+// javascript
+const code = `
+function myStuff() {
+    console.log("do thingsi n here")
+}
+`;
 
 // Returns a highlighted HTML string
 // const html = Prism.highlight(code, Prism.languages.javascript, 'javascript');
@@ -41,12 +59,13 @@ const code = `var data = 1;`;
 const Code = center => (
   <Layout>
     <Helmet title={'Code'} />
-    <Header title="Code Time">to say hi</Header>
+    <Header title="Code">examples</Header>
     <Container left={center}>
       <h2>Coming Soon...</h2>
       <p>For now see my code at <a href="https://github.com/thinkocapo">https://github.com/thinkocapo</a></p>
   
-      <SyntaxHighlighter language={'javascript'}>
+      <SyntaxHighlighter language={'javascript'} style={style}>
+      {/* <SyntaxHighlighter language={'javascript'}> */}
         {code}
       </SyntaxHighlighter>
 
