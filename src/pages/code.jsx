@@ -15,12 +15,9 @@ const Code = center => (
     <Helmet title={'Code'} />
     <Header title="Code Time">to say hi</Header>
     <Container left={center}>
-      <h2>Coming Soon. For now see Github</h2>
-      <p><a href="https://github.com/thinkocapo">https://github.com/thinkocapo</a></p>
-
-      <h2>Header2</h2>
-      <p>Info</p>
-
+      <h2>Coming Soon...</h2>
+      <p>For now see my code at <a href="https://github.com/thinkocapo">https://github.com/thinkocapo</a></p>
+      
       {/* <h2 style={{ 'color': 'blue' }}>Books</h2> */}
 
       <br></br>

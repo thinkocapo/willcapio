@@ -32,14 +32,14 @@ const Index = ({ data }) => {
       <PostWrapper>
         {edges.map(({ node }) => {
           const { id, excerpt, frontmatter } = node;
-          const { cover, path, title } = frontmatter; 
+          const { cover, path, title, date } = frontmatter; 
           return (
             <PostList
               key={id}
               cover={cover.childImageSharp.fluid}
               path={path}
               title={title}
-            
+              date={date}
               excerpt={excerpt}
             />
           );

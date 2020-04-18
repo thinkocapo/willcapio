@@ -104,7 +104,7 @@ const Info = styled.div`
 const Title = styled.h2`
   margin-bottom: 0.6rem;
 `;
-
+// <span>{date}</span>
 const PostList = ({ cover, path, date, title, excerpt }) => (
   <Wrapper>
     <Image>
@@ -112,7 +112,7 @@ const PostList = ({ cover, path, date, title, excerpt }) => (
     </Image>
     <StyledLink to={path}>
       <Info>
-        <span>{date}</span>
+        <span></span>
         <Title>{title}</Title>
         <span>{excerpt}</span>
       </Info>
@@ -126,6 +126,6 @@ PostList.propTypes = {
   cover: PropTypes.object.isRequired,
   path: PropTypes.string.isRequired,
   excerpt: PropTypes.string,
-  date: PropTypes.string, // used to be PropTypes.string.isRequired
+  date: PropTypes.string.isRequired, //can make it PropTypes.string instead
   title: PropTypes.string.isRequired,
 };
