@@ -24,7 +24,7 @@ function myStuff() {
     console.log("do things in here")
 }
 `;
-const transitionTime = 600
+const transitionTime = 100
 const Code = center => (
   <Layout>
     <Helmet title={'Code'} />
@@ -53,10 +53,6 @@ const Code = center => (
             {javascriptCode}
         </SyntaxHighlighter>
       </Collapsible>
-
-
-
-
 
       {/* <SyntaxHighlighter language={'javascript'} style={style}>
         {code}
