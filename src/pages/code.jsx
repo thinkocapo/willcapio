@@ -26,7 +26,7 @@ const Code = center => (
     <Container left={center}>
       <h2>This page is still under construction</h2>
       <p>For now see my code at <a href="https://github.com/thinkocapo">https://github.com/thinkocapo</a></p>
-      <p>Click</p>
+      <p>Click / Press</p>
 
       <Collapsible 
         className="wc-collapsible" 

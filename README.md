@@ -154,11 +154,13 @@ npm format
 ## TODO
 
 I. 
+mobile view 'About' button is cut off...
+remove 'Home' button from Navbar and make 'Will' in navbar say Home?
+OR
+make 'Will' in navbar dissappear when you render in Mobile
+
 CODE Page
 Build out the code snippets / project descriptions / problems solved. In html/jsx and SyntaxHighlighter markdown for the code.
-
-EDUCATION
-better photo, high-quality. something cambridge or rwu or other
 
 II. 
 LANGUAGE | SALES | ANIMALS | SPORTS
