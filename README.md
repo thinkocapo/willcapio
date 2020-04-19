@@ -162,6 +162,9 @@ make 'Will' in navbar dissappear when you render in Mobile
 CODE Page
 Build out the code snippets / project descriptions / problems solved. In html/jsx and SyntaxHighlighter markdown for the code.
 
+EDUCATION
+could mention Sam's Teach Yourself C++ todo's app kitchen on monastery ave, Crockford's Eloquent Javascript, PHP & MySQL Book, coderbyte, codeacademy
+
 II. 
 LANGUAGE | SALES | ANIMALS | SPORTS
 

@@ -6,7 +6,7 @@ title: "Travel Photo Albums"
 tags: ['travel', 'photos']
 published: true
 ---
-International photos from backpacking trips and living abroad.                         
+International photos from backpacking and living abroad.                         
 
 ## Brazil
 **2015**  
@@ -20,7 +20,7 @@ International photos from backpacking trips and living abroad.
 
 ## Colombia
 **2018**  
-[photos](https://photos.app.goo.gl/jTGiJoBwK9ozvNeG8)
+[167 photos](https://photos.app.goo.gl/jTGiJoBwK9ozvNeG8)
 
 **2017**  
 [180 photos](https://goo.gl/photos/Em4Ckax1yrDwhg227)
