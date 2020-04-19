@@ -7,7 +7,7 @@ tags: ['travel', 'music']
 published: true
 ---
 
-The best tailgates and fireworks I've ever seen.                                     
+The best fireworks I've ever seen.                                                   
 
 Argentina Flying Banner
 ![Argentina Flying Banner](./argentina-flying-banner.jpg)

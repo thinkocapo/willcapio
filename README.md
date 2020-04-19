@@ -155,45 +155,17 @@ npm format
 
 I. 
 CODE Page
-collapsable...code snippets | topics areas of interest/learning
-"[Intervention] An <img> element was lazyloaded with loading=lazy, but had no dimensions specified. Specifying dimensions improves performance. See https://crbug.com/954323"
-
-https://react-bootstrap.github.io/components/accordion/
-
-or  
-https://github.com/react-component/collapse  
-http://react-component.github.io/collapse/examples/custom-icon.html  
-
-good
-https://www.devzonetech.com/demo/react-collapsible-component/
-
-good
-https://www.npmjs.com/package/react-collapsible
-
-
-
-or  
-https://reactstrap.github.io/components/collapse/
-
-https://reactjsexample.com/tag/accordion/
-
-https://react.semantic-ui.com/modules/accordion/
-
-https://react-bootstrap.github.io/utilities/transitions/
-
-https://reacttraining.com/reach-ui/accordion/
+Build out the code snippets / project descriptions / problems solved. In html/jsx and SyntaxHighlighter markdown for the code.
 
 EDUCATION
 better photo, high-quality. something cambridge or rwu or other
-
-titles...
-either show them at top of markdown page or don't. be consistent.
 
 II. 
 LANGUAGE | SALES | ANIMALS | SPORTS
 
 LANGUAGE - sanskrit. eastern philosophy, words for object orientation. learning techniques for spoken.
 
+"[Intervention] An <img> element was lazyloaded with loading=lazy, but had no dimensions specified. Specifying dimensions improves performance. See https://crbug.com/954323"
 
 III.
 monitor MB's used.
@@ -281,3 +253,38 @@ always say going to. i like how you can send-keys from 1 to another.good for whe
 ?
 gRPC: (doesn't do enough)  
 grpc repo  
+
+
+
+## Other
+1.  
+https://react-bootstrap.github.io/components/accordion/  
+- involves downloading react-bootstrap, could cause problems.
+
+2.  
+https://github.com/react-component/collapse  
+http://react-component.github.io/collapse/examples/custom-icon.html  
+- requires .less and i don't even have .css
+
+3.  
+https://www.devzonetech.com/demo/react-collapsible-component/  
+https://github.com/devzonetech/react-collapsible-component  
++ works  
+- not a ton of css / styling comes with it...  
++ fixed css with global.css in src/styles BUT  
+- errors during 'gatsby build' on a window objet.  
+
+4.  
+https://www.npmjs.com/package/react-collapsible  
+https://github.com/glennflanagan/react-collapsible  
++ works  
+- requires too much adding of css + styling.  
+
+
+
+Didn't Try:  
+https://reactstrap.github.io/components/collapse/  
+https://reactjsexample.com/tag/accordion/  
+https://react.semantic-ui.com/modules/accordion/  
+https://react-bootstrap.github.io/utilities/transitions/  
+https://reacttraining.com/reach-ui/accordion/  

@@ -26,7 +26,7 @@ const Code = center => (
     <Container left={center}>
       <h2>This page is still under construction</h2>
       <p>For now see my code at <a href="https://github.com/thinkocapo">https://github.com/thinkocapo</a></p>
-      <p>Click...</p>
+      <p>Click</p>
 
       <Collapsible 
         className="wc-collapsible" 
@@ -67,6 +67,5 @@ for strand, nuc in [(+1, seq), (-1, seq.reverse_complement())]:
         length = 3 * ((len(seq)-frame) // 3) #Multiple of three
         for pro in nuc[frame:frame+length].translate(table).split("*"):
             if len(pro) >= min_pro_len:
-                print("%s...%s - length %i, strand %i, frame %i" \
-                      % (pro[:30], pro[-3:], len(pro), strand, frame))
+                print("%s...%s - length %i, strand %i, frame %i" % (pro[:30], pro[-3:], len(pro), strand, frame))
 `

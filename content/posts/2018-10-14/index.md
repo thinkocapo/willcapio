@@ -1,6 +1,6 @@
 ---
 path: "/education"
-cover: "./harvard.jpg"
+cover: "./harvard-will.jpg"
 date: "2018-10-14"
 title: "Education"
 tags: ['education']
