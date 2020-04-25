@@ -29,9 +29,9 @@ const Nav = styled.nav`
 
 const NavBar = () => (
   <Headroom calcHeightOnResize disableInlineStyles>
-    <StyledLink to="/" style={{ 'color': 'white'}}>Will</StyledLink>
+    <StyledLink to="/" style={{ 'color': 'white'}}>Home</StyledLink>
     <Nav>
-      <Link to="/">Home</Link>
+      {/* <Link to="/">Home</Link> */}
       <Link to="/code">Code</Link>
       <Link to="/blog">Blog</Link>
       <Link to="/about">About</Link>
