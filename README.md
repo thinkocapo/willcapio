@@ -154,10 +154,8 @@ npm format
 ## TODO
 
 I. 
-mobile view 'About' button is cut off...
-remove 'Home' button from Navbar and make 'Will' in navbar say Home?
-OR
-make 'Will' in navbar dissappear when you render in Mobile
++mobile view 'About' button is cut off...
++remove 'Home' button from Navbar and make 'Will' in navbar say Home?
 
 CODE Page
 Build out the code snippets / project descriptions / problems solved. In html/jsx and SyntaxHighlighter markdown for the code.
@@ -173,16 +171,13 @@ LANGUAGE - sanskrit. eastern philosophy, words for object orientation. learning 
 "[Intervention] An <img> element was lazyloaded with loading=lazy, but had no dimensions specified. Specifying dimensions improves performance. See https://crbug.com/954323"
 
 III.
-monitor MB's used.
-
 BLOCKCHAIN
 favorite resources. MasteringBitcoin  
 Speech by Cardano founder  . quotes.
 subreddits to follow.  
 
-
-CARNAVAL colombia, this is worthy of its own post?
-SKATEBOARDERS & AWESOME SHIT
+CARNAVAL colombia
+SKATEBOARDING & AWESOME SHIT
 guy juggling swords..
 skateboarding SP, argentina (me) and others
 
