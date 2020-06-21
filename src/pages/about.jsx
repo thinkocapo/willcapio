@@ -22,7 +22,7 @@ import dirtRoadBoarder from './dirt-road-photos.jpg'
 const About = center => (
   <Layout>
     <Helmet title={'About'} />
-    <Header title="About Time">to say hi</Header>
+    <Header title="About">to say hi</Header>
     <Container left={center}>
       <h2>Github</h2>
       <p><a href="https://github.com/thinkocapo">https://github.com/thinkocapo</a></p>

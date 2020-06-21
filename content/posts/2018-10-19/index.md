@@ -9,12 +9,16 @@ published: true
 
 The story of why and how I started to code, and the places it's taken me.             
 
-**2014** started programming in C++ as a hobby  
-**2015** started programming in javascript full-time by leaving my job and moving to Brazil:
+**2014** I started programming in C++ as a hobby. I enjoyed the feeling of creativty and power to fix things myself. I realized I was lacking this in my other jobs such as Consulting, where I felt like I was essentially a secretary cross-coordinating lots of teams, always waiting for approval and direction from managers. While the work I did was valuable and it solved problems, it left me feeling like I was never fixing things myself.
+
+*With people*, you have to wait 24-48 hours for a response to the emails you send them.  
+*With code*, the computer responds right away. This is much more efficient than dealing with humans. It felt great.
+
+**2015** I started programming in javascript full-time by leaving my job and moving to Brazil:
 ![Brazil Office](./brazil-office.jpg)
-Got an internship at Educare.com.br with these guys:  
+I got an internship at Educare.com.br with these guys:  
 ![Internship Colleauges](./internship-colleagues.jpg)
-And bit by a dog when I was skateboarding in Argentina:
+and was bit by a dog when I was skateboarding in Argentina:
 ![Dog Bite](./dog-bite.jpg)
 
 I'm never afraid to take one for the team:
@@ -23,7 +27,7 @@ I'm never afraid to take one for the team:
 **2015** I left Brazil to attend Fullstack Academy (NYC) to go from amateur to professional developer. I learned to make super useful things:
 ![Audio Visualizer](./audio-visualizer.jpg)
 
-**2016** 1st Software Developer job at Biotech Company. I developed web services to support R&D of mRNA therapeutic drugs and played music in Cambridge:
+**2016** I got my first job as a Software Developer, at a Biotech Company. I developed web services to support R&D of mRNA therapeutic drugs, and played music in Boston:
 ![Allston](./allston-dual-pianos.jpg)
 
 **2018** I worked for two web development agencies as a contractor, and did much of this remotely while travelling:
@@ -39,16 +43,8 @@ And took Slavic breaks:
 
 and wrote this bash script to make ASCII art and play music:  
 https://github.com/thinkocapo/bash-party-scripting
-```bash
-...
-run() {
-        play_music
-        strobe_light
-}
-run
-```
-
-among other things:  
-https://github.com/thinkocapo/event-maker  
-https://github.com/sentry-demos/kubernetes  
+among other things I've built there for Sales:  
+https://github.com/thinkocapo/undertaker
+https://github.com/sentry-demos/kubernetes
+https://github.com/sentry-demos/tracing  
 https://github.com/thinkocapo/golang-grpc  

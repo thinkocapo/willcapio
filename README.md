@@ -153,37 +153,39 @@ npm format
 
 ## TODO
 
-I. 
 +mobile view 'About' button is cut off...
 +remove 'Home' button from Navbar and make 'Will' in navbar say Home?
 
+I. 
+SKATEBOARDING & AWESOME SHIT
+guy juggling swords..
+skateboarding SP, argentina (me) and others
+
 CODE Page
-Build out the code snippets / project descriptions / problems solved. In html/jsx and SyntaxHighlighter markdown for the code.
+Undertaker. Build out the code snippets / project descriptions / problems solved. In html/jsx and SyntaxHighlighter markdown for the code.
+
+SOFTWARE JOURNEY  
+the story of why i started programming -> more details on my evolution / what I took interest in.
+
+ANIMALS | SPORTS  
+"it's all happening At The Zoo" link to simon & garfunkel.
+
+LANGUAGE - sanskrit. eastern philosophy, words for object orientation. my special learning approach for languages. Immersion. Google Translate.
+
+SALES - look at past cover letters. subs.
 
 EDUCATION
-could mention Sam's Teach Yourself C++ todo's app kitchen on monastery ave, Crockford's Eloquent Javascript, PHP & MySQL Book, coderbyte, codeacademy
-
-II. 
-LANGUAGE | SALES | ANIMALS | SPORTS
-
-LANGUAGE - sanskrit. eastern philosophy, words for object orientation. learning techniques for spoken.
-
-"[Intervention] An <img> element was lazyloaded with loading=lazy, but had no dimensions specified. Specifying dimensions improves performance. See https://crbug.com/954323"
+could mention Sam's Teach Yourself C++ todo's app kitchen on monastery ave, Crockford's Eloquent Javascript, PHP & MySQL Book, coderbyte, codeacademy  
+or in Software Journey page. or 1 picture with these 3 books... but Software Journey is more important
 
 III.
+
 BLOCKCHAIN
 favorite resources. MasteringBitcoin  
 Speech by Cardano founder  . quotes.
 subreddits to follow.  
 
 CARNAVAL colombia
-SKATEBOARDING & AWESOME SHIT
-guy juggling swords..
-skateboarding SP, argentina (me) and others
-
-MUSIC
-something on RATM. shirt?
-
 
 III.  
 IMG host research. have to pay somewhere. 
@@ -192,12 +194,7 @@ TOP PHOTOS - saved a bunch to ~/Pictures folder. post FL/vaca's. but re-check al
 
 check memoir document on GDrive, everything underlined....
 
-ANIMALS san diego zoo, and others. south america. birds. "it's all happening At The Zoo" link to simon & garfunkel.
-
-WRITINGS  
-
-SOFTWARE JOURNEY  
-the story of why i started programming
+WRITING?
 
 florida hockey photo. jetski.
 
