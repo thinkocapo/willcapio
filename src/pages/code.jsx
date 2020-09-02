@@ -56,7 +56,7 @@ Overview
 const ethereumCode = `
 
 export async function createRawTransaction (web3, ether, recipient) {
-  const gasPrice = web3.eth.gasPrice; // gasPrice.toString(10)) "10000000000000"
+  const gasPrice = web3.eth.gasPrice
   const txCount = web3.eth.getTransactionCount(process.env.fromAddress)
   var gasLimit = web3.eth.getBlock("latest").gasLimit
 
@@ -72,7 +72,7 @@ export async function createRawTransaction (web3, ether, recipient) {
   LOG.gasPriceInEther(gasPrice, web3)      
   LOG.rawTxData({nonce: txCount, gasPrice, gasLimit, to: recipient, value: ether, chainId: process.env.chainId, data: ""}, rawTx)
   
-  return new ethJsTx(rawTx) // Transaction: { raw: [<Buffer >], _fields: ['nonce',]}
+  return new ethJsTx(rawTx)
 }
 
 createRawTransaction(web3, ether, recipient)
@@ -87,10 +87,7 @@ createRawTransaction(web3, ether, recipient)
         }
       })
 })
-
-// optional
-// web3.eth.getTransaction(transactionHash [, callback])
-// web3.eth.getTransactionReceipt(hash [, callback])`
+`
 
 const bashCode = `
 # plays first song
