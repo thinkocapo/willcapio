@@ -153,40 +153,35 @@ npm format
 
 ## TODO
 
-+mobile view 'About' button is cut off...
 +remove 'Home' button from Navbar and make 'Will' in navbar say Home?
 
 I. 
 SOFTWARE JOURNEY / EDUCATION
-the story of why i started programming -> more details on my evolution / what I took interest in. Check FSA application.
-
-Sam's Teach Yourself C++ todo's app kitchen on monastery ave, PHP & MySQL Book, Crockford's Eloquent Javascript, Coderbyte, Codeacademy.
-.1 picture with these 3 books.
+the story of why i started programming -> more details on my evolution / what I took interest in. Check FSA application. Sam's Teach Yourself C++ todo's app kitchen on monastery ave, PHP & MySQL Book, Crockford's Eloquent Javascript, Coderbyte, Codeacademy.
+. One picture with these 3 books.
 
 SKATEBOARDING & AWESOME SHIT
-guy juggling swords..skateboarding SP, argentinaj..raves
+guy juggling swords..skateboarding SP, argentina..raves. Warning: This is the world.
 
 ANIMALS | SPORTS  
-"it's all happening At The Zoo" link to simon & garfunkel.
+"It's all happening At The Zoo" link to simon & garfunkel.
 
-LANGUAGE - sanskrit. eastern philosophy, words for object orientation. Write up about my special learning approach for languages. Immersion. Google Translate.
+LANGUAGE - Sanskrit. eastern philosophy, words for object orientation. Write up about my special learning approach for languages. Immersion. Google Translate.
 
 SALES - look at past cover letters..? pictures, experiences, stories. Italian subs.
 
 II.
 CODE Page
+Kubtel to Kubernetes.
 Android and gRPC
 In html/jsx and SyntaxHighlighter markdown for the code.
-
 
 III.
 
 BLOCKCHAIN
-favorite resources. MasteringBitcoin  
+Favorite resources. MasteringBitcoin  
 Speech by Cardano founder  . quotes.
 subreddits to follow.  
-
-CARNAVAL colombia
 
 III.  
 IMG host research. have to pay somewhere. 
@@ -195,7 +190,9 @@ TOP PHOTOS - saved a bunch to ~/Pictures folder. post FL/vaca's. but re-check al
 
 check memoir document on GDrive, everything underlined....
 
-WRITING?
+WRITINGS/LITERATURE(?)
+
+CARNAVAL colombia
 
 florida hockey photo. jetski.
 
@@ -213,9 +210,8 @@ The first thing I did on a Angular7 project for client was implement NgRedux.
 
 6.
 Java FHIR resources...? or keep in HEALTHCARE card
-6.
-hash-tronic? or keep in BLOCKCHAIN card. or make BLOCKCHAIN card link to here? would have to setup anchor'd routing...
-6.
+
+5.
 could link here TO the HEALCHARE + BLOCKCHAIN cards...
 
 ?  

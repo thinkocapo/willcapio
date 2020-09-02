@@ -153,7 +153,7 @@ const Code = center => (
         className="wc-collapsible" 
         openedClassName="wc-collapsible"
         transitionTime={transitionTime} trigger="+ Bash Script">
-        <p className="wc-collapsible-p">You are going to love this GIF. Especially when you use the included music. <a href="https://github.com/thinkocapo/hash-tronic">https://github.com/thinkocapo/hash-tronic</a></p>
+        <p className="wc-collapsible-p">You are going to love this GIF. Especially when you use the included music. <a href="https://github.com/thinkocapo/bash-party-scripting">https://github.com/thinkocapo/hash-tronic</a></p>
         <SyntaxHighlighter language={'bash'} style={style}>
             {bashCode}
         </SyntaxHighlighter>
