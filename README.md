@@ -157,26 +157,27 @@ npm format
 +remove 'Home' button from Navbar and make 'Will' in navbar say Home?
 
 I. 
+SOFTWARE JOURNEY / EDUCATION
+the story of why i started programming -> more details on my evolution / what I took interest in. Check FSA application.
+
+Sam's Teach Yourself C++ todo's app kitchen on monastery ave, PHP & MySQL Book, Crockford's Eloquent Javascript, Coderbyte, Codeacademy.
+.1 picture with these 3 books.
+
 SKATEBOARDING & AWESOME SHIT
-guy juggling swords..
-skateboarding SP, argentina (me) and others
-
-CODE Page
-Undertaker. Build out the code snippets / project descriptions / problems solved. In html/jsx and SyntaxHighlighter markdown for the code.
-
-SOFTWARE JOURNEY  
-the story of why i started programming -> more details on my evolution / what I took interest in.
+guy juggling swords..skateboarding SP, argentinaj..raves
 
 ANIMALS | SPORTS  
 "it's all happening At The Zoo" link to simon & garfunkel.
 
-LANGUAGE - sanskrit. eastern philosophy, words for object orientation. my special learning approach for languages. Immersion. Google Translate.
+LANGUAGE - sanskrit. eastern philosophy, words for object orientation. Write up about my special learning approach for languages. Immersion. Google Translate.
 
-SALES - look at past cover letters. subs.
+SALES - look at past cover letters..? pictures, experiences, stories. Italian subs.
 
-EDUCATION
-could mention Sam's Teach Yourself C++ todo's app kitchen on monastery ave, Crockford's Eloquent Javascript, PHP & MySQL Book, coderbyte, codeacademy  
-or in Software Journey page. or 1 picture with these 3 books... but Software Journey is more important
+II.
+CODE Page
+Android and gRPC
+In html/jsx and SyntaxHighlighter markdown for the code.
+
 
 III.
 
@@ -200,7 +201,7 @@ florida hockey photo. jetski.
 
 ## Code Page for Part II
 
-1.
+1. GOOD
 Python decorator I wrote because I didn't want to see all the multi-processing verbage:  
 however not good if sharing, because the behavior is quite hidden/encapsulated  
 
@@ -209,22 +210,6 @@ React Redux + Reactive programming:
 I like the concept of immutability avoiding updates by reference, or passing through lots of child/parent props. It's like a database in the browser.  
 The first thing I did on a Angular7 project for client was implement NgRedux.  
 (snippet)
-
-3.
-Scripting. Shell scripts. Especially with blockchains.  
-(Bash Party screenshot + code snippet)  
-Something I find interesting. Usually a variable has a data type. But in shell script, that's not the case. e.g. gcp whoami  
-use it to your advantage.  
-
-4.
-YES, divide into many parts
-Undertaker:  
-Event Maker - protocools, new classes + data types, dig into internals of SDK and how compresses/encodes  
-I would never do 'int_age' because it's obvious what age is for. However with bytes, rowproxy, buffers, ORM classes (e.g. sqlalchemy's rowProxy), and converting between these, it's crucial for `row_proxy.data` or `dict_body`
-
-5.
-Kubernetes:  
-minikube repo  
 
 6.
 Java FHIR resources...? or keep in HEALTHCARE card
