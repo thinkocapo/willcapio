@@ -151,6 +151,13 @@ npm format
 └── gatsby-node.js # Generate posts/tags and modify webpack
 ```
 
+## Run
+
+make  
+gatsby develop
+
+make build  
+gatsby build && gatsby serve
 ## TODO
 
 +remove 'Home' button from Navbar and make 'Will' in navbar say Home?
