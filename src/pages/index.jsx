@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import styled from '@emotion/styled';
 import { Header, PostList } from 'components';
 import { Layout } from 'layouts';
+import * as Sentry from '@sentry/gatsby'
 
 const PostWrapper = styled.div`
   display: flex;
