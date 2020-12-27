@@ -5,6 +5,12 @@ module.exports = {
     ...config,
   },
   plugins: [
+    {
+      resolve: "@sentry/gatsby/gatsby-browser",
+      options: {
+        dsn: "https://07ad5ecf6e3547f685117e58af5319cc@o87286.ingest.sentry.io/5570729",
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
     {
@@ -60,12 +66,6 @@ module.exports = {
         icon: config.favicon,
       },
     },
-    'gatsby-plugin-offline',
-    {
-      resolve: "@sentry/gatsby",
-      options: {
-        dsn: "https://07ad5ecf6e3547f685117e58af5319cc@o87286.ingest.sentry.io/5570729",
-      },
-    },
+    'gatsby-plugin-offline'
   ],
 };
