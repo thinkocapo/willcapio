@@ -25,6 +25,7 @@ const PostWrapper = styled.div`
 
 const Index = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
+  Sentry.captureMessage("App loaded");
   return (
     <Layout>
       <Helmet title={'willcap.io'} />
