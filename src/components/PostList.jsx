@@ -104,9 +104,14 @@ const Info = styled.div`
 const Title = styled.h2`
   margin-bottom: 0.6rem;
 `;
+
+var doSomething = function() { // obj is undefined
+  console.log("consider it done")
+}
+
 // <span>{date}</span>
 const PostList = ({ cover, path, date, title, excerpt }) => (
-  <Wrapper>
+  <Wrapper onClick={doSomething}>
     <Image>
       <Img fluid={cover} />
     </Image>
