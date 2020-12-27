@@ -4,6 +4,7 @@ import Img from 'gatsby-image';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import theme from '../../config/theme';
+import * as Sentry from '@sentry/gatsby'
 
 const Wrapper = styled.article`
   margin-bottom: 2rem;
@@ -105,13 +106,17 @@ const Title = styled.h2`
   margin-bottom: 0.6rem;
 `;
 
-var doSomething = function() { // obj is undefined
-  console.log("consider it done")
+var original = function () {
+
+}
+function doSomething(path) {
+  Sentry.setTag("card", path)
+  Sentry.captureMessage("Card selected");
 }
 
 // <span>{date}</span>
 const PostList = ({ cover, path, date, title, excerpt }) => (
-  <Wrapper onClick={doSomething}>
+  <Wrapper onClick={doSomething.bind(null, path)}>
     <Image>
       <Img fluid={cover} />
     </Image>
