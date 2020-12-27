@@ -10,7 +10,7 @@ module.exports = {
       options: {
         dsn: "https://07ad5ecf6e3547f685117e58af5319cc@o87286.ingest.sentry.io/5570729",
         release: new Date().getMonth()
-      },
+      }
     },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
