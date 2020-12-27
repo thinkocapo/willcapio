@@ -106,9 +106,6 @@ const Title = styled.h2`
   margin-bottom: 0.6rem;
 `;
 
-var original = function () {
-
-}
 function doSomething(path) {
   Sentry.setTag("card", path)
   Sentry.captureMessage("Card selected");
