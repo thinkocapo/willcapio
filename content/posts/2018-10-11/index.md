@@ -1,6 +1,6 @@
 ---
 path: "/art"
-cover: "./ripndip-logo-1.jpg"
+cover: "./frame-1.jpg"
 date: "2018-10-12"
 title: "Spray Paint"
 tags: ['art']
