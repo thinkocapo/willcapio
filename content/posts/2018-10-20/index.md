@@ -19,6 +19,9 @@ International photos from backpacking and living abroad.
 [186 photos](https://photos.app.goo.gl/3fUKMlJePlqxerMC2)
 
 ## Colombia
+**2021**  
+[175 photos](https://photos.app.goo.gl/911zej9CYQHUzjAp6)
+
 **2018**  
 [167 photos](https://photos.app.goo.gl/jTGiJoBwK9ozvNeG8)
 
