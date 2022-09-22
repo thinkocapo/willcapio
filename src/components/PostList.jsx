@@ -107,8 +107,7 @@ const Title = styled.h2`
 `;
 
 function doSomething(path) {
-  Sentry.setTag("card", path)
-  Sentry.captureMessage("Card selected");
+
 }
 
 // <span>{date}</span>
