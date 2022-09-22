@@ -107,7 +107,7 @@ const Title = styled.h2`
 `;
 
 function doSomething(path) {
-
+  Sentry.setTag("card", path)
 }
 
 // <span>{date}</span>
