@@ -32,6 +32,7 @@ const NavBar = () => (
     <StyledLink to="/" style={{ 'color': 'white'}}>Home</StyledLink>
     <Nav>
       {/* <Link to="/">Home</Link> */}
+      <Link to="/whereiswill">Where Is Will</Link>
       <Link to="/code">Code</Link>
       <Link to="/blog">Blog</Link>
       <Link to="/about">About</Link>

@@ -1,8 +1,8 @@
 ---
-path: "/travel-photo-albums"
+path: "/travel-photos"
 cover: "../2018-10-20/medellin-style.png"
 date: "2018-10-20"
-title: "Travel Photo Albums"
+title: "Travel Photos"
 tags: ['travel', 'photos']
 published: true
 ---

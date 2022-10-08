@@ -10,19 +10,12 @@ import skateboard from './skate-street.jpg'
 import thirtyOne from './thirty-one.jpg'
 import twoTruthsOneLie from './two-truths-one-lie.jpg'
 import dirtRoadBoarder from './dirt-road-photos.jpg'
-
-// const input = `
-
-
-// `
-
-// TODO - React function so can pass an array of books...
-// OPTIONAL - insert some quotes
+import slavNation from './slav_nation.png'
 
 const About = center => (
   <Layout>
     <Helmet title={'About'} />
-    <Header title="About">to say hi</Header>
+    <Header title="About">Hi</Header>
     <Container left={center}>
       <h2>Github</h2>
       <p><a href="https://github.com/thinkocapo">https://github.com/thinkocapo</a></p>
@@ -35,8 +28,10 @@ const About = center => (
       <img src={scooter} alt="Scooter" />
       <p>I skate</p>
       <img src={skateboard} alt="Skateboard" />
-      <p>I turned 31</p>
+      <p>I turned 31 in 2019</p>
       <img src={thirtyOne} alt="ThirtyOne" />
+      <p>I'm part Slav and won a Halloween Costume contest for it</p>
+      <img src={slavNation} alt="SlavNation" />
       <p>Two Truths and One Lie</p>
       <img src={twoTruthsOneLie} alt="TwoTruthsOneLie" />
       <p>I drove on a dirt rode along the US/Mexican border. Forgot my bathing suit.</p>

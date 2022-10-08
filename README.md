@@ -159,15 +159,15 @@ gatsby build && gatsby serve
 ```
 ## TODO
 
-+remove 'Home' button from Navbar and make 'Will' in navbar say Home?
-
 I. 
 SOFTWARE JOURNEY / EDUCATION
 the story of why i started programming -> more details on my evolution / what I took interest in. Check FSA application. Sam's Teach Yourself C++ todo's app kitchen on monastery ave, PHP & MySQL Book, Crockford's Eloquent Javascript, Coderbyte, Codeacademy.
 . One picture with these 3 books.
 
 SKATEBOARDING & AWESOME SHIT
-guy juggling swords..skateboarding SP, argentina..raves. Warning: This is the world.
+Warning: This is the world
+Guy juggling swords in FL   
+argentina..raves. 
 
 ANIMALS | SPORTS  
 "It's all happening At The Zoo" link to simon & garfunkel.
@@ -190,17 +190,18 @@ Speech by Cardano founder  . quotes.
 subreddits to follow.  
 
 III.  
-IMG host research. have to pay somewhere. 
+IMG host research. have to pay somewhere?
 
 TOP PHOTOS - saved a bunch to ~/Pictures folder. post FL/vaca's. but re-check all int'l photo albums. pics from : breckenridge hostel, ukrainian toys in store,  
 
 check memoir document on GDrive, everything underlined....
 
-WRITINGS/LITERATURE(?)
+WRITINGS/LITERATURE
+my writings from willcapo.blogspot?
 
 CARNAVAL colombia
 
-florida hockey photo. jetski.
+florida hockey photo. jetski. still need find it, check backups. put it in /about maybe.
 
 ## Code Page for Part II
 

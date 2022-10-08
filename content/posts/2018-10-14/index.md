@@ -20,5 +20,5 @@ You can take the kid out of Walpole, but you can't take Walpole out of the kid
 **2019** *Harvard Extension School* Principles of Big Data Processing  
 
 #### Alma Mater
-A picture from the university I attended. I was born in '88
+A picture from RWU
 ![RWU](./rwu.jpg)
