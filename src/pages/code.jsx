@@ -115,7 +115,7 @@ const Code = center => (
     <Helmet title={'Code'} />
     <Header title="Code">ode to code</Header>
     <Container left={center}>
-      <p>Natural languages, programming languages, and music all accomplish the same thing. Message me if you want to examine the similarities between Object Oriented Programming and Sanskrit. After all, "Padartha are the types of objectively real basic features that organise, structure and give identity to individual objects in the cosmos", according to the Vaisheshika.</p>
+      <p>"Natural languages, programming languages, and music all accomplish the same thing. Message me if you want to examine the similarities between Object Oriented Programming and Sanskrit. After all, "Padartha are the types of objectively real basic features that organise, structure and give identity to individual objects in the cosmos", according to the Vaisheshika."</p>
       
       <p>CLICK THINGS</p>
 
@@ -173,6 +173,17 @@ const Code = center => (
       {/* <SyntaxHighlighter language={'javascript'} style={style}>
         {code}
       </SyntaxHighlighter> */}
+      <br></br>
+      <h4>Some other things I worked on</h4>
+
+      <p>Demo of GRPC errors captured by Sentry  
+      https://github.com/thinkocapo/golang-grpc</p>
+
+      <p>A Go script that reads data out of Cloud Storage, transforms it and sends it up to Sentry.io.  
+      https://github.com/getsentry/replay
+      forked from
+      https://github.com/thinkocapo/undertaker  
+      </p>
     </Container>
   </Layout>
 );

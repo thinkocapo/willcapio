@@ -6,7 +6,7 @@ title: "Travel Photos"
 tags: ['travel', 'photos']
 published: true
 ---
-International photos from backpacking and living abroad.                         
+International photos from backpacking and living abroad.                             
 
 ## Brazil
 **2015**  

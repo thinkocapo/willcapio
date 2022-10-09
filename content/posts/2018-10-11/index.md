@@ -9,18 +9,18 @@ published: true
     
 <!-- That crypto candy.                                                                                                   -->
 
-Custom art work that adds color to your space or fun to your party.    
+Custom art work that adds color to your space or fun to your party.                 
 
 Title: [Ripndip Logo](https://www.ripndipclothing.com/)  
-Price: $1200  
+Price: Contact Me
 ![Simba](./ripndip-logo-1.jpg)
 
 Title: Simba  
-Price: $1300
+Price: Contact Me
 ![Simba](./simba-1.jpg)
 
 Title: Turtle Hoodie  
-Price: Not For Sale
+Price: Contact Me
 ![TurtleHoodie](./turtle-hoodie.jpg)
 
 Title: Red Hot Chili Flower  

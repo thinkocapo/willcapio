@@ -6,7 +6,7 @@ title: "Sanskrit"
 tags: ['education']
 published: true
 ---
-All roads and languages lead to the [ultimate reality](https://en.wikipedia.org/wiki/Brahmin) of Brahmin.
+All roads and languages lead to the [ultimate reality](https://en.wikipedia.org/wiki/Brahmin) of Brahmin.                                                                                                               
 
 ## Why Learn Sanskrit
 [10 Reasons Why You Should Learn Sanskrit](https://samskritabalasahityaparishad.org/why-learn-sanskrit)  
