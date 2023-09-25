@@ -10,7 +10,7 @@ import skateboard from './skate-street.jpg'
 import thirtyOne from './thirty-one.jpg'
 import twoTruthsOneLie from './two-truths-one-lie.jpg'
 import dirtRoadBoarder from './dirt-road-photos.jpg'
-import slavNation from './slav_nation.png'
+import slavNation from './slav_nation.jpg'
 
 const About = center => (
   <Layout>
