@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import { Header } from 'components';
 import { Layout, Container } from 'layouts';
-import will from './will_where_is_will_photo.png'
+import will from './will_where_is_will_photo.jpg'
 
 const placesAndDates = [
   { date: 'April 1st', place: 'Vienna, Austria'},
@@ -38,14 +38,15 @@ const WhereIsWill = center => (
       <p>I moved to Vienna, Austria on April 1st, 2022 for the job from SF.</p>
       <p>Here is a list of the places I've been in 2022.</p>
       <table>
+        <tbody>
         <tr>
           <th>Place</th>
           <th>Date (2022)</th> 
         </tr>
 
-        {placesAndDates.map(( obj ) => {
+        {placesAndDates.map(( obj, index ) => {
             return (
-              <tr>
+              <tr key={index}>
                 <td>{obj.place}</td>
                 <td>{obj.date}</td> 
               </tr>
@@ -53,8 +54,8 @@ const WhereIsWill = center => (
         })}
 
 
+        </tbody>
       </table>
-
       <p>Berlin and Porto were for work conferences</p>
 
       {/* <h2 style={{ 'color': 'blue' }}>Books</h2> */}
