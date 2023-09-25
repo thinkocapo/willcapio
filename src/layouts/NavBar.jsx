@@ -34,7 +34,7 @@ const NavBar = () => (
       {/* <Link to="/">Home</Link> */}
       <Link to="/whereiswill">Where Is Will</Link>
       <Link to="/code">Code</Link>
-      {/* <Link to="/blog">Blog</Link> */}
+      {/* <Link to="/blog">Blog</Link> */} 
       <Link to="/about">About</Link>
       {/* can't link to blog posts or external sites}
       {/* <a href="http://localhost:8000/post-5">alskdfj</a> */}
