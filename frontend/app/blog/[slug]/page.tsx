@@ -31,7 +31,6 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       <article className={styles.article}>
         <div className={styles.header}>
           <h1 className={styles.title}>{post.title}</h1>
-          <div className={styles.date}>{post.date}</div>
         </div>
         <div 
           className={styles.content}
