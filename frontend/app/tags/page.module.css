@@ -1,0 +1,42 @@
+.tagsContainer {
+  max-width: 70rem;
+  margin: 4rem auto;
+  padding: 2rem;
+}
+
+.tagsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.tagItem {
+  padding: 1rem 2rem;
+  background: linear-gradient(-45deg, #3e5fbc 0%, #284187 100%);
+  color: white;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.tagItem:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 600px) {
+  .tagsContainer {
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  .tagItem {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+

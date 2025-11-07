@@ -1,322 +1,239 @@
-<p align="center">
-  <a href="https://github.com/justinformentin/gatsby-v2-tutorial-starter">
-    <img
-      src="https://i.imgur.com/mW3HLrn.png"
-      height="80"
-      alt="gatsby-v2-tutorial-starter"
-      title="Gatsby v2 Tutorial Starter"
-    />
-  </a>
-</p>
+# WillCap.io
 
-<p align="center">
-  <a href="https://circleci.com/gh/justinformentin/gatsby-v2-tutorial-starter">
-    <img
-      src="https://circleci.com/gh/justinformentin/gatsby-v2-tutorial-starter.svg?style=svg"
-      alt="CircleCI"
-    />
-  </a>
-  <a href="https://codeclimate.com/github/justinformentin/gatsby-v2-tutorial-starter">
-    <img
-      src="https://codeclimate.com/github/justinformentin/gatsby-v2-tutorial-starter/badges/gpa.svg"
-      alt="Maintainability"
-    />
-  </a>
-  <a href="https://codeclimate.com/github/justinformentin/gatsby-v2-tutorial-starter">
-    <img
-      src="https://codeclimate.com/github/justinformentin/gatsby-v2-tutorial-starter/badges/issue_count.svg"
-      alt="Issues"
-    />
-  </a>
-  <a href="https://www.codacy.com/app/justinformentin/gatsby-v2-tutorial-starter?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=justinformentin/gatsby-v2-tutorial-starter&amp;utm_campaign=Badge_Grade">
-    <img
-      src="https://api.codacy.com/project/badge/Grade/c910ab2b18a24dde80cfc05b73c908aa"
-      alt="Code Quality"
-    />
-  </a>
-  <a href="https://david-dm.org/justinformentin/gatsby-v2-tutorial-starter">
-    <img
-      src="https://img.shields.io/david/justinformentin/gatsby-v2-tutorial-starter.svg"
-      alt="Dependencies"
-    />
-  </a>
-  <a href="https://github.com/prettier/prettier">
-    <img
-      src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg"
-      alt="styled with prettier"
-    />
-  </a>
-  <a href="https://www.netlify.com">
-    <img
-      src="https://img.shields.io/badge/deploys%20by-netlify-00c7b7.svg"
-      alt="deploys by netlify"
-    />
-  </a>
-</p>
+[![Next.js](https://img.shields.io/badge/Next.js-14+-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?style=flat-square&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5+-3178C6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python)](https://www.python.org/)
+[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=flat-square&logo=vercel)](https://vercel.com)
 
-<p align="center">
-  <strong>
-    View the demo at <a href="https://gatsby-tutorial-starter.netlify.com">gatsby-tutorial-starter.netlify.com</a>.
-  </strong>
-</p>
+A modern personal blog built with Next.js and FastAPI, featuring markdown-based content, tag filtering, and responsive design.
 
-<p align="center">
-  <strong>
-    Read the full step by step guide: <a href="https://justinformentin.com/guide-to-building-a-gatsby-site">Guide to Build a Gatsby Site with Perfect Pagespeed Scores</a></a>.
-  </strong>
-</p>
+## ✨ Features
 
-## Features
+- 📝 **Markdown Blog Posts** - Write posts in markdown with frontmatter
+- 🏷️ **Tag System** - Organize and filter posts by tags
+- 🖼️ **Image Support** - Optimized image handling and serving
+- 📱 **Responsive Design** - Mobile-first, works on all devices
+- ⚡ **Fast Performance** - Static generation with incremental updates
+- 🔍 **SEO Optimized** - Built-in metadata and Open Graph support
+- 🎨 **Modern UI** - Clean design with CSS Modules
+- 🚀 **Easy Deployment** - Optimized for Vercel
 
-- Gatsby v2
-- Emotion for styling
-- Code syntax highlighting
-- Tags
-- SEO
-  - Sitemap generation
-  - Schema.org JSON-LD for Google Rich Snippets
-  - Twitter Tags
-  - OpenGraph Tags for Facebook/Google+/Pinterest
-  - robots.txt
-- Typography.js
-- Typefaces for faster font loading
-- Offline Support
-- Manifest Support
-- Gatsby Image
-  - Responsive images
-  - Traced SVG Loading with Lazy-Loading
-  - WebP Support
-- Development tools
-  - ESLint for linting
-  - Prettier for code style
-  - CircleCI support
-  - Google Lighthouse Optimization
+## 🏗️ Architecture
 
-# Lighthouse Audit
+```
+┌─────────────────────────────────────────┐
+│              Vercel                     │
+├─────────────────────────────────────────┤
+│  Next.js Frontend  ◄──►  FastAPI Backend│
+│  (React + TypeScript)   (Python)        │
+└─────────────────────────────────────────┘
+```
 
-<p align="center">
-  <a href="https://github.com/justinformentin/gatsby-v2-tutorial-starter">
-    <img
-      src="https://i.imgur.com/YOVC76X.png"
-      alt="Google Lighthouse Audit"
-      title="Google Lighthouse Audit"
-    />
-  </a>
-</p>
+- **Frontend**: Next.js 14+ with App Router and TypeScript
+- **Backend**: FastAPI serving blog content via REST API
+- **Deployment**: Vercel with automatic HTTPS and global CDN
 
-# Usage
+## 🚀 Quick Start
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/justinformentin/gatsby-v2-tutorial-starter)
+### Prerequisites
+
+- Node.js 18+
+- Python 3.11+
+- npm or yarn
+
+### One-Command Start
 
 ```bash
-Download project
-# With `gatsby-cli`
-gatsby new my-site https://github.com/justinformentin/gatsby-v2-tutorial-starter
-
-OR
-
-# Cloning
-git clone my-site https://github.com/justinformentin/gatsby-v2-tutorial-starter.git
-cd my-site
-
-THEN
-
-# Install dependencies
-npm i
-
-# Start dev server
-gatsby develop
-
-# Build for production
-gatsby build
-
-# Format with Prettier
-npm format
-
+./start-dev.sh
 ```
 
-## Folder structure
+This starts both the frontend and backend servers. Visit:
+- **Frontend**: http://localhost:3000
+- **Backend API**: http://localhost:8000
+- **API Docs**: http://localhost:8000/docs
+
+### Manual Start
+
+**Backend:**
 ```bash
-├──.circleci # Circleci integration
-├── config # Theme and site metadata
-├── content # Post markdown and images
-├── src
-│   ├── components
-│   ├── layouts
-│   ├── pages
-│   ├── style
-│   └── templates # For Post and Tag page generation
-├── static # Images for logo and favicon, and robots.txt
-├── gatsby-config.js # Plugin loading and configuration
-└── gatsby-node.js # Generate posts/tags and modify webpack
+cd backend
+python3 -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn main:app --reload
 ```
 
-## Run
+**Frontend:**
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+## 📁 Project Structure
 
 ```
-gatsby develop
-gatsby build && gatsby serve
+willcapio-old/
+├── frontend/           # Next.js application
+│   ├── app/           # App Router pages
+│   ├── components/    # React components
+│   ├── lib/           # Utilities (API, theme)
+│   └── public/        # Static assets
+│
+├── backend/           # FastAPI application
+│   ├── main.py       # API server
+│   ├── content/      # Markdown blog posts
+│   └── requirements.txt
+│
+└── vercel.json       # Deployment configuration
 ```
-## TODO
 
-I. 
-SOFTWARE JOURNEY / EDUCATION
-the story of why i started programming -> more details on my evolution / what I took interest in. Check FSA application. Sam's Teach Yourself C++ todo's app kitchen on monastery ave, PHP & MySQL Book, Crockford's Eloquent Javascript, Coderbyte, Codeacademy.
-. One picture with these 3 books.
+## 🛠️ Tech Stack
 
-SKATEBOARDING & AWESOME SHIT
-Warning: This is the world
-Guy juggling swords in FL   
-argentina..raves. 
+### Frontend
+- Next.js 14+ (App Router)
+- TypeScript
+- CSS Modules
+- React 18
 
-ANIMALS | SPORTS  
-"It's all happening At The Zoo" link to simon & garfunkel.
+### Backend
+- FastAPI
+- Python Markdown
+- Frontmatter parsing
+- Uvicorn (ASGI server)
 
-LANGUAGE - Sanskrit. eastern philosophy, words for object orientation. Write up about my special learning approach for languages. Immersion. Google Translate.
+### Deployment
+- Vercel
+- Automatic HTTPS
+- Global CDN
 
-SALES - look at past cover letters..? pictures, experiences, stories. Italian subs.
+## 📝 Adding Blog Posts
 
-II.
-CODE Page
-Kubtel to Kubernetes.
-Android and gRPC
-In html/jsx and SyntaxHighlighter markdown for the code.
+1. Create a new directory in `backend/content/posts/`:
+   ```bash
+   mkdir backend/content/posts/2024-12-19
+   ```
 
-III.
+2. Create `index.md` with frontmatter:
+   ```markdown
+   ---
+   title: "My New Post"
+   date: "2024-12-19"
+   tags: ["tech", "blog"]
+   cover: "./cover-image.jpg"
+   ---
+   
+   Your post content here...
+   ```
 
-BLOCKCHAIN
-Favorite resources. MasteringBitcoin  
-Speech by Cardano founder  . quotes.
-subreddits to follow.  
+3. Add images to the same directory
 
-III.  
-IMG host research. have to pay somewhere?
+4. Restart the backend to see changes
 
-TOP PHOTOS - saved a bunch to ~/Pictures folder. post FL/vaca's. but re-check all int'l photo albums. pics from : breckenridge hostel, ukrainian toys in store,  
+## 🌐 Deployment
 
-check memoir document on GDrive, everything underlined....
+### Deploy to Vercel
 
-WRITINGS/LITERATURE
-my writings from willcapo.blogspot?
+```bash
+# Install Vercel CLI
+npm i -g vercel
 
-CARNAVAL colombia
+# Login
+vercel login
 
-florida hockey photo. jetski. still need find it, check backups. put it in /about maybe.
-
-## Code Page for Part II
-
-1. GOOD
-Python decorator I wrote because I didn't want to see all the multi-processing verbage:  
-however not good if sharing, because the behavior is quite hidden/encapsulated  
-
-2.
-React Redux + Reactive programming:  
-I like the concept of immutability avoiding updates by reference, or passing through lots of child/parent props. It's like a database in the browser.  
-The first thing I did on a Angular7 project for client was implement NgRedux.  
-(snippet)
-
-6.
-Java FHIR resources...? or keep in HEALTHCARE card
-
-5.
-could link here TO the HEALCHARE + BLOCKCHAIN cards...
-
-?  
-Protocools, data types, ports, https, Network programming, C/C++ Go, Unix  
-I like knowing there's no interpreter, feels more lightweight.  
-?
-Idempotency  
-I liked this concept. Here's from grad school course:  
-(snippet) 
-?
-Tmux:  (get practical example working again)
-always say going to. i like how you can send-keys from 1 to another.good for when managing lots of terminals. examples...  
-(screenshot | snippet)  
-?
-.zshrc:  (good enough?)
-(snippet of some fav commands)  
-?
-gRPC: (doesn't do enough)  
-grpc repo  
-
-
-
-## Other
-1.  
-https://react-bootstrap.github.io/components/accordion/  
-- involves downloading react-bootstrap, could cause problems.
-
-2.  
-https://github.com/react-component/collapse  
-http://react-component.github.io/collapse/examples/custom-icon.html  
-- requires .less and i don't even have .css
-
-3.  
-https://www.devzonetech.com/demo/react-collapsible-component/  
-https://github.com/devzonetech/react-collapsible-component  
-+ works  
-- not a ton of css / styling comes with it...  
-+ fixed css with global.css in src/styles BUT  
-- errors during 'gatsby build' on a window objet.  
-
-4.  
-https://www.npmjs.com/package/react-collapsible  
-https://github.com/glennflanagan/react-collapsible  
-+ works  
-- requires too much adding of css + styling.  
-
-
-Didn't Try:  
-https://reactstrap.github.io/components/collapse/  
-https://reactjsexample.com/tag/accordion/  
-https://react.semantic-ui.com/modules/accordion/  
-https://react-bootstrap.github.io/utilities/transitions/  
-https://reacttraining.com/reach-ui/accordion/  
-
+# Deploy to production
+vercel --prod
 ```
-var info={
 
-    timeOpened:new Date(),
-    timezone:(new Date()).getTimezoneOffset()/60,
+### Environment Variables
 
-    pageon(){return window.location.pathname},
-    referrer(){return document.referrer},
-    previousSites(){return history.length},
+Set `NEXT_PUBLIC_API_URL` in Vercel:
+- Development: `http://localhost:8000`
+- Production: `https://your-domain.vercel.app`
 
-    browserName(){return navigator.appName},
-    browserEngine(){return navigator.product},
-    browserVersion1a(){return navigator.appVersion},
-    browserVersion1b(){return navigator.userAgent},
-    browserLanguage(){return navigator.language},
-    browserOnline(){return navigator.onLine},
-    browserPlatform(){return navigator.platform},
-    javaEnabled(){return navigator.javaEnabled()},
-    dataCookiesEnabled(){return navigator.cookieEnabled},
-    dataCookies1(){return document.cookie},
-    dataCookies2(){return decodeURIComponent(document.cookie.split(";"))},
-    dataStorage(){return localStorage},
+## 📖 Documentation
 
-    sizeScreenW(){return screen.width},
-    sizeScreenH(){return screen.height},
-    sizeDocW(){return document.width},
-    sizeDocH(){return document.height},
-    sizeInW(){return innerWidth},
-    sizeInH(){return innerHeight},
-    sizeAvailW(){return screen.availWidth},
-    sizeAvailH(){return screen.availHeight},
-    scrColorDepth(){return screen.colorDepth},
-    scrPixelDepth(){return screen.pixelDepth},
+- **[Quick Start Guide](QUICK-START.md)** - Get up and running fast
+- **[Deployment Guide](DEPLOYMENT.md)** - Deploy to Vercel
+- **[Project Overview](PROJECT-OVERVIEW.md)** - Full technical overview
+- **[Migration Summary](MIGRATION-SUMMARY.md)** - What was changed
+- **[Migration Complete](MIGRATION-COMPLETE.md)** - Completion checklist
 
+## 🧪 Testing
 
-    latitude(){return position.coords.latitude},
-    longitude(){return position.coords.longitude},
-    accuracy(){return position.coords.accuracy},
-    altitude(){return position.coords.altitude},
-    altitudeAccuracy(){return position.coords.altitudeAccuracy},
-    heading(){return position.coords.heading},
-    speed(){return position.coords.speed},
-    timestamp(){return position.timestamp},
+```bash
+# Test the API
+./test-api.sh
 
+# Test frontend build
+cd frontend && npm run build
+```
 
-    };
-    ```
+## 📊 API Endpoints
+
+| Endpoint | Description |
+|----------|-------------|
+| `GET /api/posts` | List all blog posts |
+| `GET /api/posts/{slug}` | Get single post |
+| `GET /api/tags` | Get all tags |
+| `GET /api/posts/tag/{tag}` | Filter by tag |
+| `GET /api/site-config` | Site configuration |
+| `GET /docs` | API documentation |
+
+## 🎨 Customization
+
+### Theme Colors
+Edit `frontend/lib/theme.ts` to change colors, fonts, and styles.
+
+### Components
+React components are in `frontend/components/` with CSS Modules for styling.
+
+### API
+All API logic is in `backend/main.py`. Easy to extend with new endpoints.
+
+## 🔒 Security
+
+- ✅ CORS properly configured
+- ✅ Environment variables for configuration
+- ✅ No sensitive data in code
+- ✅ HTTPS on Vercel
+
+## 📈 Performance
+
+- ⚡ Static Site Generation (SSG)
+- 🔄 Incremental Static Regeneration (ISR)
+- 🖼️ Optimized image loading
+- 🌍 Global CDN distribution
+- 📱 Mobile-first responsive design
+
+## 🤝 Contributing
+
+This is a personal blog, but feel free to fork and adapt for your own use!
+
+## 📄 License
+
+MIT
+
+## 👤 Author
+
+**Will Cap**
+
+- Website: [WillCap.io](https://willcap.io)
+- Twitter: [@thinkocapo](https://twitter.com/thinkocapo)
+- GitHub: [@thinkocapo](https://github.com/thinkocapo)
+- LinkedIn: [williamcapozzoli](https://linkedin.com/in/williamcapozzoli)
+
+## 🙏 Acknowledgments
+
+- Originally built with Gatsby
+- Migrated to Next.js + FastAPI architecture
+- Deployed on Vercel
+
+---
+
+**Status**: ✅ Migration Complete  
+**From**: Gatsby v2  
+**To**: Next.js 14+ & FastAPI  
+
+Ready to deploy! 🚀

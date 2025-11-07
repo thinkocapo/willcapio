@@ -1,0 +1,57 @@
+.container {
+  max-width: 46rem;
+  margin: 3rem auto;
+  padding: 2rem;
+  line-height: 1.8;
+}
+
+.container h2 {
+  margin-top: 2rem;
+  color: #333438;
+  font-family: 'Candal', sans-serif;
+}
+
+.container p {
+  margin-bottom: 1rem;
+  color: #4b4e57;
+  font-size: 1.1rem;
+}
+
+.table {
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #cecece;
+}
+
+.table th {
+  background: linear-gradient(-45deg, #3e5fbc 0%, #284187 100%);
+  color: white;
+  font-weight: 600;
+}
+
+.table tr:hover {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  .table {
+    font-size: 0.9rem;
+  }
+  
+  .table th, .table td {
+    padding: 0.5rem;
+  }
+}
+

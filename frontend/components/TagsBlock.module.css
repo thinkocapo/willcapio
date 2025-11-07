@@ -1,0 +1,25 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.tag {
+  padding: 0.3rem 0.8rem;
+  background: #f0f0f0;
+  color: #333438;
+  border-radius: 0.4rem;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.tag:hover {
+  background: #3498db;
+  color: white;
+  transform: translateY(-2px);
+}
+

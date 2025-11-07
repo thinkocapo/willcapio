@@ -1,0 +1,15 @@
+{
+    "rules": [
+      {
+        "name": "Save Prompt to File",
+        "when": "promptSubmitted",
+        "actions": [
+          {
+            "type": "appendToFile",
+            "file": "prompts.md",
+            "content": "{{date:YYYY.MM.DD}} {{prompt}}\n\n"
+          }
+        ]
+      }
+    ]
+  }

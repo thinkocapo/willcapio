@@ -1,0 +1,31 @@
+.container {
+  max-width: 46rem;
+  margin: 3rem auto;
+  padding: 2rem;
+  line-height: 1.8;
+}
+
+.container h2, .container h3 {
+  margin-top: 2rem;
+  color: #333438;
+  font-family: 'Candal', sans-serif;
+}
+
+.container h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.container p {
+  margin-bottom: 1rem;
+  color: #4b4e57;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+}
+

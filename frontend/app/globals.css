@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Candal&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  color: #3498db;
+  transition: color 0.5s;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #284187;
+}
+
+h1, h2, h3 {
+  font-family: 'Candal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Prism.js code highlighting styles */
+pre[class*="language-"] {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  overflow: auto;
+  border-radius: 0.4rem;
+}
+
+code[class*="language-"] {
+  font-family: 'Courier New', Courier, monospace;
+}

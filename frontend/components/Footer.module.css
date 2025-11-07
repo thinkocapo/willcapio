@@ -1,0 +1,23 @@
+.footer {
+  position: relative;
+  padding-top: 2rem;
+  bottom: 0;
+  box-shadow: 0 -3px 26px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(-45deg, #3e5fbc 0%, #284187 100%);
+  font-weight: 500;
+  margin-top: auto;
+}
+
+.text {
+  margin: 0;
+  padding-bottom: 2rem;
+  text-align: center;
+  color: #f0f0f0;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding-top: 3rem;
+  }
+}
+

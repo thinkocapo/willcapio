@@ -7,7 +7,7 @@ tags: ['software', 'travel']
 published: true
 ---
 
-The story.                                     
+The storyy.                        
 
 **2014** I started programming in C++ as a hobby. I enjoyed the feeling of creativty and power to fix things myself. My day job felt more like I was consulting and acting as a secretary, coordinating fixes across teams, always waiting for approval from higher-ups, but never actually fixing anything myself. 
 
