@@ -1,6 +1,5 @@
 import { getAllPosts, getPost } from '@/lib/api';
 import { notFound } from 'next/navigation';
-import TagsBlock from '@/components/TagsBlock';
 import styles from './page.module.css';
 
 export const dynamic = 'force-static';
@@ -33,7 +32,6 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         <div className={styles.header}>
           <h1 className={styles.title}>{post.title}</h1>
           <div className={styles.date}>{post.date}</div>
-          <TagsBlock tags={post.tags} />
         </div>
         <div 
           className={styles.content}
