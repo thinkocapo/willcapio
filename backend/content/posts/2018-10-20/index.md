@@ -1,6 +1,6 @@
 ---
 path: "/travel-photos"
-cover: "../2018-10-20/medellin-style.jpg"
+cover: "./medellin-style.jpg"
 date: "2018-10-20"
 title: "Travel Photos"
 tags: ['travel', 'photos']
