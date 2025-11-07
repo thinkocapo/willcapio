@@ -24,8 +24,7 @@ export default function PostList({ slug, title, cover, excerpt, preview }: PostL
             <Image
               src={imageSrc}
               alt={title}
-              width={800}
-              height={400}
+              fill
               className={styles.img}
               unoptimized
             />

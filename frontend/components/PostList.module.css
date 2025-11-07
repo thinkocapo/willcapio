@@ -12,7 +12,7 @@
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   border-radius: 0.4rem;
-  min-height: 300px;
+  height: 300px;
   overflow: hidden;
   width: 100%;
 }
@@ -23,10 +23,8 @@
 }
 
 .img {
-  border-radius: 0.4rem;
-  width: 100%;
-  height: auto;
   object-fit: cover;
+  object-position: center;
 }
 
 .placeholder {
@@ -80,7 +78,7 @@
 
 @media (max-width: 500px) {
   .image {
-    min-height: 200px;
+    height: 200px;
   }
   
   .title {
