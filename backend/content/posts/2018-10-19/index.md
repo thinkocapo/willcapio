@@ -5,6 +5,7 @@ date: "2018-10-19"
 title: "Software Journey"
 tags: ['software', 'travel']
 published: true
+preview: my story in software
 ---
 
 The storyy.                        

@@ -5,6 +5,7 @@ date: "2018-10-17"
 title: "Top Photos"
 tags: ['travel', 'photos']
 published: true
+preview: it all started with a Blackberry Curve
 ---
 Favorite photos from my adventures.                                                     
 

@@ -5,6 +5,7 @@ date: "2018-10-20"
 title: "Travel Photos"
 tags: ['travel', 'photos']
 published: true
+preview: backpacking and living
 ---
 International photos from backpacking and living abroad.                             
 

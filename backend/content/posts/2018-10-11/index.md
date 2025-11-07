@@ -5,6 +5,7 @@ date: "2018-10-12"
 title: "Spray Paint"
 tags: ['art']
 published: true
+preview: I painted these
 ---
     
 <!-- That crypto candy.                                                                                                   -->

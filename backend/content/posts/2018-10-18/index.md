@@ -5,6 +5,7 @@ date: "2018-10-18"
 title: "Healthcare & Biotech"
 tags: ['healthcare', 'software']
 published: true
+preview: my first career
 ---
 
 Areas of health science I've worked in.                                             

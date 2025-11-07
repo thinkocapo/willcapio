@@ -5,6 +5,7 @@ date: "2018-10-10"
 title: "Sanskrit"
 tags: ['education']
 published: true
+preview: perceptions
 ---
 All roads and languages lead to the [ultimate reality](https://en.wikipedia.org/wiki/Brahmin) of Brahmin.                                                                                                               
 

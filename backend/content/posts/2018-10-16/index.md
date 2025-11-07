@@ -5,6 +5,7 @@ date: "2018-10-16"
 title: "Music"
 tags: ['music']
 published: true
+preview: want to jam?
 ---
 
 The way music intersects and shapes my life. Plus some tunes.                            

@@ -22,6 +22,7 @@ export default async function Home() {
             tags={post.tags}
             cover={post.cover}
             excerpt={post.excerpt}
+            preview={post.preview}
           />
         ))}
       </div>

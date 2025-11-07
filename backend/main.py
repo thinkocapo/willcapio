@@ -39,6 +39,7 @@ class Post(BaseModel):
     cover: Optional[str] = None
     content: str
     excerpt: str
+    preview: Optional[str] = None
 
 class PostSummary(BaseModel):
     slug: str
@@ -47,6 +48,7 @@ class PostSummary(BaseModel):
     tags: List[str]
     cover: Optional[str] = None
     excerpt: str
+    preview: Optional[str] = None
 
 class SiteConfig(BaseModel):
     title: str
@@ -85,6 +87,9 @@ def parse_post(post_path: Path) -> Optional[Post]:
         content_text = post.content.replace('\n', ' ')
         excerpt = content_text[:150] + "..." if len(content_text) > 150 else content_text
         
+        # Get preview from frontmatter if available, otherwise use excerpt
+        preview = post.get('preview', None)
+        
         return Post(
             slug=post_path.name,
             title=post.get('title', 'Untitled'),
@@ -92,7 +97,8 @@ def parse_post(post_path: Path) -> Optional[Post]:
             tags=post.get('tags', []),
             cover=cover,
             content=html_content,
-            excerpt=excerpt
+            excerpt=excerpt,
+            preview=preview
         )
     except Exception as e:
         print(f"Error parsing post {post_path}: {e}")
@@ -115,7 +121,8 @@ def get_all_posts() -> List[PostSummary]:
                     date=post.date,
                     tags=post.tags,
                     cover=post.cover,
-                    excerpt=post.excerpt
+                    excerpt=post.excerpt,
+                    preview=post.preview
                 ))
     
     # Sort by date (newest first)

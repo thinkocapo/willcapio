@@ -5,6 +5,7 @@ date: "2018-10-15"
 title: "Books"
 tags: ['education']
 published: true
+preview: some books
 ---
 
 ![Books](./books_sf.jpg)

@@ -5,6 +5,7 @@ date: "2018-10-14"
 title: "Education"
 tags: ['education']
 published: true
+preview: my education
 ---
 <!-- institutions I studied in. courses I took -->
 You can take the kid out of Walpole, but you can't take Walpole out of the kid                     

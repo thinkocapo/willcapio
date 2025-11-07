@@ -10,6 +10,7 @@ export interface Post {
   cover: string | null;
   content: string;
   excerpt: string;
+  preview?: string;
 }
 
 export interface PostSummary {
@@ -19,6 +20,7 @@ export interface PostSummary {
   tags: string[];
   cover: string | null;
   excerpt: string;
+  preview?: string;
 }
 
 export interface SiteConfig {

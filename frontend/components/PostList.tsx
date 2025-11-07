@@ -9,9 +9,10 @@ interface PostListProps {
   tags: string[];
   cover: string | null;
   excerpt: string;
+  preview?: string;
 }
 
-export default function PostList({ slug, title, date, tags, cover, excerpt }: PostListProps) {
+export default function PostList({ slug, title, date, cover, excerpt, preview }: PostListProps) {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
   const imageSrc = cover ? `${apiUrl}${cover}` : null;
 
@@ -38,7 +39,7 @@ export default function PostList({ slug, title, date, tags, cover, excerpt }: Po
         <Link href={`/blog/${slug}`}>
           <h2 className={styles.title}>{title}</h2>
         </Link>
-        <p className={styles.excerpt}>{excerpt.slice(0, 84)}</p>
+        <p className={styles.excerpt}>{preview || excerpt.slice(0, 84)}</p>
       </div>
     </article>
   );
