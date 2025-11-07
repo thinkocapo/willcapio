@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './PostList.module.css';
-import TagsBlock from './TagsBlock';
 
 interface PostListProps {
   slug: string;
@@ -39,7 +38,6 @@ export default function PostList({ slug, title, date, tags, cover, excerpt }: Po
         <Link href={`/blog/${slug}`}>
           <h2 className={styles.title}>{title}</h2>
         </Link>
-        <TagsBlock tags={tags} />
         <p className={styles.excerpt}>{excerpt.slice(0, 84)}</p>
       </div>
     </article>
