@@ -12,7 +12,7 @@ interface PostListProps {
   preview?: string;
 }
 
-export default function PostList({ slug, title, date, cover, excerpt, preview }: PostListProps) {
+export default function PostList({ slug, title, cover, excerpt, preview }: PostListProps) {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
   const imageSrc = cover ? `${apiUrl}${cover}` : null;
 
@@ -35,7 +35,6 @@ export default function PostList({ slug, title, date, cover, excerpt, preview }:
         </Link>
       </div>
       <div className={styles.information}>
-        <div className={styles.date}>{date}</div>
         <Link href={`/blog/${slug}`}>
           <h2 className={styles.title}>{title}</h2>
         </Link>
