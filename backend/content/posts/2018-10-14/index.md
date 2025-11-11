@@ -8,7 +8,7 @@ published: true
 preview: my education
 ---
 <!-- institutions I studied in. courses I took -->
-You can take the kid out of Walpole, but you can't take Walpole out of the kid                     
+You can take the kid out of Walpole, but you can't take Walpole out of the kid.                
 
 **2010** *Roger Williams University* B.S. Biology
 
@@ -20,6 +20,5 @@ You can take the kid out of Walpole, but you can't take Walpole out of the kid
 
 **2019** *Harvard Extension School* Principles of Big Data Processing  
 
-#### Alma Mater
-A picture from RWU
+A picture from my alma mater RWU
 ![RWU](./rwu.jpg)

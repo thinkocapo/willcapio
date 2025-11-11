@@ -10,7 +10,7 @@ preview: some books
 
 ![Books](./books_sf.jpg)
 
-Some books I've read                                                                                               
+Some books I read through 2022.                                                                                         
 
 | Title  | Author |
 | ------------- | ------------- |

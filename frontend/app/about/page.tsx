@@ -18,9 +18,7 @@ export default function About() {
         <p><a href="https://linkedin.com/in/williamcapozzoli">https://linkedin.com/in/williamcapozzoli</a></p>
 
         <h2>About Me</h2>
-        <p>I&apos;m a software engineer. I work in Sales. I have a B.S. in Biology. I speak 5 languages.</p>
-        <p>I scooter, I skate, and I travel.</p>
-        <p>Two truths and one lie - can you guess which?</p>
+        <p>Coming soon...</p>
       </div>
     </>
   );

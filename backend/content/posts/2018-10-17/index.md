@@ -7,9 +7,9 @@ tags: ['travel', 'photos']
 published: true
 preview: it all started with a Blackberry Curve
 ---
-Favorite photos from my adventures.                                                     
+A few favorites from 2011 to 2017.                                                 
 
-La Finca, Interior, Colombia 2017
+La Finca, Colombia 2017
 ![Horse](./horse.jpg)
 
 ![Barn](./barn.jpg)
