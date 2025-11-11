@@ -63,10 +63,16 @@ class SiteConfig(BaseModel):
 
 
 # Helper functions
+def get_image_url(path: str) -> str:
+    """Convert image path to full URL for HTML content, or just path for JSON"""
+    # For HTML content, we need full URLs. For JSON, frontend will add the domain.
+    return f"{BACKEND_URL}{path}"
+
 def process_image_paths(html_content: str, slug: str) -> str:
-    """Replace relative image paths in HTML with absolute API paths"""
+    """Replace relative image paths in HTML with absolute API URLs"""
     # Pattern to match img tags with relative src paths
     pattern = r'<img([^>]*?)src=["\']\./(.*?)["\']([^>]*?)>'
+    # HTML needs full URLs since it's rendered in browser
     replacement = rf'<img\1src="{BACKEND_URL}/images/{slug}/\2"\3>'
     return re.sub(pattern, replacement, html_content)
 
@@ -94,8 +100,8 @@ def parse_post(post_path: Path) -> Optional[Post]:
         if cover:
             # Remove ./ prefix if present
             cover = cover.replace('./', '')
-            # Create absolute URL for API with backend domain
-            cover = f"{BACKEND_URL}/images/{post_path.name}/{cover}"
+            # Return just the path - frontend will add the domain
+            cover = f"/images/{post_path.name}/{cover}"
         
         # Extract excerpt (first paragraph or first 150 chars)
         content_text = post.content.replace('\n', ' ')

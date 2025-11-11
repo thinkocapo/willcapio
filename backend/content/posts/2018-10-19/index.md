@@ -7,7 +7,9 @@ tags: ['software', 'travel']
 published: true
 preview: my story in software
 ---
-                 
+
+**2022** I moved to Vienna, Austria to continue working for Sentry as a Sales Engineer.
+      
 **2019** I moved to San Francisco to join Sentry.io as a Sales Engineer.
 ![Pinata Rocket](./pinata-rocket-ship.jpg)
 

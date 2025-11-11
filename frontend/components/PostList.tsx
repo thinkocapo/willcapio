@@ -15,7 +15,7 @@ interface PostListProps {
 export default function PostList({ slug, title, cover, excerpt, preview }: PostListProps) {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
   const imageSrc = cover ? `${apiUrl}${cover}` : null;
-
+  console.log("imageSrc", imageSrc)
   return (
     <article className={styles.wrapper}>
       <div className={styles.image}>
