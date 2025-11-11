@@ -9,8 +9,12 @@ import markdown
 from pydantic import BaseModel
 from datetime import datetime
 import os
+import re
 
 app = FastAPI(title="WillCap.io Blog API")
+
+# Backend URL configuration
+BACKEND_URL = os.getenv('BACKEND_URL', 'http://localhost:8000')
 
 # CORS configuration for Next.js frontend
 app.add_middleware(
@@ -59,6 +63,13 @@ class SiteConfig(BaseModel):
 
 
 # Helper functions
+def process_image_paths(html_content: str, slug: str) -> str:
+    """Replace relative image paths in HTML with absolute API paths"""
+    # Pattern to match img tags with relative src paths
+    pattern = r'<img([^>]*?)src=["\']\./(.*?)["\']([^>]*?)>'
+    replacement = rf'<img\1src="{BACKEND_URL}/images/{slug}/\2"\3>'
+    return re.sub(pattern, replacement, html_content)
+
 def parse_post(post_path: Path) -> Optional[Post]:
     """Parse a markdown post file and return a Post object"""
     try:
@@ -75,13 +86,16 @@ def parse_post(post_path: Path) -> Optional[Post]:
             extensions=['extra', 'codehilite', 'toc']
         )
         
+        # Process image paths in HTML content
+        html_content = process_image_paths(html_content, post_path.name)
+        
         # Process cover image path
         cover = post.get('cover', None)
         if cover:
             # Remove ./ prefix if present
             cover = cover.replace('./', '')
-            # Create absolute path for API
-            cover = f"/images/{post_path.name}/{cover}"
+            # Create absolute URL for API with backend domain
+            cover = f"{BACKEND_URL}/images/{post_path.name}/{cover}"
         
         # Extract excerpt (first paragraph or first 150 chars)
         content_text = post.content.replace('\n', ' ')
