@@ -77,6 +77,8 @@ npm install
 npm run dev
 ```
 
+QUICK-START.md for more details.
+
 ## 📁 Project Structure
 
 ```
