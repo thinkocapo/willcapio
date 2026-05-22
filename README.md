@@ -10,6 +10,10 @@ Test commit.
 
 A modern personal blog built with Next.js and FastAPI, featuring markdown-based content, tag filtering, and responsive design.
 
+### Timeline
+
+2026 May 22 - ran new Next/FastAPI app. removed old gatsby files, removed redundant readme markdowns. soon deploy to Vercel.
+
 ## ✨ Features
 
 - 📝 **Markdown Blog Posts** - Write posts in markdown with frontmatter
@@ -99,16 +103,31 @@ willcapio-old/
 - CSS Modules
 - React 18
 
+### Components
+React components are in `frontend/components/` with CSS Modules for styling.
+
+### Theme Colors
+Edit `frontend/lib/theme.ts` to change colors, fonts, and styles.
+
 ### Backend
 - FastAPI
 - Python Markdown
 - Frontmatter parsing
 - Uvicorn (ASGI server)
 
-### Deployment
-- Vercel
-- Automatic HTTPS
-- Global CDN
+### 📊 API Endpoints
+
+| Endpoint | Description |
+|----------|-------------|
+| `GET /api/posts` | List all blog posts |
+| `GET /api/posts/{slug}` | Get single post |
+| `GET /api/tags` | Get all tags |
+| `GET /api/posts/tag/{tag}` | Filter by tag |
+| `GET /api/site-config` | Site configuration |
+| `GET /docs` | API documentation |
+
+### API
+All API logic is in `backend/main.py`. Easy to extend with new endpoints. Much of this is only used during build time.
 
 ## 📝 Adding Blog Posts
 
@@ -135,18 +154,7 @@ willcapio-old/
 
 ## 🌐 Deployment
 
-### Deploy to Vercel
-
-```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Login
-vercel login
-
-# Deploy to production
-vercel --prod
-```
+see DEPLOYMENT.md
 
 ### Environment Variables
 
@@ -154,13 +162,21 @@ Set `NEXT_PUBLIC_API_URL` in Vercel:
 - Development: `http://localhost:8000`
 - Production: `https://your-domain.vercel.app`
 
-## 📖 Documentation
+## 📖 Documentation / How This Works
 
 - **[Quick Start Guide](QUICK-START.md)** - Get up and running fast
 - **[Deployment Guide](DEPLOYMENT.md)** - Deploy to Vercel
 - **[Project Overview](PROJECT-OVERVIEW.md)** - Full technical overview
-- **[Migration Summary](MIGRATION-SUMMARY.md)** - What was changed
-- **[Migration Complete](MIGRATION-COMPLETE.md)** - Completion checklist
+- **[Migration Summary](MIGRATION-SUMMARY.md)** - What was changed (originally built with Gatsby v2 and migrated to Next.js and FastAPI)
+
+The reason you're only seeing :8000 image calls in the Network tab is because the text/post data calls happen server-side — Next.js fetches from the API at build/render time on the server (note next: { revalidate: 3600 } in lib/api.ts), so they never appear in the browser's network inspector. Only the image src URLs embedded in the rendered HTML end up making client-side requests to :8000.
+
+Both pages use force-static, meaning Next.js calls the FastAPI backend at build time (npm run build), bakes all the post data into static HTML files, and serves those pre-rendered pages. So:
+
+When you hit localhost:3000 for the first time, the HTML you get back already contains all the text — no API call happens in the browser at all
+generateStaticParams() on the blog page means every post slug is also pre-rendered to its own static HTML page at build time
+The :8000 image calls you see in the Network tab are the only runtime requests, because image URLs are embedded as src attributes and the browser fetches those client-side
+The FastAPI backend only needs to be running during npm run build (or when Next.js revalidates after 1 hour). In production you'd need the backend running continuously for revalidation, but the page loads themselves are just static file serving.
 
 ## 🧪 Testing
 
@@ -171,28 +187,6 @@ Set `NEXT_PUBLIC_API_URL` in Vercel:
 # Test frontend build
 cd frontend && npm run build
 ```
-
-## 📊 API Endpoints
-
-| Endpoint | Description |
-|----------|-------------|
-| `GET /api/posts` | List all blog posts |
-| `GET /api/posts/{slug}` | Get single post |
-| `GET /api/tags` | Get all tags |
-| `GET /api/posts/tag/{tag}` | Filter by tag |
-| `GET /api/site-config` | Site configuration |
-| `GET /docs` | API documentation |
-
-## 🎨 Customization
-
-### Theme Colors
-Edit `frontend/lib/theme.ts` to change colors, fonts, and styles.
-
-### Components
-React components are in `frontend/components/` with CSS Modules for styling.
-
-### API
-All API logic is in `backend/main.py`. Easy to extend with new endpoints.
 
 ## 🔒 Security
 
@@ -216,26 +210,3 @@ This is a personal blog, but feel free to fork and adapt for your own use!
 ## 📄 License
 
 MIT
-
-## 👤 Author
-
-**Will Cap**
-
-- Website: [WillCap.io](https://willcap.io)
-- Twitter: [@thinkocapo](https://twitter.com/thinkocapo)
-- GitHub: [@thinkocapo](https://github.com/thinkocapo)
-- LinkedIn: [williamcapozzoli](https://linkedin.com/in/williamcapozzoli)
-
-## 🙏 Acknowledgments
-
-- Originally built with Gatsby
-- Migrated to Next.js + FastAPI architecture
-- Deployed on Vercel
-
----
-
-**Status**: ✅ Migration Complete  
-**From**: Gatsby v2  
-**To**: Next.js 14+ & FastAPI  
-
-Ready to deploy! 🚀

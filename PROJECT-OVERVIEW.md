@@ -153,6 +153,8 @@ willcapio-old/
 | `/images/{slug}/{filename}` | GET | Serve post images |
 | `/docs` | GET | API documentation (Swagger) |
 
+> **Note:** All endpoints except `/images/{slug}/{filename}` are called at **build time** by Next.js (`force-static`) — the data is baked into static HTML and never fetched by the browser. Only image requests are made at runtime and will appear in the browser's Network tab. `/docs` is Swagger UI for manual exploration at `localhost:8000/docs`.
+
 ### Frontend Pages
 
 | Route | Description |
