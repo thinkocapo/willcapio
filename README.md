@@ -180,6 +180,17 @@ generateStaticParams() on the blog page means every post slug is also pre-render
 The :8000 image calls you see in the Network tab are the only runtime requests, because image URLs are embedded as src attributes and the browser fetches those client-side
 The FastAPI backend only needs to be running during npm run build (or when Next.js revalidates after 1 hour). In production you'd need the backend running continuously for revalidation, but the page loads themselves are just static file serving.
 
+First deploy to Vercel failed...I think the vercel functions serving images, weren't working. so updated app to find them locally on filesystem. then that broke local running, even though Vercel deploy worked:
+
+The images are requesting localhost:3000/images/... but FastAPI is on localhost:8000. Locally, Next.js doesn't proxy /images/* to FastAPI — that routing only exists in vercel.json for Vercel. Fix is to add a dev rewrite in next.config.ts.
+
+Edited
+next.config.ts
++15
+-0
+This proxies /images/* and /api/* to FastAPI at localhost:8000 in dev only. On Vercel, vercel.json handles the routing instead.
+
+Make sure FastAPI is running (cd backend && uvicorn main:app --reload), then restart the Next.js dev server and the images should load. Want me to commit and push this fix too?
 ## 🧪 Testing
 
 ```bash
