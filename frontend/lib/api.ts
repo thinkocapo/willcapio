@@ -1,6 +1,9 @@
-// API utility functions for fetching blog data
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import { marked } from 'marked';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const CONTENT_DIR = path.join(process.cwd(), '..', 'backend', 'content', 'posts');
 
 export interface Post {
   slug: string;
@@ -31,63 +34,90 @@ export interface SiteConfig {
   twitter: string;
 }
 
+function processImagePaths(html: string, slug: string): string {
+  return html.replace(/src="\.\/([^"]+)"/g, `src="/images/${slug}/$1"`);
+}
+
+function parseCover(cover: string | undefined, slug: string): string | null {
+  if (!cover) return null;
+  return `/images/${slug}/${cover.replace('./', '')}`;
+}
+
+function makeExcerpt(content: string): string {
+  const text = content.replace(/\n/g, ' ').trim();
+  return text.length > 150 ? text.slice(0, 150) + '...' : text;
+}
+
+function readPost(slug: string): { data: Record<string, unknown>; content: string } | null {
+  const indexPath = path.join(CONTENT_DIR, slug, 'index.md');
+  if (!fs.existsSync(indexPath)) return null;
+  const { data, content } = matter(fs.readFileSync(indexPath, 'utf-8'));
+  return { data, content };
+}
+
 export async function getAllPosts(): Promise<PostSummary[]> {
-  const res = await fetch(`${API_URL}/api/posts`, {
-    next: { revalidate: 3600 }, // Revalidate every hour
-  });
-  
-  if (!res.ok) {
-    throw new Error('Failed to fetch posts');
+  const dirs = fs.readdirSync(CONTENT_DIR).filter((name) =>
+    fs.statSync(path.join(CONTENT_DIR, name)).isDirectory()
+  );
+
+  const posts: PostSummary[] = [];
+
+  for (const slug of dirs) {
+    const parsed = readPost(slug);
+    if (!parsed) continue;
+    const { data, content } = parsed;
+    posts.push({
+      slug,
+      title: (data.title as string) || 'Untitled',
+      date: data.date ? String(data.date) : '',
+      tags: (data.tags as string[]) || [],
+      cover: parseCover(data.cover as string | undefined, slug),
+      excerpt: makeExcerpt(content),
+      preview: (data.preview as string) || undefined,
+    });
   }
-  
-  return res.json();
+
+  return posts.sort((a, b) => b.date.localeCompare(a.date));
 }
 
 export async function getPost(slug: string): Promise<Post> {
-  const res = await fetch(`${API_URL}/api/posts/${slug}`, {
-    next: { revalidate: 3600 },
-  });
-  
-  if (!res.ok) {
-    throw new Error('Failed to fetch post');
-  }
-  
-  return res.json();
+  const parsed = readPost(slug);
+  if (!parsed) throw new Error(`Post not found: ${slug}`);
+  const { data, content } = parsed;
+
+  let html = await marked(content);
+  html = processImagePaths(html, slug);
+
+  return {
+    slug,
+    title: (data.title as string) || 'Untitled',
+    date: data.date ? String(data.date) : '',
+    tags: (data.tags as string[]) || [],
+    cover: parseCover(data.cover as string | undefined, slug),
+    content: html,
+    excerpt: makeExcerpt(content),
+    preview: (data.preview as string) || undefined,
+  };
 }
 
 export async function getAllTags(): Promise<string[]> {
-  const res = await fetch(`${API_URL}/api/tags`, {
-    next: { revalidate: 3600 },
-  });
-  
-  if (!res.ok) {
-    throw new Error('Failed to fetch tags');
-  }
-  
-  return res.json();
+  const posts = await getAllPosts();
+  const tags = new Set<string>();
+  posts.forEach((post) => post.tags.forEach((tag) => tags.add(tag)));
+  return Array.from(tags).sort();
 }
 
 export async function getPostsByTag(tag: string): Promise<PostSummary[]> {
-  const res = await fetch(`${API_URL}/api/posts/tag/${tag}`, {
-    next: { revalidate: 3600 },
-  });
-  
-  if (!res.ok) {
-    throw new Error('Failed to fetch posts by tag');
-  }
-  
-  return res.json();
+  const posts = await getAllPosts();
+  return posts.filter((post) => post.tags.includes(tag));
 }
 
 export async function getSiteConfig(): Promise<SiteConfig> {
-  const res = await fetch(`${API_URL}/api/site-config`, {
-    next: { revalidate: 86400 }, // Revalidate daily
-  });
-  
-  if (!res.ok) {
-    throw new Error('Failed to fetch site config');
-  }
-  
-  return res.json();
+  return {
+    title: 'WillCap.io',
+    description: 'life',
+    author: 'Will',
+    url: 'https://willcap.io',
+    twitter: '@thinkocapo',
+  };
 }
-
