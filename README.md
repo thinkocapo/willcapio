@@ -191,6 +191,24 @@ next.config.ts
 This proxies /images/* and /api/* to FastAPI at localhost:8000 in dev only. On Vercel, vercel.json handles the routing instead.
 
 Make sure FastAPI is running (cd backend && uvicorn main:app --reload), then restart the Next.js dev server and the images should load. Want me to commit and push this fix too?
+
+### Is this a SPA?
+A true SPA loads a single blank HTML shell upfront and JavaScript renders everything — the server never sends actual page content, just a JS bundle that builds the UI in the browser.
+
+Next.js with force-static works differently:
+
+First visit to any URL → server sends fully pre-rendered HTML with content already in it (not a blank shell). The browser can display it before any JS runs.
+After hydration → Next.js takes over and subsequent navigation is client-side, like a SPA
+So it's a hybrid — static HTML for first load, SPA-like for subsequent navigation. The distinction matters for:
+
+SEO — crawlers see real content in the HTML, not a blank page waiting for JS
+Performance — first paint is fast because content is in the HTML
+The RSC prefetch requests you saw — a pure SPA wouldn't have those because it would already have all the JS needed to render every route
+Gatsby worked the same way. If it were a pure SPA, you'd see a nearly empty index.html and one large JS bundle doing all the work. Instead each route has its own pre-rendered HTML file on Vercel's CDN.
+
+### thing
+The fix is straightforward: move the images to frontend/public/images/ so Vercel serves them directly from its CDN, bypassing FastAPI entirely. The image paths in api.ts already use /images/${slug}/filename — Next.js automatically serves anything in public/ at /, so no code changes needed. Then remove the /images/* route from vercel.json.
+
 ## 🧪 Testing
 
 ```bash
