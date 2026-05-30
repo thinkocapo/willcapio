@@ -266,3 +266,29 @@ All other requests go to the Next.js frontend. This is the catch-all — homepag
 
 > **Note:** The `/api/*` endpoints are no longer called by the frontend. Originally `lib/api.ts` fetched from `localhost:8000/api/*` at build time, but this caused Vercel builds to fail (`ECONNREFUSED`) because FastAPI wasn't running during Vercel's build process. The fix (May 2026) was to replace all `fetch` calls in `lib/api.ts` with direct filesystem reads using `gray-matter` and `marked`, reading markdown files from `backend/content/posts/` at build time instead. The `/images/*` route is the only FastAPI route actively used at runtime.
 
+## Static generation: build time vs runtime
+
+Pages use `export const dynamic = 'force-static'` and `revalidate = 3600` in the App Router. Post content is never fetched from FastAPI over HTTP — `frontend/lib/api.ts` reads markdown with Node `fs` on the machine running `next build` (and again on ISR revalidation).
+
+### Build time (and at most once per hour per page on revalidate)
+
+1. `getAllPosts()` / `getPost()` read markdown from `backend/content/posts/`
+2. Markdown is turned into HTML
+3. That HTML is baked into static page files on Vercel
+
+### Runtime (when a visitor opens `/` or `/blog/some-slug`)
+
+- The browser gets pre-built HTML from the CDN
+- No request to FastAPI for posts
+- No `fs.readFile` on each page view for normal traffic
+
+### Is it “in the bundle” or “from CDN”?
+
+| Asset | Where it lives after build | What the browser does |
+|--------|----------------------------|------------------------|
+| **Post text** (title, body HTML) | Embedded in **static HTML** from CDN | One document request per page; content is in that HTML, not a separate API fetch |
+| **React/JS** for the app | JS chunks (code splitting) | Small client bundles for interactivity; not where full post bodies live |
+| **Cover + inline images** | `frontend/public/images/` → CDN | Separate HTTP requests per image (like any static file in `public/`) |
+
+**Tradeoff:** Content updates require a deploy or wait for ISR (`revalidate = 3600` — up to ~1 hour before changes appear without redeploying). Markdown lives in `backend/content/posts/`; images live in `frontend/public/images/`.
+
