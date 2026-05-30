@@ -12,6 +12,7 @@ A modern personal blog built with Next.js and FastAPI, featuring markdown-based 
 
 ### Timeline
 
+2026 May 30 - revisited how everything works. images-cdn PR and documentation.  
 2026 May 22 - ran new Next/FastAPI app. removed old gatsby files, removed redundant readme markdowns. soon deploy to Vercel.
 
 ## ✨ Features
@@ -99,13 +100,7 @@ willcapio-old/
 
 ## 🛠️ Tech Stack
 
-### Frontend
-- Next.js 14+ (App Router)
-- TypeScript
-- CSS Modules
-- React 18
-
-### Components
+### Frontend Components
 React components are in `frontend/components/` with CSS Modules for styling.
 
 ### Theme Colors
@@ -135,13 +130,13 @@ All API logic is in `backend/main.py`. Easy to extend with new endpoints. Much o
 
 1. Create a new directory in `backend/content/posts/`:
    ```bash
-   mkdir backend/content/posts/2024-12-19
+   mkdir backend/content/posts/name-of-post
    ```
 
 2. Create `index.md` with frontmatter:
    ```markdown
    ---
-   title: "My New Post"
+   title: "Name of Post"
    date: "2024-12-19"
    tags: ["tech", "blog"]
    cover: "./cover-image.jpg"
@@ -150,9 +145,7 @@ All API logic is in `backend/main.py`. Easy to extend with new endpoints. Much o
    Your post content here...
    ```
 
-3. Add images to the same directory
-
-4. Restart the backend to see changes
+3. Add images to the same directory. May need to add the post to frontend/public/images with its images.
 
 ## 🌐 Deployment
 
