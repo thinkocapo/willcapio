@@ -231,3 +231,38 @@ The migration was successful! The application now runs on a modern, scalable arc
 
 Ready for deployment to Vercel! 🚀
 
+## vercel.json Explained
+
+```json
+{
+  "version": 2,
+  "builds": [...],
+  "routes": [...]
+}
+```
+
+### builds []
+
+Tells Vercel how to build each part of the monorepo. Two entries:
+
+**1. `@vercel/next` + `frontend/package.json`**
+Vercel runs `npm run build` in `frontend/`. Produces the Next.js static HTML pages, JS chunks, and CSS — all uploaded to Vercel's CDN.
+
+**2. `@vercel/python` + `backend/main.py`**
+Vercel packages `main.py` and `requirements.txt` into a Python serverless function. This is the FastAPI backend. It has no connection to the Next.js build — they are built independently.
+
+### routes []
+
+Tells Vercel where to send incoming HTTP requests after both builds are complete. Three entries, evaluated top to bottom:
+
+**1. `/api/(.*)` → `backend/main.py`**
+Any request to `/api/*` (e.g. `/api/posts`, `/api/tags`) is routed to the FastAPI Python serverless function. Currently no frontend code calls these endpoints — they are kept for future use (e.g. Sentry distributed tracing examples).
+
+**2. `/images/(.*)` → `backend/main.py`**
+Any request to `/images/*` (e.g. `/images/2018-10-16/piano-wedding.jpg`) is routed to the FastAPI serverless function, which serves the image files from `backend/content/posts/` using FastAPI's `StaticFiles`. This is the only route actively used at runtime — the browser fetches blog post images through here.
+
+**3. `/(.*)` → `frontend/$1`**
+All other requests go to the Next.js frontend. This is the catch-all — homepage, blog posts, tags, about, etc.
+
+> **Note:** The `/api/*` endpoints are no longer called by the frontend. Originally `lib/api.ts` fetched from `localhost:8000/api/*` at build time, but this caused Vercel builds to fail (`ECONNREFUSED`) because FastAPI wasn't running during Vercel's build process. The fix (May 2026) was to replace all `fetch` calls in `lib/api.ts` with direct filesystem reads using `gray-matter` and `marked`, reading markdown files from `backend/content/posts/` at build time instead. The `/images/*` route is the only FastAPI route actively used at runtime.
+
