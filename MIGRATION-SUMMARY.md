@@ -342,3 +342,27 @@ flowchart TB
     INST --> CH["JS chunk for that route\nloaded from CDN if first visit\nthen cached forever"]
 ```
 
+### Note
+This project has a separate backend — it's not using Next.js for server-side logic:
+
+Backend / API	thinkocapo/willcapio/backend/main.py	Python (likely FastAPI/Flask)
+
+Frontend	thinkocapo/willcapio/frontend/	Next.js (App Router)
+
+In Next.js App Router, Server Components run on the server at request time (not just build time), not in the browser.
+
+Here's what actually happens:
+
+1. Browser requests a page
+2. Next.js runs layout.tsx and page.tsx on the Node.js server — fetches data, renders to HTML
+3. That HTML is sent to the browser
+4. The browser receives ready-made HTML (fast first paint)
+5. React then "hydrates" — attaches event listeners to make it interactive
+
+So it's neither pure build-time nor browser — it's server-side rendering (SSR) on each request by default. Build-time (static) rendering is also possible if the page has no dynamic data, which Next.js will do automatically when it can.
+
+The key distinction in App Router:
+
+- Server Components (layout.tsx, page.tsx by default) — run on the server, can fetch data directly, never sent as JS to the browser
+
+- Client Components (files with "use client" at the top) — JS that runs in the browser, can use useState, event handlers, etc.
