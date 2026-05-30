@@ -292,3 +292,53 @@ Pages use `export const dynamic = 'force-static'` and `revalidate = 3600` in the
 
 **Tradeoff:** Content updates require a deploy or wait for ISR (`revalidate = 3600` — up to ~1 hour before changes appear without redeploying). Markdown lives in `backend/content/posts/`; images live in `frontend/public/images/`.
 
+---
+
+## Diagrams
+
+### Build Time
+
+```mermaid
+flowchart TB
+    VJ["📄 vercel.json"]
+
+    VJ --> B1["Build 1 — @vercel/next\nfrontend/package.json"]
+    VJ --> B2["Build 2 — @vercel/python\nbackend/main.py"]
+
+    B1 --> NPM["npm run build\ninside frontend/"]
+    NPM --> API["lib/api.ts\nreads backend/content/posts/ via Node fs\ngray-matter parses frontmatter\nmarked converts markdown → HTML\n⚠️ NO HTTP calls to FastAPI"]
+    API --> PAGES["28 static HTML pages\none per route\ncontent already embedded in HTML"]
+    NPM --> JS["Code-split JS chunks\ncontent-hashed filenames\ne.g. 5b38991ac84883e4.js"]
+    NPM --> IMGS["frontend/public/images/\n80 image files copied here\nfrom backend/content/posts/"]
+
+    B2 --> SF["main.py + requirements.txt\npackaged into\nPython serverless function"]
+
+    PAGES --> CDN["☁️ Vercel Edge CDN"]
+    JS --> CDN
+    IMGS --> CDN
+    SF --> SFN["⚡ Vercel Serverless Function\nroute: /api/(.*)\nnot called by frontend currently\nreserved for Sentry distributed tracing"]
+```
+
+### Runtime
+
+```mermaid
+flowchart TB
+    U["👤 User opens willcap.io"] --> BR["Browser"]
+
+    BR --> R1["GET /\n→ Vercel Edge CDN\nPre-rendered HTML returned\ncontent visible before any JS runs\nnot 'in the bundle'"]
+
+    R1 --> PARSE["Browser parses HTML"]
+
+    PARSE --> R2["GET /_next/static/chunks/*.js\n→ Vercel CDN\nor browser disk cache\ncached forever by content hash\nonly re-fetched if hash changes on new deploy"]
+    PARSE --> R3["GET /images/slug/*.jpg\n→ Vercel CDN\nor browser cache\ndirect static file, no FastAPI involved"]
+
+    R2 --> HY["Next.js hydrates\napp becomes interactive"]
+
+    HY --> PRE["Prefetches RSC payloads\nfor every visible link\ne.g. /about?_rsc=...\n/blog/2018-10-16?_rsc=...\nsmall JSON, not full HTML"]
+    PRE --> CDN2["☁️ Vercel Edge CDN"]
+
+    CDN2 --> NAV["👤 User clicks a link"]
+    NAV --> INST["Instant client-side navigation\nno new HTML request\nuses prefetched RSC payload"]
+    INST --> CH["JS chunk for that route\nloaded from CDN if first visit\nthen cached forever"]
+```
+
