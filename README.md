@@ -1,6 +1,6 @@
 # WillCap.io
 
-Test commit.
+<img src="willcapio.png" width="49%" />&nbsp;<img src="trace_explained.png" width="49%" />
 
 [![Next.js](https://img.shields.io/badge/Next.js-14+-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?style=flat-square&logo=fastapi)](https://fastapi.tiangolo.com/)

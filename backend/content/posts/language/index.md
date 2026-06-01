@@ -1,11 +1,11 @@
 ---
-path: "/europe"
+path: "/language"
 cover: "./favela.jpg"
 date: "2018-10-12"
-title: "Europe"
-tags: ['europe', 'software']
+title: "Language"
+tags: ['language', 'software']
 published: true
-preview: europe
+preview: language
 ---
     
 Stuff about my experience in Europe.

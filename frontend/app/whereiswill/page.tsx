@@ -1,4 +1,5 @@
 import Header from '@/components/Header';
+import Image from 'next/image';
 import styles from './page.module.css';
 
 export const metadata = {
@@ -33,6 +34,15 @@ export default function WhereIsWill() {
   return (
     <>
       <Header title="Where Is Will">right here</Header>
+      <div className={styles.heroImage}>
+        <Image
+          src="/images/languages_selfie.jpg"
+          alt="Languages selfie"
+          width={400}
+          height={300}
+          style={{ objectFit: 'cover', borderRadius: '8px' }}
+        />
+      </div>
       <div className={styles.container}>
         <h2>Travel Update</h2>
         <p>I spent 3 years living in San Francisco, California from 2019 to 2022.</p>

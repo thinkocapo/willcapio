@@ -14,5 +14,3 @@ Sao Paulo, Brazil
 Sao Paulo, Brazil
 
 ![SkateboardingView2](./skateboarding-view-2.jpg)
-
-TODO: need pics of me in here

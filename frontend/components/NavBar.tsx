@@ -11,7 +11,6 @@ export default function NavBar() {
       </Link>
       <nav className={styles.nav}>
         <Link href="/whereiswill">Where Is Will</Link>
-        <Link href="/code">Code</Link>
         <Link href="/about">About</Link>
       </nav>
     </header>

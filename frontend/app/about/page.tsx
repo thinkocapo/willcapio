@@ -17,8 +17,8 @@ export default function About() {
         <h2>LinkedIn</h2>
         <p><a href="https://linkedin.com/in/williamcapozzoli">https://linkedin.com/in/williamcapozzoli</a></p>
 
-        <h2>About Me</h2>
-        <p>Coming soon...</p>
+        <h2>LinkTree</h2>
+        <p><a href="https://linktr.ee/vilkozz">https://linktr.ee/vilkozz</a></p>
       </div>
     </>
   );
