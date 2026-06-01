@@ -7,6 +7,8 @@ tags: ['travel', 'photos']
 published: true
 preview: it all started with a Blackberry Curve
 ---
+[Futbol & Tailgates →](/blog/top-photos/futbol)
+
 A few favorites from 2011 to 2017.                                                 
 
 La Finca, Colombia 2017

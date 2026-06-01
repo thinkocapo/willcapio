@@ -10,3 +10,5 @@ preview: language
     
 Stuff about my experience in Europe.
 
+[Sanskrit →](/blog/language/sanskrit)
+

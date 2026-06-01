@@ -66,6 +66,7 @@ export async function getAllPosts(): Promise<PostSummary[]> {
     const parsed = readPost(slug);
     if (!parsed) continue;
     const { data, content } = parsed;
+    if (data.published === false) continue;
     posts.push({
       slug,
       title: (data.title as string) || 'Untitled',
