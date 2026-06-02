@@ -5,7 +5,7 @@ import * as Sentry from '@sentry/nextjs';
 import styles from './NavBar.module.css';
 
 function trackNavClick(label: string) {
-  Sentry.metrics.increment('navbar.click', 1, { tags: { item: label } });
+  Sentry.metrics.count('navbar.click', 1, { tags: { item: label } });
 }
 
 export default function NavBar() {

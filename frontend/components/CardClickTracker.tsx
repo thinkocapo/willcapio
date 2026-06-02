@@ -9,7 +9,7 @@ interface CardClickTrackerProps {
 
 export default function CardClickTracker({ slug, children }: CardClickTrackerProps) {
   return (
-    <div onClick={() => Sentry.metrics.increment('card.click', 1, { tags: { slug } })}>
+    <div onClick={() => Sentry.metrics.count('card.click', 1, { tags: { slug } })}>
       {children}
     </div>
   );
