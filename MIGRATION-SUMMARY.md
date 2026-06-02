@@ -131,61 +131,12 @@ willcapio-old/
 - ✅ SEO metadata
 - ✅ Responsive design
 
-## Breaking Changes
-
-- GraphQL queries replaced with REST API calls
-- Gatsby plugins removed (no longer needed)
-- Image processing handled by Next.js instead of Gatsby
-- Build process changed (Next.js instead of Gatsby)
-
-## How to Use
-
-### Development
-
-```bash
-# Quick start (both frontend and backend)
-./start-dev.sh
-
-# Or manually:
-
-# Backend
-cd backend
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-uvicorn main:app --reload
-
-# Frontend (in another terminal)
-cd frontend
-npm install
-npm run dev
-```
-
-### Deployment
-
-```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy to preview
-vercel
-
-# Deploy to production
-vercel --prod
-```
-
 See `DEPLOYMENT.md` for detailed deployment instructions.
 
 ## Testing the Migration
 
 1. **Backend API**: Visit `http://localhost:8000/docs` for API documentation
 2. **Frontend**: Visit `http://localhost:3000`
-3. **Test all pages**:
-   - Homepage: Blog post listing
-   - Individual posts: Click any post
-   - Tags: Navigate to tags page
-   - Filter by tag: Click a tag
-   - Static pages: About, Code, Where Is Will
 
 ## Performance Metrics
 
@@ -195,41 +146,11 @@ Expected improvements:
 - **Time to Interactive**: Improved with App Router
 - **SEO Score**: Better with built-in metadata
 
-## Future Enhancements
-
-Consider adding:
-1. Search functionality
-2. Comments system (e.g., Giscus)
-3. Reading time estimates
-4. Related posts
-5. RSS feed
-6. Newsletter integration
-7. Dark mode toggle
-8. Content management system
-9. Automated testing
-10. Performance monitoring
-
-## Migration Stats
-
-- **Files Created**: ~30 new files
-- **Components Migrated**: 6 components
-- **Pages Migrated**: 7 pages
-- **Blog Posts Preserved**: All posts from `content/posts/`
-- **API Endpoints**: 5 endpoints
-- **Lines of Code**: ~2000 lines (frontend + backend)
-- **Time Invested**: Full migration plan executed
-
 ## Conclusion
 
 The migration was successful! The application now runs on a modern, scalable architecture with:
-- ✅ Better performance
-- ✅ Improved developer experience
-- ✅ Easier deployment
-- ✅ Full TypeScript support
-- ✅ Modern React patterns
-- ✅ Flexible API architecture
-
-Ready for deployment to Vercel! 🚀
+- ✅ Better performance, Improved developer experience, Easier deployment
+- ✅ Full TypeScript support, Modern React patterns, Flexible API architecture
 
 ## vercel.json Explained
 

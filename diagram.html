@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Build Architecture</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <style>
+    body {
+      background: #0f1117;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+      font-family: sans-serif;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .diagram-wrap {
+      background: #1a1d2e;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+      max-width: 960px;
+      width: 100%;
+    }
+    h2 {
+      color: #a78bfa;
+      font-size: 1.4rem;
+      margin: 0 0 28px 0;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .mermaid {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="diagram-wrap">
+    <h2>⚡ Vercel Build & Runtime Architecture</h2>
+    <div class="mermaid">
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "primaryColor": "#2d2f4a",
+    "primaryTextColor": "#e2e8f0",
+    "primaryBorderColor": "#6366f1",
+    "lineColor": "#818cf8",
+    "secondaryColor": "#1e293b",
+    "tertiaryColor": "#0f172a",
+    "edgeLabelBackground": "#1a1d2e",
+    "clusterBkg": "#1e293b",
+    "clusterBorder": "#334155",
+    "fontSize": "15px",
+    "fontFamily": "ui-monospace, monospace"
+  }
+}}%%
+flowchart TB
+    VJ["📄 vercel.json"]
+
+    VJ --> B1["🔷 Build 1 · @vercel/next\nfrontend/package.json"]
+    VJ --> B2["🐍 Build 2 · @vercel/python\nbackend/main.py"]
+
+    B1 --> NPM["npm run build\ninside frontend/"]
+    NPM --> API["📚 lib/api.ts\nreads backend/content/posts/ via Node fs\ngray-matter parses frontmatter\nmarked converts markdown → HTML\n⚠️ NO HTTP calls to FastAPI"]
+    API --> PAGES["🗂️ 28 static HTML pages\none per route\ncontent already embedded in HTML"]
+    NPM --> JS["⚙️ Code-split JS chunks\ncontent-hashed filenames"]
+    NPM --> IMGS["🖼️ frontend/public/images/\n80 image files\nfrom backend/content/posts/"]
+
+    B2 --> SF["📦 main.py + requirements.txt\nPython serverless function"]
+
+    PAGES --> CDN["☁️ Vercel Edge CDN"]
+    JS --> CDN
+    IMGS --> CDN
+    SF --> SFN["⚡ Vercel Serverless Function\nroute: /api/(.*)\nnot called by frontend currently\nreserved for Sentry distributed tracing"]
+
+    classDef entry fill:#4f46e5,stroke:#818cf8,color:#e0e7ff,rx:8
+    classDef build fill:#0f766e,stroke:#2dd4bf,color:#ccfbf1,rx:8
+    classDef process fill:#1e3a5f,stroke:#3b82f6,color:#bfdbfe,rx:8
+    classDef output fill:#3b0764,stroke:#a855f7,color:#f3e8ff,rx:8
+    classDef cdn fill:#064e3b,stroke:#10b981,color:#d1fae5,rx:8
+    classDef serverless fill:#422006,stroke:#f59e0b,color:#fef3c7,rx:8
+
+    class VJ entry
+    class B1,B2 build
+    class NPM,API,SF process
+    class PAGES,JS,IMGS output
+    class CDN cdn
+    class SFN serverless
+    </div>
+  </div>
+  <script>
+    mermaid.initialize({ startOnLoad: true, securityLevel: 'loose' });
+  </script>
+</body>
+</html>
