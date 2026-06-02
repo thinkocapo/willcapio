@@ -20,7 +20,10 @@ export default function PostList({ slug, title, cover, excerpt, preview }: PostL
   return (
     <article
       className={styles.wrapper}
-      onClick={() => Sentry.metrics.count('card.click', 1, { attributes: { page: slug } })}
+      onClick={() => {
+        Sentry.metrics.count('card.click', 1, { attributes: { page: slug } });
+        Sentry.metrics.count(`${slug}.click`, 1);
+      }}
     >
       <div className={styles.image}>
         <Link href={`/blog/${slug}`} title={title}>

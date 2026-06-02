@@ -6,6 +6,7 @@ import styles from './NavBar.module.css';
 
 function trackNavClick(label: string) {
   Sentry.metrics.count('navbar.click', 1, { attributes: { page: label } });
+  Sentry.metrics.count(`${label}.click`, 1);
 }
 
 export default function NavBar() {
