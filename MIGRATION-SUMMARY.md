@@ -131,61 +131,12 @@ willcapio-old/
 - ✅ SEO metadata
 - ✅ Responsive design
 
-## Breaking Changes
-
-- GraphQL queries replaced with REST API calls
-- Gatsby plugins removed (no longer needed)
-- Image processing handled by Next.js instead of Gatsby
-- Build process changed (Next.js instead of Gatsby)
-
-## How to Use
-
-### Development
-
-```bash
-# Quick start (both frontend and backend)
-./start-dev.sh
-
-# Or manually:
-
-# Backend
-cd backend
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-uvicorn main:app --reload
-
-# Frontend (in another terminal)
-cd frontend
-npm install
-npm run dev
-```
-
-### Deployment
-
-```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy to preview
-vercel
-
-# Deploy to production
-vercel --prod
-```
-
 See `DEPLOYMENT.md` for detailed deployment instructions.
 
 ## Testing the Migration
 
 1. **Backend API**: Visit `http://localhost:8000/docs` for API documentation
 2. **Frontend**: Visit `http://localhost:3000`
-3. **Test all pages**:
-   - Homepage: Blog post listing
-   - Individual posts: Click any post
-   - Tags: Navigate to tags page
-   - Filter by tag: Click a tag
-   - Static pages: About, Code, Where Is Will
 
 ## Performance Metrics
 
@@ -195,41 +146,11 @@ Expected improvements:
 - **Time to Interactive**: Improved with App Router
 - **SEO Score**: Better with built-in metadata
 
-## Future Enhancements
-
-Consider adding:
-1. Search functionality
-2. Comments system (e.g., Giscus)
-3. Reading time estimates
-4. Related posts
-5. RSS feed
-6. Newsletter integration
-7. Dark mode toggle
-8. Content management system
-9. Automated testing
-10. Performance monitoring
-
-## Migration Stats
-
-- **Files Created**: ~30 new files
-- **Components Migrated**: 6 components
-- **Pages Migrated**: 7 pages
-- **Blog Posts Preserved**: All posts from `content/posts/`
-- **API Endpoints**: 5 endpoints
-- **Lines of Code**: ~2000 lines (frontend + backend)
-- **Time Invested**: Full migration plan executed
-
 ## Conclusion
 
 The migration was successful! The application now runs on a modern, scalable architecture with:
-- ✅ Better performance
-- ✅ Improved developer experience
-- ✅ Easier deployment
-- ✅ Full TypeScript support
-- ✅ Modern React patterns
-- ✅ Flexible API architecture
-
-Ready for deployment to Vercel! 🚀
+- ✅ Better performance, Improved developer experience, Easier deployment
+- ✅ Full TypeScript support, Modern React patterns, Flexible API architecture
 
 ## vercel.json Explained
 
@@ -298,47 +219,9 @@ Pages use `export const dynamic = 'force-static'` and `revalidate = 3600` in the
 
 ### Build Time
 
-```mermaid
-flowchart TB
-    VJ["📄 vercel.json"]
-
-    VJ --> B1["Build 1 — @vercel/next\nfrontend/package.json"]
-    VJ --> B2["Build 2 — @vercel/python\nbackend/main.py"]
-
-    B1 --> NPM["npm run build\ninside frontend/"]
-    NPM --> API["lib/api.ts\nreads backend/content/posts/ via Node fs\ngray-matter parses frontmatter\nmarked converts markdown → HTML\n⚠️ NO HTTP calls to FastAPI"]
-    API --> PAGES["28 static HTML pages\none per route\ncontent already embedded in HTML"]
-    NPM --> JS["Code-split JS chunks\ncontent-hashed filenames\ne.g. 5b38991ac84883e4.js"]
-    NPM --> IMGS["frontend/public/images/\n80 image files copied here\nfrom backend/content/posts/"]
-
-    B2 --> SF["main.py + requirements.txt\npackaged into\nPython serverless function"]
-
-    PAGES --> CDN["☁️ Vercel Edge CDN"]
-    JS --> CDN
-    IMGS --> CDN
-    SF --> SFN["⚡ Vercel Serverless Function\nroute: /api/(.*)\nnot called by frontend currently\nreserved for Sentry distributed tracing"]
-```
+![Vercel Build Flow](vercel_build_flow.png)
 
 ### Runtime
 
-```mermaid
-flowchart TB
-    U["👤 User opens willcap.io"] --> BR["Browser"]
-
-    BR --> R1["GET /\n→ Vercel Edge CDN\nPre-rendered HTML returned\ncontent visible before any JS runs\nnot 'in the bundle'"]
-
-    R1 --> PARSE["Browser parses HTML"]
-
-    PARSE --> R2["GET /_next/static/chunks/*.js\n→ Vercel CDN\nor browser disk cache\ncached forever by content hash\nonly re-fetched if hash changes on new deploy"]
-    PARSE --> R3["GET /images/slug/*.jpg\n→ Vercel CDN\nor browser cache\ndirect static file, no FastAPI involved"]
-
-    R2 --> HY["Next.js hydrates\napp becomes interactive"]
-
-    HY --> PRE["Prefetches RSC payloads\nfor every visible link\ne.g. /about?_rsc=...\n/blog/2018-10-16?_rsc=...\nsmall JSON, not full HTML"]
-    PRE --> CDN2["☁️ Vercel Edge CDN"]
-
-    CDN2 --> NAV["👤 User clicks a link"]
-    NAV --> INST["Instant client-side navigation\nno new HTML request\nuses prefetched RSC payload"]
-    INST --> CH["JS chunk for that route\nloaded from CDN if first visit\nthen cached forever"]
-```
+![Vercel Runtime Flow](vercel_runtime_flow.png)
 
