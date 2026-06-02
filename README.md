@@ -40,6 +40,14 @@ A modern personal blog built with Next.js and FastAPI, featuring markdown-based 
 - **Backend**: FastAPI serving blog content via REST API
 - **Deployment**: Vercel with automatic HTTPS and global CDN
 
+### Build Time
+
+![Vercel Build Flow](vercel_build_flow.png)
+
+### Runtime
+
+![Vercel Runtime Flow](vercel_runtime_flow.png)
+
 ## 🚀 Quick Start
 
 ### Prerequisites

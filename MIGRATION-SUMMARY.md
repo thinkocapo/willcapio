@@ -213,15 +213,3 @@ Pages use `export const dynamic = 'force-static'` and `revalidate = 3600` in the
 
 **Tradeoff:** Content updates require a deploy or wait for ISR (`revalidate = 3600` — up to ~1 hour before changes appear without redeploying). Markdown lives in `backend/content/posts/`; images live in `frontend/public/images/`.
 
----
-
-## Diagrams
-
-### Build Time
-
-![Vercel Build Flow](vercel_build_flow.png)
-
-### Runtime
-
-![Vercel Runtime Flow](vercel_runtime_flow.png)
-
