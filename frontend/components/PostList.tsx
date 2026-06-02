@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import * as Sentry from '@sentry/nextjs';
 import styles from './PostList.module.css';
 
 interface PostListProps {
@@ -15,7 +18,10 @@ interface PostListProps {
 export default function PostList({ slug, title, cover, excerpt, preview }: PostListProps) {
   const imageSrc = cover || null;
   return (
-    <article className={styles.wrapper}>
+    <article
+      className={styles.wrapper}
+      onClick={() => Sentry.metrics.count('card.click', 1, { tags: { slug } })}
+    >
       <div className={styles.image}>
         <Link href={`/blog/${slug}`} title={title}>
           {imageSrc ? (
@@ -40,4 +46,3 @@ export default function PostList({ slug, title, cover, excerpt, preview }: PostL
     </article>
   );
 }
-
