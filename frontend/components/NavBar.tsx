@@ -5,8 +5,9 @@ import * as Sentry from '@sentry/nextjs';
 import styles from './NavBar.module.css';
 
 function trackNavClick(label: string) {
-  Sentry.metrics.count('navbar.click', 1, { attributes: { page: label } });
-  Sentry.metrics.count(`${label}.click`, 1);
+  // slug values are names of the cards, navbar buttons, and embedded links in the pages.
+  Sentry.metrics.count('page.click', 1, { attributes: { page: label } });
+  Sentry.metrics.count(`page.${label}.click`, 1);
 }
 
 export default function NavBar() {
@@ -22,4 +23,3 @@ export default function NavBar() {
     </header>
   );
 }
-
