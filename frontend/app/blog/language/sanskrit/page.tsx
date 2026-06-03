@@ -2,6 +2,7 @@ import { getPost } from '@/lib/api';
 import { notFound } from 'next/navigation';
 import styles from '@/app/blog/[slug]/page.module.css';
 import PageViewTracker from '@/components/PageViewTracker';
+import ScrollDepthTracker from '@/components/ScrollDepthTracker';
 
 export const dynamic = 'force-static';
 export const revalidate = 3600;
@@ -24,6 +25,7 @@ export default async function SanskritPage() {
           className={styles.content}
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
+        <ScrollDepthTracker slug="sanskrit" />
       </article>
     );
   } catch (error) {

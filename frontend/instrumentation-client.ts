@@ -17,4 +17,13 @@ Sentry.init({
   // sendDefaultPii: true,
 });
 
+// Generate or retrieve a stable anonymous user ID for this browser.
+// Persists in localStorage so the same visitor keeps the same ID across sessions.
+let userId = localStorage.getItem('willcapio_user_id');
+if (!userId) {
+  userId = crypto.randomUUID();
+  localStorage.setItem('willcapio_user_id', userId);
+}
+Sentry.setUser({ id: userId });
+
 export const onRouterTransitionStart = Sentry.captureRouterTransitionStart;
