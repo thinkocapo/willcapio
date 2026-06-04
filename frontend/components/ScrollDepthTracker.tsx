@@ -11,7 +11,6 @@ export default function ScrollDepthTracker({ slug }: { slug: string }) {
       if (entry.isIntersecting) {
         // slug values are names of the cards, navbar buttons, and embedded links in the pages.
         Sentry.metrics.count('page.click', 1, { attributes: { page: `${slug}.scroll_complete` } });
-        Sentry.metrics.count(`page.${slug}.scroll_complete`, 1);
         observer.disconnect();
       }
     });

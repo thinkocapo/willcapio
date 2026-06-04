@@ -11,7 +11,6 @@ export default function PageViewTracker({ slug }: PageViewTrackerProps) {
   useEffect(() => {
     // slug values are names of the cards, navbar buttons, and embedded links in the pages.
     Sentry.metrics.count('page.click', 1, { attributes: { page: slug } });
-    Sentry.metrics.count(`page.${slug}.click`, 1);
   }, [slug]);
 
   return null;
