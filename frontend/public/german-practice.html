@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>German Practice</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: #0f0f0f;
+      color: #e8e8e8;
+      min-height: 100vh;
+      padding: 40px 24px 40px 280px;
+    }
+
+    /* ── Connectors sidebar ──────────────────────────────── */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 240px;
+      overflow-y: auto;
+      background: #131313;
+      border-right: 1px solid #252525;
+      padding: 28px 20px;
+    }
+
+    .sidebar h2 {
+      font-size: 0.7rem;
+      font-weight: normal;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    .conn-group { margin-bottom: 24px; }
+
+    .conn-group h3 {
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+
+    .conn-group .verb-rule {
+      font-size: 0.6rem;
+      font-style: italic;
+      color: #5a5a5a;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .conn-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .conn {
+      font-size: 1rem;
+      padding: 3px 8px;
+      border-radius: 3px;
+      background: #1c1c1c;
+      border: 1px solid #2a2a2a;
+    }
+
+    /* category colors */
+    .cat-coord  h3 { color: #7fbf8e; }
+    .cat-coord  .conn { color: #9fd6ab; border-color: #2c3a2e; }
+    .cat-sub    h3 { color: #bf8e7f; }
+    .cat-sub    .conn { color: #d6a99f; border-color: #3a2e2c; }
+    .cat-adv    h3 { color: #7a9fbf; }
+    .cat-adv    .conn { color: #9fbdd6; border-color: #2c343a; }
+
+    .examples-block {
+      margin-top: 28px;
+      border-top: 1px solid #252525;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .ex-group { display: flex; flex-direction: column; gap: 3px; }
+
+    .ex-line {
+      font-size: 0.75rem;
+      line-height: 1.5;
+      font-family: 'Georgia', serif;
+    }
+
+    .ex-normal { color: #666; }
+    .ex-conn   { color: #999; }
+    .ex-conn em { color: #c8a96e; font-style: normal; }
+    .ex-wrong  { color: #6a3a3a; font-size: 0.7rem; }
+
+    .ex-tag {
+      display: inline-block;
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      text-transform: lowercase;
+      background: #1c1c1c;
+      border: 1px solid #2a2a2a;
+      border-radius: 3px;
+      padding: 1px 5px;
+      margin-right: 4px;
+      color: #7a9fbf;
+      font-family: sans-serif;
+    }
+
+    @media (max-width: 720px) {
+      body { padding: 40px 24px; }
+      .sidebar {
+        position: static;
+        width: auto;
+        border-right: none;
+        border-bottom: 1px solid #252525;
+        margin-bottom: 32px;
+      }
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 1.4rem;
+      font-weight: normal;
+      letter-spacing: 0.15em;
+      color: #aaa;
+      text-transform: uppercase;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    button {
+      background: #1e1e1e;
+      border: 1px solid #333;
+      color: #ccc;
+      padding: 8px 20px;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      border-radius: 3px;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    button:hover {
+      background: #2a2a2a;
+      color: #fff;
+    }
+
+    .sentences {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card {
+      background: #161616;
+      border: 1px solid #252525;
+      border-radius: 6px;
+      padding: 24px 28px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .sentence-parts {
+      display: flex;
+      align-items: flex-end;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .token {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .label {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #555;
+    }
+
+    .label.tense   { color: #7a9fbf; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .label.article { color: #9b7fbf; }
+
+    .word {
+      font-size: 1.25rem;
+      color: #e0e0e0;
+      letter-spacing: 0.03em;
+    }
+
+    .word.pronoun { color: #c8a96e; }
+    .word.verb    { color: #7fbf8e; }
+    .word.noun    { color: #bf8e7f; }
+    .word.obj-pronoun { color: #c8a96e; font-style: italic; }
+
+    .word.swappable {
+      cursor: pointer;
+      border-bottom: 1px dashed currentColor;
+      transition: opacity 0.12s ease;
+    }
+    .word.swappable:hover { opacity: 0.65; }
+
+    .answer-btn {
+      background: #1a1a2e;
+      border-color: #2a2a4a;
+      color: #7a7abf;
+      font-size: 0.75rem;
+      white-space: nowrap;
+    }
+
+    .answer-btn:hover {
+      background: #1e1e3a;
+      color: #aaaaff;
+    }
+
+    .answer-area {
+      display: none;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid #252525;
+      font-size: 0.95rem;
+      color: #888;
+      grid-column: 1 / -1;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+<aside class="sidebar">
+  <h2>Connectors</h2>
+
+  <div class="conn-group cat-coord">
+    <h3>Coordinating</h3>
+    <div class="verb-rule">verb stays in 2nd position</div>
+    <div class="conn-list">
+      <span class="conn">und</span>
+      <span class="conn">oder</span>
+      <span class="conn">aber</span>
+      <span class="conn">denn</span>
+      <span class="conn">sondern</span>
+    </div>
+  </div>
+
+  <div class="conn-group cat-sub">
+    <h3>Subordinating</h3>
+    <div class="verb-rule">verb followed by pronoun</div>
+    <div class="conn-list">
+      <span class="conn">dass</span>
+      <span class="conn">wenn</span>
+      <span class="conn">weil</span>
+      <span class="conn">als</span>
+      <span class="conn">ob</span>
+      <span class="conn">obwohl</span>
+      <span class="conn">damit</span>
+      <span class="conn">bevor</span>
+      <span class="conn">nachdem</span>
+      <span class="conn">während</span>
+      <span class="conn">falls</span>
+      <span class="conn">da</span>
+      <span class="conn">bis</span>
+      <span class="conn">sobald</span>
+      <span class="conn">seitdem</span>
+    </div>
+  </div>
+
+  <div class="conn-group cat-adv">
+    <h3>Conj. adverbs</h3>
+    <div class="verb-rule">verb followed by pronoun</div>
+    <div class="conn-list">
+      <span class="conn">dann</span>
+      <span class="conn">deshalb</span>
+      <span class="conn">deswegen</span>
+      <span class="conn">trotzdem</span>
+      <span class="conn">außerdem</span>
+      <span class="conn">also</span>
+      <span class="conn">sonst</span>
+      <span class="conn">danach</span>
+      <span class="conn">jedoch</span>
+      <span class="conn">zuerst</span>
+    </div>
+  </div>
+
+  <div class="examples-block">
+    <div class="ex-group">
+      <div class="ex-line ex-normal">Du lernst Deutsch.</div>
+      <div class="ex-line ex-conn"><span class="ex-tag">dass</span> …, dass du Deutsch <em>lernst</em>.</div>
+    </div>
+    <div class="ex-group">
+      <div class="ex-line ex-normal">Das Wetter ist schön.</div>
+      <div class="ex-line ex-conn"><span class="ex-tag">wenn</span> Wenn das Wetter schön <em>ist</em>, …</div>
+    </div>
+    <div class="ex-group">
+      <div class="ex-line ex-conn"><span class="ex-tag">dann</span> …dann <em>arbeite</em> ich.</div>
+      <div class="ex-line ex-wrong">✗ dann ich arbeite</div>
+    </div>
+    <div class="ex-group">
+      <div class="ex-line ex-conn"><span class="ex-tag">deshalb</span> …deshalb <em>bleibe</em> ich…</div>
+      <div class="ex-line ex-wrong">✗ deshalb ich bleibe</div>
+    </div>
+  </div>
+</aside>
+
+<header>
+  <h1>German Practice</h1>
+</header>
+
+<div class="controls">
+  <button onclick="generate()">Generate 10 Sentences</button>
+</div>
+
+<div class="sentences" id="sentences"></div>
+
+<script>
+// ── Vocab ─────────────────────────────────────────────────────────────────────
+
+const PRONOUNS = [
+  { de: 'ich' }, { de: 'du' }, { de: 'er' }, { de: 'sie' }, { de: 'es' },
+  { de: 'wir' }, { de: 'ihr' }, { de: 'sie' }, { de: 'Sie' }
+];
+
+// Accusative object pronouns (mich, dich, ihn, etc.)
+const OBJ_PRONOUNS = [
+  'mich', 'dich', 'ihn', 'sie', 'es', 'uns', 'euch', 'sie', 'Sie'
+];
+
+const VERBS = [
+  { inf: 'sein' },    { inf: 'haben' },   { inf: 'machen' },
+  { inf: 'gehen' },   { inf: 'kommen' },  { inf: 'sehen' },
+  { inf: 'geben' },   { inf: 'nehmen' },  { inf: 'sprechen' },
+  { inf: 'fahren' },  { inf: 'essen' },   { inf: 'trinken' },
+  { inf: 'schlafen' },{ inf: 'lesen' },   { inf: 'schreiben' },
+  { inf: 'hören' },   { inf: 'fragen' },  { inf: 'arbeiten' },
+  { inf: 'spielen' }, { inf: 'lernen' },  { inf: 'kaufen' },
+  { inf: 'wohnen' },  { inf: 'laufen' },  { inf: 'kochen' },
+  { inf: 'helfen' },  { inf: 'warten' },  { inf: 'suchen' },
+  { inf: 'zeigen' },  { inf: 'bringen' }, { inf: 'treffen' },
+  { inf: 'besuchen' },{ inf: 'vergessen' },{ inf: 'verstehen' },
+  { inf: 'denken' },  { inf: 'glauben' }, { inf: 'wissen' },
+  { inf: 'finden' },  { inf: 'bleiben' }, { inf: 'stehen' },
+  { inf: 'liegen' },  { inf: 'sitzen' },  { inf: 'tragen' },
+  { inf: 'öffnen' },  { inf: 'schließen' },{ inf: 'rufen' },
+  { inf: 'singen' },  { inf: 'tanzen' },  { inf: 'reisen' },
+  { inf: 'lieben' },  { inf: 'brauchen' },
+];
+
+// Nouns: { de, gender: m/f/n }
+const NOUNS = [
+  { de: 'Mann',    gender: 'm' }, { de: 'Frau',    gender: 'f' },
+  { de: 'Kind',    gender: 'n' }, { de: 'Hund',    gender: 'm' },
+  { de: 'Katze',   gender: 'f' }, { de: 'Buch',    gender: 'n' },
+  { de: 'Tisch',   gender: 'm' }, { de: 'Stuhl',   gender: 'm' },
+  { de: 'Auto',    gender: 'n' }, { de: 'Haus',    gender: 'n' },
+  { de: 'Stadt',   gender: 'f' }, { de: 'Schule',  gender: 'f' },
+  { de: 'Wasser',  gender: 'n' }, { de: 'Brot',    gender: 'n' },
+  { de: 'Apfel',   gender: 'm' }, { de: 'Milch',   gender: 'f' },
+  { de: 'Tee',     gender: 'm' }, { de: 'Kaffee',  gender: 'm' },
+  { de: 'Zeitung', gender: 'f' }, { de: 'Film',    gender: 'm' },
+  { de: 'Arbeit',  gender: 'f' }, { de: 'Geld',    gender: 'n' },
+  { de: 'Brief',   gender: 'm' }, { de: 'Tasche',  gender: 'f' },
+  { de: 'Küche',   gender: 'f' }, { de: 'Zimmer',  gender: 'n' },
+  { de: 'Junge',   gender: 'm' }, { de: 'Mädchen', gender: 'n' },
+  { de: 'Vater',   gender: 'm' }, { de: 'Mutter',  gender: 'f' },
+  { de: 'Bruder',  gender: 'm' }, { de: 'Schwester',gender: 'f' },
+  { de: 'Freund',  gender: 'm' }, { de: 'Lehrer',  gender: 'm' },
+  { de: 'Arzt',    gender: 'm' }, { de: 'Nachbar', gender: 'm' },
+  { de: 'Vogel',   gender: 'm' }, { de: 'Pferd',   gender: 'n' },
+  { de: 'Fisch',   gender: 'm' }, { de: 'Baum',    gender: 'm' },
+  { de: 'Blume',   gender: 'f' }, { de: 'Garten',  gender: 'm' },
+  { de: 'Wald',    gender: 'm' }, { de: 'Berg',    gender: 'm' },
+  { de: 'Fluss',   gender: 'm' }, { de: 'See',     gender: 'm' },
+  { de: 'Meer',    gender: 'n' }, { de: 'Sonne',   gender: 'f' },
+  { de: 'Mond',    gender: 'm' }, { de: 'Himmel',  gender: 'm' },
+  { de: 'Wind',    gender: 'm' }, { de: 'Regen',   gender: 'm' },
+  { de: 'Schnee',  gender: 'm' }, { de: 'Tag',     gender: 'm' },
+  { de: 'Nacht',   gender: 'f' }, { de: 'Woche',   gender: 'f' },
+  { de: 'Jahr',    gender: 'n' }, { de: 'Zeit',    gender: 'f' },
+  { de: 'Stunde',  gender: 'f' }, { de: 'Morgen',  gender: 'm' },
+  { de: 'Abend',   gender: 'm' }, { de: 'Fenster', gender: 'n' },
+  { de: 'Tür',     gender: 'f' }, { de: 'Wand',    gender: 'f' },
+  { de: 'Bett',    gender: 'n' }, { de: 'Lampe',   gender: 'f' },
+  { de: 'Uhr',     gender: 'f' }, { de: 'Telefon', gender: 'n' },
+  { de: 'Computer',gender: 'm' }, { de: 'Schlüssel',gender: 'm' },
+  { de: 'Geschenk',gender: 'n' }, { de: 'Bild',    gender: 'n' },
+  { de: 'Musik',   gender: 'f' }, { de: 'Lied',    gender: 'n' },
+  { de: 'Spiel',   gender: 'n' }, { de: 'Ball',    gender: 'm' },
+  { de: 'Wein',    gender: 'm' }, { de: 'Bier',    gender: 'n' },
+  { de: 'Saft',    gender: 'm' }, { de: 'Suppe',   gender: 'f' },
+  { de: 'Fleisch', gender: 'n' }, { de: 'Gemüse',  gender: 'n' },
+  { de: 'Obst',    gender: 'n' }, { de: 'Ei',      gender: 'n' },
+  { de: 'Käse',    gender: 'm' }, { de: 'Zucker',  gender: 'm' },
+  { de: 'Salz',    gender: 'n' }, { de: 'Teller',  gender: 'm' },
+  { de: 'Glas',    gender: 'n' }, { de: 'Flasche', gender: 'f' },
+  { de: 'Straße',  gender: 'f' }, { de: 'Weg',     gender: 'm' },
+  { de: 'Zug',     gender: 'm' }, { de: 'Bus',     gender: 'm' },
+  { de: 'Flugzeug',gender: 'n' }, { de: 'Fahrrad', gender: 'n' },
+  { de: 'Land',    gender: 'n' }, { de: 'Welt',    gender: 'f' },
+  { de: 'Sprache', gender: 'f' }, { de: 'Wort',    gender: 'n' },
+];
+
+const TENSES = ['present', 'präterite', 'perfekt', 'futur'];
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+
+function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+function articleType() {
+  const r = Math.random();
+  if (r < 1/3) return 'definite';
+  if (r < 2/3) return 'indefinite';
+  return 'none';
+}
+
+// Show all three forms for the chosen article type; the reader picks the
+// one that fits the noun's gender.
+const ARTICLE_FORMS = {
+  definite:   ['der', 'das', 'die'],
+  indefinite: ['ein', 'ein', 'eine'],
+};
+
+function sentencePattern() {
+  const r = Math.random();
+  if (r < 1/3) return 'P-V-N';          // pronoun verb noun
+  if (r < 2/3) return 'P-V-OP';         // pronoun verb obj-pronoun
+  return 'P-V-N-OP';                     // pronoun verb noun obj-pronoun
+}
+
+// ── Render ────────────────────────────────────────────────────────────────────
+
+function token(label, word, cls, labelCls = '', swap = '') {
+  const swapCls   = swap ? ' swappable' : '';
+  const swapAttrs = swap ? ` onclick="swapWord(this, '${swap}')" title="click for a new ${swap}"` : '';
+  return `
+    <div class="token">
+      <span class="label ${labelCls}">${label}</span>
+      <span class="word ${cls}${swapCls}"${swapAttrs}>${word}</span>
+    </div>`;
+}
+
+function swapWord(el, type) {
+  if (type === 'verb') el.textContent = pick(VERBS).inf;
+  else if (type === 'noun') el.textContent = pick(NOUNS).de;
+}
+
+function buildCard(i) {
+  const pronoun  = pick(PRONOUNS);
+  const verb     = pick(VERBS);
+  const noun     = pick(NOUNS);
+  const objPron  = pick(OBJ_PRONOUNS);
+  const tense    = pick(TENSES);
+  const art      = articleType();
+  const pattern  = sentencePattern();
+
+  const hasNoun = pattern === 'P-V-N' || pattern === 'P-V-N-OP';
+
+  let parts = '';
+  parts += token('pronoun', pronoun.de, 'pronoun');
+  parts += token(tense, verb.inf, 'verb', 'tense', 'verb');
+
+  if (hasNoun) {
+    if (art !== 'none') {
+      const stacked = ARTICLE_FORMS[art].join('<br>');
+      parts += token(art, stacked, 'noun', 'article');
+    }
+    parts += token('noun', noun.de, 'noun', '', 'noun');
+  }
+
+  if (pattern === 'P-V-OP' || pattern === 'P-V-N-OP') {
+    parts += token('obj. pronoun', objPron, 'obj-pronoun');
+  }
+
+  return `
+    <div class="card" id="card-${i}">
+      <div class="sentence-parts">${parts}</div>
+      <button class="answer-btn" onclick="toggleAnswer(${i})">ANSWER</button>
+      <div class="answer-area" id="answer-${i}">
+        — answer coming soon —
+      </div>
+    </div>`;
+}
+
+function generate() {
+  const container = document.getElementById('sentences');
+  container.innerHTML = '';
+  for (let i = 0; i < 10; i++) {
+    container.insertAdjacentHTML('beforeend', buildCard(i));
+  }
+}
+
+function toggleAnswer(i) {
+  const el = document.getElementById(`answer-${i}`);
+  el.style.display = el.style.display === 'block' ? 'none' : 'block';
+}
+
+// Auto-generate on load
+generate();
+</script>
+</body>
+</html>
