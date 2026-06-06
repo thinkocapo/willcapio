@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Open_Sans, Candal } from "next/font/google";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -7,6 +7,12 @@ import "./globals.css";
 const openSans = Open_Sans({
   variable: "--font-open-sans",
   subsets: ["latin"],
+});
+
+const candal = Candal({
+  variable: "--font-candal",
+  subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${openSans.variable} antialiased`}>
+      <body className={`${openSans.variable} ${candal.variable} antialiased`}>
         <div className="app-container">
           <NavBar />
           <main>{children}</main>

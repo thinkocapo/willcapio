@@ -17,6 +17,7 @@ export default function NavBar() {
       </Link>
       <nav className={styles.nav}>
         <Link href="/whereiswill" onClick={() => trackNavClick('whereiswill')}>Where Is Will</Link>
+        <Link href="/apps" onClick={() => trackNavClick('apps')}>Apps</Link>
         <Link href="/about" onClick={() => trackNavClick('about')}>About</Link>
       </nav>
     </header>
