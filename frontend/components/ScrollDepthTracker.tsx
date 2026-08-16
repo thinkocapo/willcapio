@@ -10,7 +10,7 @@ export default function ScrollDepthTracker({ slug }: { slug: string }) {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         // slug values are names of the cards, navbar buttons, and embedded links in the pages.
-        Sentry.metrics.count('page.click', 1, { attributes: { page: `${slug}.scroll_complete` } });
+        Sentry.metrics.count('page.end', 1, { attributes: { page: slug } });
         observer.disconnect();
       }
     });

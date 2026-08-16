@@ -210,6 +210,75 @@ Gatsby worked the same way. If it were a pure SPA, you'd see a nearly empty inde
 ### thing
 The fix is straightforward: move the images to frontend/public/images/ so Vercel serves them directly from its CDN, bypassing FastAPI entirely. The image paths in api.ts already use /images/${slug}/filename — Next.js automatically serves anything in public/ at /, so no code changes needed. Then remove the /images/* route from vercel.json.
 
+## 🧭 Sessions (Custom Session Tracing)
+
+This app models a **user session as a single Sentry trace**: one long-lived root
+span (`op: session`, typically seconds-to-minutes long) with one child span per
+page (`op: ui.page`, spanning page-enter → page-leave). Time-on-page, ordering,
+and journey context live as span **attributes** (`session.id`, `page`, `from`,
+`step`, `dwell_ms`) because spans are indexed and easily queryable. A few
+aggregate rollups are also emitted as custom metrics at each span stop
+(`page.dwell`, `session.duration`, `session.pages`).
+
+Implementation:
+- `frontend/lib/sessionTrace.ts` — the session engine (start/end, page spans, metrics)
+- `frontend/components/SessionTracker.tsx` — mounted once in `app/layout.tsx`, drives enter/leave off route changes
+
+### Single narrative — navigation auto-instrumentation is OFF
+
+So the session trace is the *one* story of a journey, we disabled the SDK's
+default per-navigation traces — otherwise every client-side page change spawns
+its own trace and fragments the journey into many disconnected traces. In
+`instrumentation-client.ts`:
+
+- `Sentry.browserTracingIntegration({ instrumentNavigation: false })`
+- `onRouterTransitionStart` is intentionally **not** exported (that hook is what
+  starts the SDK's App Router navigation spans).
+
+The initial page-load trace is kept (`instrumentPageLoad`, on by default) for
+load performance (LCP/FCP/TTFB) — that's one trace at session start, not per-page noise.
+
+### Why a session STARTS
+
+A new session begins on the first of these to occur:
+
+- **The SDK is initialized** and the first page is entered (initial page load).
+- **The page/tab is resumed** (becomes visible again) and no current session is
+  recorded — most likely because the previous session ended when they navigated
+  away / switched tabs. In other words, **returning to the original tab starts a
+  brand-new session** (by design — the prior session already flushed when they left).
+- Any page navigation while no session is currently active (e.g. after an idle timeout).
+
+### Why a session ENDS
+
+A session ends — and *only then* is its trace flushed to Sentry — on:
+
+| What the user does | Event fired | Session ends? |
+|---|---|---|
+| Switch to another tab / minimize / switch app / lock phone | `visibilitychange → hidden` | **Instantly** ✓ |
+| Close the tab / navigate to another site | `pagehide` (backstop) | **Instantly** ✓ |
+| Stays on one page, tab visible, stops interacting | idle timer | after timeout |
+| Tab crash / force-kill / power loss | *none* | **Never — trace is lost** ⚠️ |
+
+The last row is inherent to this model: a trace only flushes when its root span
+ends, so if the JS context dies without warning, `session.end()` never runs and
+that session is lost. Every *graceful* exit (the common cases) is covered by
+`visibilitychange` + `pagehide`.
+
+> Note: because the trace only appears once the session ends, a live session shows
+> nothing in Sentry until it's over. Great for demos (do a journey, leave, then
+> open the finished trace) — just know it isn't live-streaming.
+
+### Idle timer — note for reviewers
+
+The idle timeout defaults to **30 minutes since the last page change** (`IDLE_MS`
+in `sessionTrace.ts`). Note this is "since the last navigation," not true
+inactivity — a reader who stays on one long page for 30 min would have their
+session ended mid-read. To make it *real* inactivity, one could also reset the
+idle timer on user activity (`pointerdown` / `keydown` / `scroll`) — a small,
+self-contained change. It's left **unimplemented on purpose** so anyone reviewing
+this Session Tracing can decide that trade-off for themselves; for now we keep it simple.
+
 ## 🧪 Testing
 
 ```bash

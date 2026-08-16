@@ -6,7 +6,7 @@ import styles from './NavBar.module.css';
 
 function trackNavClick(label: string) {
   // slug values are names of the cards, navbar buttons, and embedded links in the pages.
-  Sentry.metrics.count('page.click', 1, { attributes: { page: label } });
+  Sentry.metrics.count('page.select', 1, { attributes: { page: label } });
 }
 
 export default function NavBar() {
