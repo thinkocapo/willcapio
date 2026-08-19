@@ -22,7 +22,7 @@ export default function PostList({ slug, title, cover, excerpt, preview }: PostL
       className={styles.wrapper}
       onClick={() => {
         // slug values are names of the cards, navbar buttons, and embedded links in the pages.
-        Sentry.metrics.count('page.click', 1, { attributes: { page: slug } });
+        Sentry.metrics.count('page.select', 1, { attributes: { page: slug } });
       }}
     >
       <div className={styles.image}>

@@ -29,7 +29,7 @@ export default withSentryConfig(nextConfig, {
 
   org: "will-captel",
 
-  project: "frontend-nextjs",
+  project: "willcapio-frontend-nextjs",
 
   // Only print logs for uploading source maps in CI
   silent: !process.env.CI,

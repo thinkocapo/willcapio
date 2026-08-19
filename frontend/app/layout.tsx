@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Open_Sans, Candal } from "next/font/google";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import SessionTracker from "@/components/SessionTracker";
 import "./globals.css";
 
 const openSans = Open_Sans({
@@ -32,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${openSans.variable} ${candal.variable} antialiased`}>
+        <SessionTracker />
         <div className="app-container">
           <NavBar />
           <main>{children}</main>
