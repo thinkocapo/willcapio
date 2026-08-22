@@ -1,12 +1,28 @@
 import * as Sentry from '@sentry/nextjs';
+// _INTERNAL_setSpanForScope is the same primitive the browserTracing integration
+// uses to pin a span as the "active" span on the scope. It isn't re-exported
+// through @sentry/nextjs, so we import it from @sentry/core (single copy — same
+// singleton scope machinery the rest of the SDK uses).
+import { _INTERNAL_setSpanForScope } from '@sentry/core';
 
 // A "session" is modeled as ONE trace: a long-lived root span (op: session)
 // with one child span per page (op: ui.page, enter -> leave). Because spans are
 // indexed and queryable, all the useful dimensions live as span ATTRIBUTES
 // (session.id, page, from, step, dwell_ms). Standalone Sentry.metrics.* calls are
 // only aggregate rollups fired at span stop — not the source of truth.
+//
+// OPTION B: while a page span is open we make it the ACTIVE span (setActive
+// below). That way the SDK's auto-instrumentation attaches its children to it —
+// http.client (fetch/XHR), resource.* — and Sentry.withProfiler(...) components
+// emit ui.react.mount / ui.react.update spans nested inside the ui.page span.
+// The result is one rich session trace instead of a bare journey skeleton.
 
 type SentrySpan = ReturnType<typeof Sentry.startInactiveSpan>;
+
+// Pin (or clear) the scope's active span so new auto/profiler spans parent to it.
+function setActive(span: SentrySpan | undefined): void {
+  _INTERNAL_setSpanForScope(Sentry.getCurrentScope(), span);
+}
 
 // A session is considered over after this much inactivity. Keeping sessions
 // bounded matters: an unbounded root span risks getting clamped/dropped by
@@ -76,6 +92,9 @@ function closeCurrentPage(): void {
   current.span.setAttribute('dwell_ms', ms);
   current.span.end();
   session.lastPath = current.path;
+  // Between pages, fall back to the session root as the active span so any spans
+  // created in the gap still land on the session trace (not the just-ended page).
+  setActive(session.root);
 
   // Aggregate rollup (not on the waterfall) — "a metric at each span stop".
   Sentry.metrics.distribution('page.dwell', ms, {
@@ -116,6 +135,9 @@ export function enterPage(path: string): PageToken | null {
   });
 
   current = { span, path, startedAt: now(), sessionId: session.id };
+  // OPTION B: make this page span the active span for the route's lifetime so
+  // http.client / resource.* / ui.react.mount|update nest inside it.
+  setActive(span);
   return current;
 }
 
@@ -143,6 +165,7 @@ function endSession(reason: 'idle' | 'hidden' | 'manual'): void {
   s.root.setAttribute('pages', s.pages);
   s.root.setAttribute('end.reason', reason);
   s.root.end(); // <-- ending the root is what flushes the whole session trace
+  setActive(undefined); // no active span until the next session starts
 
   Sentry.metrics.distribution('session.duration', ms, {
     unit: 'millisecond',

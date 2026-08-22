@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { getAllPosts } from '@/lib/api';
 import Header from '@/components/Header';
 import PostList from '@/components/PostList';
@@ -12,6 +13,8 @@ export default async function Home() {
   return (
     <>
       <Header title="Will Cap">Hello, I&apos;m Will</Header>
+      {/* Demo funnel entry (session-page-span-active branch) */}
+      <p><Link href="/products">Enter shop (demo funnel) →</Link></p>
       <div className={styles.postWrapper}>
         {posts.map((post) => (
           <PostList
