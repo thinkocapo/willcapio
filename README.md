@@ -311,3 +311,48 @@ This is a personal blog, but feel free to fork and adapt for your own use!
 ## 📄 License
 
 MIT
+
+## 🧭 Session Tracing — Three Techniques & Trade-offs
+
+There are three ways to shape how the session/trace data is captured. The
+**session-tracking PR (#7)** shipped **Option A**.
+
+### Option A — Current (shipped in PR #7)
+
+The session trace is a clean **journey skeleton**: a `session` root span with one
+`ui.page` child per page (`dwell_ms` / `from` / `step` as span attributes). The
+SDK's default per-navigation traces are disabled so the journey isn't fragmented;
+the initial-load `pageload` trace is kept (a *separate* trace) for load performance.
+
+**Q3: What span ops did we give up by disabling navigation?**
+
+On client-side route changes we no longer capture:
+
+| Lost op (on navigation) | What it was |
+|---|---|
+| `navigation` | the per-route root transaction |
+| `resource.script` / `resource.link` / `resource.css` / `resource.img` / `resource.other` | JS chunks, CSS, images loaded for the new route |
+| `http.client` | fetch/XHR — including Next's RSC data fetches |
+| `browser.request` / `browser.response` | browser timing for the navigation |
+| `ui.long-task` / `ui.long-animation-frame` | main-thread jank during the route change |
+| `ui.webvital.cls` / `ui.webvital.lcp` (+ INP/FCP/TTFB) | Web Vitals attributed to the navigation |
+
+Note: these still fire on the **initial load** (they hang off the kept `pageload`
+trace). But because our session spans are `startInactiveSpan`, none of these auto
+spans land *inside* the session trace — it stays a skeleton.
+
+### Option B — Make the `ui.page` span active
+
+Run each `ui.page` span as the **active** span for the route's lifetime, so
+auto-instrumentation nests *inside* it: `http.client`, `resource.*`, and (with
+`Sentry.withProfiler`) `ui.react.mount` / `ui.react.update`. Result: one rich,
+deep session trace. Cost: managing an active span across React's async lifecycle
+and Next navigations — higher implementation complexity/risk.
+
+### Option C — Re-enable navigation + link by `session.id`
+
+Keep the `session` trace as the journey narrative **and** re-enable per-navigation
+traces for page-level depth, stitched together by a shared `session.id`. Two
+complementary *views* (journey-level + page-level). Lowest implementation risk,
+but the most trace instances per journey (`pageload` + `session` + one
+`navigation` per route change).
